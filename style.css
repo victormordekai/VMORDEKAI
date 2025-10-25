@@ -1,0 +1,181 @@
+/* CSS externo - style.css */
+
+/* Reset e configurações globais */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+.icone {width:20vh; font-size:100px; text-align:center;}
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+
+
+/* Header */
+/* ===== Logo no Header ===== */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-container img {
+    width: 80px; /* Ajusta tamanho pequeno na barra */
+    height: auto;
+}
+
+/* Cores do logo no header */
+.logo-text {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text .re {
+    color: rgb(45, 52, 104); /* Roxo */
+}
+
+.logo-text .tear {
+    color: rgb(31, 97, 84); /* Verde */
+}
+
+/* Links do menu */
+nav ul {
+  display: flex;
+  flex-wrap: wrap; /* permite quebrar linha */
+  gap: 1.5rem;
+  list-style: none;
+}
+
+/* Estilo para mobile */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* vira lista vertical */
+    align-items: center;
+  }
+}
+
+nav ul li a {
+    color: rgb(104, 125, 125);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block; /* <- Adicione esta linha */
+    padding: 5px 10px; /* deixa clicável e melhora o visual */
+}
+
+/* Efeito ao passar o mouse no menu */
+nav ul li a:hover {
+    color: rgb(31, 97, 84);
+    transform: scale(1.08);
+}
+	
+/* Header layout */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ===== Logo no Hero (acima do título) ===== */
+.hero-logo {
+    width: 600px; /* Tamanho maior no topo do destaque */
+    margin: 0 auto 1rem; /* Centraliza */
+    display: block;
+}
+
+/* Esmaece todos elementos depois do título */
+.titulo-principal ~ * {
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+}
+
+/* Quando passa o mouse em QUALQUER elemento abaixo do título, volta ao normal */
+.titulo-principal ~ *:hover {
+  opacity: 1;
+}
+
+
+/* Hero Section */
+.hero { background: #f2f2f2; padding: 2rem 2rem; text-align: center; }
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { max-width: 600px; margin: 0 auto 2rem; }
+.btn-primary { padding: 0.8rem 1.5rem; background: rgb(104, 125, 125); color: #fff; border: none; cursor: pointer; }
+.btn-primary:hover { background: rgb(45, 52, 104); /* Roxo */ }
+
+/* ===== Cards Section ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 3rem 2rem;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background: #fff;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    z-index: 2;
+}
+/* Mobile-friendly */
+@media (max-width: 768px) {
+    .card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    /* Efeito no clique */
+    .card:active {
+        transform: scale(1.03);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+
+/* Footer */
+footer { background: #222; color: #fff; padding: 2rem; text-align: center; margin-top: 2rem; }
+
+/* Seções adicionais */
+.intro-section { padding: 4rem 2rem; }
+.big-image { margin: 2rem 0; }
+.content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem; }
+.cta-section { background: #000; color: #fff; padding: 3rem; text-align: center; margin: 2rem; }
+
+/* Animações de revelação II */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal.left {
+    transform: translateX(-80px);
+}
+
+.reveal.right {
+    transform: translateX(80px);
+}
+
+.reveal.active.left,
+.reveal.active.right {
+    transform: translateX(0);
+}
+
+
