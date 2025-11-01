@@ -4,8 +4,8 @@
 /* ----------------------------- */
 
 :root{
-  --color-bg: #ffffff;
-  --color-text: #333333;
+  --color-bg: rgb (255, 255, 255);
+  --color-text: rgb (20,15,22);
   --accent-1: rgb (20,15,22); /* ROXO rgb (20,15,22) */
   --accent-2: rgb (198, 72, 50);  /* VERMELHO rgb (198, 72, 50) */
   --accent-3: rgb (131, 180, 187); /* AZUL CALM rgb (131, 180, 187) */
@@ -29,7 +29,7 @@ html, body {
 }
 body{
   font-family: Arial, sans-serif;
-  line-height:1.6;
+  line-height:1.2;
   color:var(--color-text);
   background: #fff;
   -webkit-font-smoothing:antialiased;
@@ -82,11 +82,10 @@ img{ max-width:100%; display:block; height:auto; }
   font-size:1.1rem;
   line-height:1;
   font-weight:700;
-  color:var(--color-text);
+  color:var(--color-2);
   user-select:none;
 }
-.logo-text .VMORDEKAI{ color: var(--accent-1); } /* RE- roxo */
-.logo-text .tear{ color: var(--accent-2); } /* TEAR verde */
+.logo-text .VMORDEKAI{ color: var(--accent-2); } /* VERMELHO */
 
 /* Navegação desktop (visível por padrão) */
 #nav-menu{
