@@ -1,110 +1,208 @@
-/* CSS externo - style.css */
+/* style.css — versão limpa e corrigida */
+/* ----------------------------- */
+/* Variáveis e Reset */
+/* ----------------------------- */
 
-/* Reset e configurações globais */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-.icone {width:20vh; font-size:100px; text-align:center;}
-a { text-decoration: none; color: inherit; }
-img { max-width: 100%; display: block; }
+:root{
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  --accent-1: rgb (20,15,22); /* ROXO rgb (20,15,22) */
+  --accent-2: rgb (198, 72, 50);  /* VERMELHO rgb (198, 72, 50) */
+  --accent-3: rgb (131, 180, 187); /* AZUL CALM rgb (131, 180, 187) */
+  --accent-4: rgb (255, 255, 255); /* BRANCO rgb (255, 255, 255) */
+  --muted: rgb(104, 125, 125);
+  --header-height: 64px; /* ajustar conforme necessário */
+}
+/* -----------BRANDING VMORDEKAI------------------ */
+/* VERMELHO rgb (198, 72, 50) */
+/* ROXO rgb (20,15,22) */
+/* AZUL CALM rgb (131, 180, 187) */
+/* BRANCO rgb (255, 255, 255) */
+/* ----------------------------- */
 
+*{ margin:0; padding:0; box-sizing:border-box; }
 
-/* Header */
-/* ===== Logo no Header ===== */
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+html, body {
+	height:100%;
+    overflow-x: hidden;
+    width: 100%;
+}
+body{
+  font-family: Arial, sans-serif;
+  line-height:1.6;
+  color:var(--color-text);
+  background: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  /* Evita que o header fixe cubra conteúdo inicial */
+  padding-top: var(--header-height);
 }
 
-.logo-container img {
-    width: 80px; /* Ajusta tamanho pequeno na barra */
-    height: auto;
+a{ text-decoration:none; color:inherit; }
+img{ max-width:100%; display:block; height:auto; }
+
+/* util */
+.container{ max-width:1200px; margin:0 auto; padding:0 1rem; }
+
+/* ----------------------------- */
+/* Header / Logo / Navegação */
+/* ----------------------------- */
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  display:flex;
+  align-items:center;
+  padding: 0.5rem 3rem;
+  justify-content:space-between;
+  gap:1rem;
+  padding:0 1rem;
+  background:var(--color-bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index:1100;
 }
 
-/* Cores do logo no header */
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
+/* Logo */
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+}
+.logo-container img{
+  width:45px;
+  height:auto;
+  display:block;
+}
+.logo-text{
+  display:flex;
+  gap:0.15rem;
+  align-items:center;
+  font-size:1.1rem;
+  line-height:1;
+  font-weight:700;
+  color:var(--color-text);
+  user-select:none;
+}
+.logo-text .VMORDEKAI{ color: var(--accent-1); } /* RE- roxo */
+.logo-text .tear{ color: var(--accent-2); } /* TEAR verde */
+
+/* Navegação desktop (visível por padrão) */
+#nav-menu{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+#nav-menu ul{
+  display:flex;
+  gap:1.2rem;
+  list-style:none;
+  align-items:center;
+  margin:0;
+  padding:0;
+}
+#nav-menu ul li a{
+  display:inline-block; /* permite transform/scale */
+  padding:6px 10px;
+  border-radius:6px;
+  color:var(--accent-2);
+  font-weight:600;
+  transition: color .18s ease, transform .18s ease, background .18s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+#nav-menu ul li a:hover,
+#nav-menu ul li a:focus{
+  color:var(--accent-1);
+  transform: scale(1.06);
+  background: rgba(0,0,0,0.04);
+  outline: none;
 }
 
-.logo-text .re {
-    color: rgb(45, 52, 104); /* Roxo */
+/* Botão hambúrguer (escondido em desktop) */
+.menu-toggle{
+  display:none;
+  background:none;
+  border:0;
+  cursor:pointer;
+  padding:6px;
+  font-size:1.6rem;
+  line-height:1;
 }
 
-.logo-text .tear {
-    color: rgb(31, 97, 84); /* Verde */
-}
-
-/* Links do menu */
-nav ul {
-  display: flex;
-  flex-wrap: wrap; /* permite quebrar linha */
-  gap: 1.5rem;
-  list-style: none;
-}
-
-/* Estilo para mobile */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column; /* vira lista vertical */
-    align-items: center;
+/* ----------------------------- */
+/* Responsividade - mobile menu */
+/* ----------------------------- */
+@media (max-width: 768px){
+  /* Mostrar botão */
+  .menu-toggle{
+    display:block;
   }
-}
 
-nav ul li a {
-    color: rgb(104, 125, 125);
-    text-decoration: none;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block; /* <- Adicione esta linha */
-    padding: 5px 10px; /* deixa clicável e melhora o visual */
-}
+  /* Esconder nav por padrão no mobile */
+  #nav-menu{
+    display:none;
+  }
 
-/* Efeito ao passar o mouse no menu */
-nav ul li a:hover {
-    color: rgb(31, 97, 84);
-    transform: scale(1.08);
-}
-	
-/* Header layout */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+  /* Menu quando ativo (classe .active aplicada via JS) */
+  #nav-menu.active{
+    display:flex;
+    position: fixed;
+    top: calc(var(--header-height) + 8px);
+    right: 12px;
+    width: 92%;
+    max-width: 320px;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0.9rem;
     background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    z-index: 1200;
+    animation: slideIn .22s ease-out;
+  }
+
+  #nav-menu.active ul{
+    display:flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  #nav-menu ul li a{
+    padding: 10px 12px;
+    display:block;
+    border-radius:6px;
+    text-align:center;
+  }
+
+  /* backdrop opcional: você pode adicionar um overlay .menu-backdrop no HTML via JS quando abrir */
 }
 
-/* ===== Logo no Hero (acima do título) ===== */
-.hero-logo {
-    width: 600px; /* Tamanho maior no topo do destaque */
-    margin: 0 auto 1rem; /* Centraliza */
-    display: block;
+/* animação do panel */
+@keyframes slideIn {
+  from{ transform: translateY(-8px); opacity:0; }
+  to{ transform: translateY(0); opacity:1; }
 }
-
-/* Esmaece todos elementos depois do título */
-.titulo-principal ~ * {
-  opacity: 0.3;
-  transition: opacity 0.5s ease;
-}
-
-/* Quando passa o mouse em QUALQUER elemento abaixo do título, volta ao normal */
-.titulo-principal ~ *:hover {
-  opacity: 1;
-}
-
 
 /* Hero Section */
-.hero { background: #f2f2f2; padding: 2rem 2rem; text-align: center; }
+.hero {
+    background: #f2f2f2;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
 .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
 .hero p { max-width: 600px; margin: 0 auto 2rem; }
 .btn-primary { padding: 0.8rem 1.5rem; background: rgb(104, 125, 125); color: #fff; border: none; cursor: pointer; }
 .btn-primary:hover { background: rgb(45, 52, 104); /* Roxo */ }
+.hero img {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+}
 
 /* ===== Cards Section ===== */
 .cards {
@@ -129,53 +227,79 @@ header {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     z-index: 2;
 }
-/* Mobile-friendly */
-@media (max-width: 768px) {
-    .card:hover {
-        transform: none;
-        box-shadow: none;
-    }
 
-    /* Efeito no clique */
-    .card:active {
-        transform: scale(1.03);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
+/* mobile touch-friendly: remove hover scale; use :active */
+@media (max-width:768px){
+  .card:hover{ transform:none; box-shadow:none; }
+  .card:active{ transform: scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
 }
 
+/* ----------------------------- */
+/* Seções adicionais (intro, big-image, content-grid, cta) */
+/* ----------------------------- */
+.intro-section{ padding:4rem 1rem; }
+.intro-section .container{ max-width:900px; margin:0 auto; text-align:left; }
+.big-image{ margin:2rem 0; text-align:center; }
+.content-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; padding:2rem 1rem; }
+.content-grid img{ width:100%; border-radius:8px; }
+.cta-section{ background:#000; color:#fff; padding:2.5rem 1rem; text-align:center; margin:2rem 1rem; border-radius:8px; }
+@media (max-width:900px){
+  .content-grid{ grid-template-columns:1fr; }
+}
 
+/* ----------------------------- */
 /* Footer */
-footer { background: #222; color: #fff; padding: 2rem; text-align: center; margin-top: 2rem; }
-
-/* Seções adicionais */
-.intro-section { padding: 4rem 2rem; }
-.big-image { margin: 2rem 0; }
-.content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2rem; }
-.cta-section { background: #000; color: #fff; padding: 3rem; text-align: center; margin: 2rem; }
-
-/* Animações de revelação II */
-.reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 1s ease-out;
+/* ----------------------------- */
+footer{
+  background:#222;
+  color:#fff;
+  padding:2rem 1rem;
+  text-align:center;
+  margin-top:2rem;
 }
 
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
+/* ----------------------------- */
+/* Efeito de "revelar" com scroll (Intersection Observer) */
+/* ----------------------------- */
+.reveal{
+  opacity:0;
+  transform: translateY(32px);
+  transition: all 0.9s cubic-bezier(.2,.9,.25,1);
+}
+.reveal.active{
+  opacity:1;
+  transform: translateY(0);
+}
+.reveal.left{ transform: translateX(-30px); }
+.reveal.right{ transform: translateX(30px); }
+.reveal.active.left, .reveal.active.right{ transform: translateX(0); }
+
+/* ----------------------------- */
+/* Seletores auxiliares e acessibilidade */
+/* ----------------------------- */
+:focus{ outline: 2px solid rgba(45,52,104,0.12); outline-offset:3px; }
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;
 }
 
-.reveal.left {
-    transform: translateX(-80px);
+/* ----------------------------- */
+/* Efeito para esmaecer elementos abaixo de um título específico */
+/* Use .titulo-principal na tag do título */
+/* ----------------------------- */
+.titulo-principal ~ *{ opacity:0.28; transition: opacity .35s ease; }
+.titulo-principal ~ *:hover{ opacity:1; }
+
+/* ----------------------------- */
+/* Pequenos ajustes finais (espaçamentos, responsividade fina) */
+/* ----------------------------- */
+@media (min-width:1200px){
+  .container{ max-width:1200px; }
+}
+@media (max-width:420px){
+  .logo-text{ font-size:1rem; }
+  .hero h2{ font-size:1.25rem; }
 }
 
-.reveal.right {
-    transform: translateX(80px);
-}
-
-.reveal.active.left,
-.reveal.active.right {
-    transform: translateX(0);
-}
-
-
+/* ----------------------------- */
+/* Fim do arquivo style.css */
+/* ----------------------------- */
