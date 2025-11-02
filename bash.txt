@@ -1,0 +1,7 @@
+/
+├── index.html
+├── shop.html
+├── Lab Consultoria > encaminha para IMAGEM 7 (botão "SAIBA MAIS" na sessão lab encaminha para lab.html)
+├── PORTFOLIO > encaminha para sessão da rolagem "PORTFÓLIO BRIEFING" (botão "SAIBA MAIS" na sessão encaminha para portfolio.html)
+└── QUEM SOMOS > encaminha para sessão da rolagem antes do footer final, acima de "Quer saber mais?/ Entre em contato pelo WhatsApp/ CONTATO"
+└── RE-TEAR projeto > encaminha para site externo RE-TEAR

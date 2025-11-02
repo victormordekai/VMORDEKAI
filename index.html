@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VMORDEKAI lab</title>
+    <title>VMORDEKAI® lab</title>
 
     <!-- Ligação com o CSS externo -->
     <link rel="stylesheet" href="style.css">
@@ -28,7 +28,7 @@
     <!-- Menu Navegação -->
     <nav id="nav-menu">
         <ul>
-            <li><a href="https://forms.gle/DpyJ2SpKYQrD1D4W9" target="_blank">PRODUTOS</a></li>
+            <li><a href="shop.html" target="_blank">PRODUTOS</a></li>
             <li><a href="https://1drv.ms/b/c/7e67ec0c867bfc91/EdrFJIjVVwlAit2YEYGWIzkBGzFGHh8H_T_xX8I-T8d-2w?e=dbxUJ5" target="_blank">PORTFOLIO</a></li>
             <li><a href="https://www.instagram.com/vmordekai/">QUEM SOMOS</a></li>
             <li><a href="https://victormordekai.github.io/RE-TEAR/" target="_blank">RE-TEAR projeto</a></li>
@@ -40,31 +40,31 @@
     <!-- ===== Hero Section ===== -->
 	<section class="hero">
 		<img class="hero-logo" src="imagens/logo.png" alt="Logo">
-		<h2 class="titulo-principal">Praticidade ao alcance das mãos</h2>
+		<h2 class="titulo-principal">Design e Processos | Gestão e consultorias</h2>
 		<br>
-		<p>Autenticidade & Qualidade.
-		<br>Mochilas & Bolsas | Originais e Customizadas.</p>		
+		<p>Praticidade ao alcance das mãos</p>		
 		<button class="btn-primary" id="ctaButton">Saiba Mais</button>
 	</section>
 	
-    <!-- ===== Cards ===== -->
-    <section class="cards">
-        <div class="card">
-            <img src="imagens/Retalhos.jpg" alt="Imagem 1">
-            <h3>Título 3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card">
-            <img src="imagens/checklistfacil-industria-textil.webp" alt="Imagem 2">
-            <h3>Título 4</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card">
-            <img src="imagens/circular-economy-sustainable-fashion-reuse-repa-2022-01-26-17-32-24-utc-1024x683.jpg" alt="Imagem 3">
-            <h3>Título 5</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </section>
+    <!-- ===== Cards ===== --> 
+<section class="cards">
+    <div class="card" onclick="window.open('https://victormordekai.github.io/RE-TEAR/','_blank')">
+        <img src="imagens/Retalhos.jpg" alt="Imagem 1">
+        <h3>Re-Tear</h3>
+        <p>Projeto de economia circular e reutilização de tecidos técnicos e resíduos têxteis.</p>
+    </div>
+    <div class="card" onclick="window.location.href='portfolio.html'">
+        <img src="imagens/checklistfacil-industria-textil.webp" alt="Imagem 2">
+        <h3>Processo e Forma</h3>
+        <p>Pesquisa de fluxos produtivos e modelagem técnica aplicados à criação autoral.</p>
+    </div>
+    <div class="card" onclick="window.location.href='shop.html'">
+        <img src="imagens/circular-economy-sustainable-fashion-reuse-repa-2022-01-26-17-32-24-utc-1024x683.jpg" alt="Imagem 3">
+        <h3>Design Circular</h3>
+        <p>Desenvolvimento de bolsas e mochilas com propósito — do conceito à execução manual.</p>
+    </div>
+</section>
+
 	
 <!-- ===== Footer ===== -->
     <footer>
@@ -99,16 +99,56 @@
 		</div>
 	</section>
 
-    <section class="cta-section">
-		<h3>Quer saber mais?</h3>
-		<p>Entre em contato pelo WhatsApp</p>
-			<br><a href="https://wa.me/message/LIKDPGYCWU5CF1" target="_blank" class="btn-primary">CONTATO</a>
-	</section>
+<!-- ===== QUEM SOMOS ===== -->
+<section id="quem-somos" class="quem-somos">
+  <div class="quem-somos-bg">
+    <div class="quem-somos-texto">
+      <h2>Quem somos?</h2>
+      <p>VMORDEKAI® atua como um laboratório de design e consultoria técnica, desenvolvendo soluções estratégicas para moda, produto e gestão industrial.</p>
+      <p>Nosso trabalho combina engenharia, arte e propósito — com responsabilidade social e compromisso ambiental.</p>
+	  <p>Nossas marcas conceituais são a VMORDEKAI (mochilas e bolsas) e a RE-TEAR (engajamento ambiental para tratamento de resíduos têxteis).
+	  <p>CNPJ: 26.732.865/0001-36.<br>Sede: Curitiba – PR.</p>
+    </div>
+    <div class="quem-somos-img">
+      <img src="imagens/mochila_ambitus.jpg" alt="Mochila VMORDEKAI Ambitus">
+    </div>
+  </div>
 
-    <!-- ===== Footer ===== -->
-    <footer>
-        <p>Copyright © Victor Ferreira | Curitiba-PR | 2025</p>
-    </footer>
+ <!-- ===== CONTATO ===== -->
+<section class="contato-section">
+  <div class="contato-container">
+    <!-- Formulário -->
+    <form class="contato-form" id="contatoForm">
+      <input type="text" name="nome" placeholder="Nome *" required>
+      <input type="email" name="email" placeholder="Email *" required>
+      <input type="text" name="telefone" placeholder="Telefone">
+      <input type="text" name="assunto" placeholder="Assunto">
+      <textarea name="mensagem" placeholder="Mensagem" rows="5"></textarea>
+      <button type="submit" class="btn-primary">ENVIAR</button>
+    </form>
+
+    <!-- Informações com engajamento -->
+    <div class="contato-info">
+      <h3>Quer saber mais?</h3>
+      <p>
+        Entre em contato pelo WhatsApp ou acompanhe nosso Instagram, onde compartilhamos bastidores, cases e processos de desenvolvimento.
+      </p>
+
+      <div class="links">
+        <a href="https://instagram.com/vmordekai" target="_blank" class="btn-primary">Instagram</a>
+        <a href="https://linkedin.com/in/vmordekai" target="_blank" class="btn-primary">LinkedIn</a>
+        <a href="https://wa.me/message/LIKDPGYCWU5CF1" target="_blank" class="btn-primary">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© VMORDEKAI® | Laboratório de Ideias | Curitiba – PR | 2025</p>
+  <p><a href="mailto:vmordekai@hotmail.com">vmordekai@hotmail.com</a></p>
+</footer>
+
 
     <!-- Ligação com o JavaScript externo -->
     <script src="script.js"></script>

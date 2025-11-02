@@ -241,10 +241,170 @@ img{ max-width:100%; display:block; height:auto; }
 .big-image{ margin:2rem 0; text-align:center; }
 .content-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:1.5rem; padding:2rem 1rem; }
 .content-grid img{ width:100%; border-radius:8px; }
-.cta-section{ background:#000; color:#fff; padding:2.5rem 1rem; text-align:center; margin:2rem 1rem; border-radius:8px; }
+.engajamento{ background:#000; color:#fff; padding:2.5rem 1rem; text-align:center; margin:2rem 1rem; border-radius:8px; }
 @media (max-width:900px){
   .content-grid{ grid-template-columns:1fr; }
 }
+/* ----------------------------- */
+/* SEÇÃO QUEM SOMOS */
+/* ----------------------------- */
+
+.quem-somos {
+  position: relative;
+  background: url("imagens/imagem_madeiras.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 5rem 2rem;
+  margin-bottom: 4rem; /* <-- respiro */
+}
+
+.quem-somos-bg {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quem-somos-texto {
+  flex: 1;
+  background: rgba(20, 15, 22, 0.7); /* Roxo 30% opaco */
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.quem-somos-texto h2 {
+  font-size: 2rem;
+  color: var(--accent-2);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.quem-somos-texto p {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.quem-somos-img {
+  flex: 1;
+  text-align: center;
+}
+
+.quem-somos-img img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
+}
+
+.quem-somos-img img:hover {
+  transform: scale(1.05);
+}
+
+/* -------- Responsividade -------- */
+@media (max-width: 900px) {
+  .quem-somos-bg {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quem-somos-texto {
+    order: 1;
+    text-align: justify;
+  }
+
+  .quem-somos-img {
+    order: 2;
+  }
+
+  .quem-somos-img img {
+    max-width: 90%;
+    margin: 1.5rem auto;
+  }
+}
+/* ----------------------------- */
+/* FIM SEÇÃO QUEM SOMOS */
+/* ----------------------------- */
+
+/* ===== CONTATO ===== */
+.contato-section {
+  background: rgba(20, 15, 22, 0.7); /* Roxo 30% opaco */
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.contato-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contato-form {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.contato-form input::placeholder,
+.contato-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contato-info {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contato-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.contato-info p {
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-primary {
+  background-color: #c44a27;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #a93d20;
+  transform: translateY(-2px);
+}
+
 
 /* ----------------------------- */
 /* Footer */
@@ -254,7 +414,8 @@ footer{
   color:#fff;
   padding:2rem 1rem;
   text-align:center;
-  margin-top:2rem;
+  width: 100vw;       /* ocupa toda a largura da viewport */
+  margin-left: calc(50% - 50vw);
 }
 
 /* ----------------------------- */
@@ -298,6 +459,8 @@ footer{
   .logo-text{ font-size:1rem; }
   .hero h2{ font-size:1.25rem; }
 }
+
+
 
 /* ----------------------------- */
 /* Fim do arquivo style.css */
