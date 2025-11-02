@@ -259,11 +259,12 @@ img{ max-width:100%; display:block; height:auto; }
 
 .quem-somos-bg {
   display: flex;
-  align-items: center;
+  align-items: stretch; /* <-- ADICIONE: faz os elementos internos terem mesma altura */
   justify-content: space-between;
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 4rem;
 }
 
 .quem-somos-texto {
@@ -307,9 +308,13 @@ img{ max-width:100%; display:block; height:auto; }
 /* -------- Responsividade -------- */
 @media (max-width: 900px) {
   .quem-somos-bg {
-    flex-direction: column;
-    text-align: center;
-  }
+  display: flex;
+  align-items: stretch; /* <-- ADICIONE: faz os elementos internos terem mesma altura */
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
   .quem-somos-texto {
     order: 1;
