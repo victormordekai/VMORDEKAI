@@ -32,7 +32,14 @@ html, body {
 }
 
 body{
-  font-family: Arial, sans-serif;
+  font-family:
+    -apple-system, /* macOS e iOS */
+    BlinkMacSystemFont, /* Safari/Chrome em macOS */
+    "Segoe UI", /* Windows */
+    Roboto, /* Android */
+    Oxygen, Ubuntu, Cantarell, /* Linux */
+    "Helvetica Neue", Arial,
+    sans-serif;
   line-height:1.2;
   color:var(--color-text);
   background: #fff;
