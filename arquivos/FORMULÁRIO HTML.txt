@@ -1,0 +1,19 @@
+<!-- ===== CONTATO ===== -->
+<section class="contato-section">
+  <h3>Inscreva-se ou deixe seu comentário</h3>
+<div class="contato-container">
+  <form class="contato-form"
+        id="contatoForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSf7yrRSN75SesK7_rqKs6haP_J4xbWilqVKvuGGPN8MqaEmSQ/formResponse?usp=header"
+        method="POST"
+        target="_blank">
+
+    <input type="text" name="entry.1111111111" placeholder="Nome *" required>
+    <input type="email" name="entry.2222222222" placeholder="Email *" required>
+    <input type="text" name="entry.3333333333" placeholder="Telefone">
+    <input type="text" name="entry.4444444444" placeholder="Assunto">
+    <textarea name="entry.5555555555" placeholder="Mensagem" rows="5"></textarea>
+
+    <button type="submit" class="btn-primary">ENVIAR</button>
+  </form>
+</div>
