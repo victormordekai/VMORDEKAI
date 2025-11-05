@@ -454,6 +454,62 @@ img{ max-width:100%; display:block; height:auto; }
   .card:hover .overlay, .card:active .overlay { opacity:1; }
 }
 
+/* CARROSSEL CYLINDER 
+/* Container principal com perspectiva 
+.cylinder-carousel {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+  overflow: hidden;
+  background: #0b0b0b;
+}
+
+/* Estrutura do cilindro 
+.carousel-3d {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+
+/* Cada item no cilindro 
+.carousel-item {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  left: 25px;
+  top: 25px;
+  background: linear-gradient(135deg, #2b2b2b, #1a1a1a);
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  backface-visibility: hidden;
+}
+
+/* Responsivo 
+@media (max-width: 600px) {
+  .carousel-3d {
+    width: 220px;
+    height: 160px;
+  }
+  .carousel-item {
+    width: 200px;
+    height: 120px;
+    line-height: 120px;
+    font-size: 1rem;
+  }
+}
+/* FIM CARROSSEL CYLINDER */
+
 
 /* ----------------------------- */
 /* SEÇÃO QUEM SOMOS */
