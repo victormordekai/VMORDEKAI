@@ -194,6 +194,128 @@ img{ max-width:100%; display:block; height:auto; }
   to{ transform: translateY(0); opacity:1; }
 }
 
+/* ===== CARROSSEL DE PRODUTOS ===== */
+.product-carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Container geral das imagens */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 45vh; /* altura tipo “faixa” */
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Cada slide */
+.carousel-slide {
+  flex: 0 0 100%;
+  display: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.carousel-slide.active {
+  display: block;
+  opacity: 1;
+  position: relative;
+}
+
+/* Imagem de fundo */
+.carousel-slide img {
+  width: 100%;
+  height: 45vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Texto sobreposto */
+.carousel-text {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  color: #fff;
+  text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  max-width: 80%;
+}
+
+/* Controles (setas) */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+.carousel-controls button {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  transition: background 0.3s;
+}
+
+.carousel-controls button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* ===== RESPONSIVIDADE CARROSSEL ===== */
+@media (max-width: 1024px) {
+  .carousel-slide img {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide img {
+    height: 35vh;
+  }
+  .carousel-text {
+    bottom: 15px;
+    left: 20px;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem;
+  }
+  .carousel-controls button {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide img {
+    height: 30vh;
+  }
+  .carousel-text {
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+/* FIM CARROSSEL */
+
 /* Hero Section */
 .hero {
     background: #f2f2f2;

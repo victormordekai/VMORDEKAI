@@ -37,6 +37,57 @@
     </nav>
 </header>
 
+<!-- ===== Carrossel de Produtos em Destaque ===== -->
+
+<section class="product-carousel">
+  <div class="carousel-container">
+    <div class="carousel-slide active">
+      <img src="imagens/produto1.jpg" alt="Bolsa Urbana 02">
+      <div class="carousel-text">
+        <h3>BOLSA URBANA 02</h3>
+        <p>Lona técnica reciclada e cadarços de algodão. Feita à mão.</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <img src="imagens/produto2.jpg" alt="Mochila Térrea 05">
+      <div class="carousel-text">
+        <h3>MOCHILA TÉRREA 05</h3>
+        <p>Design utilitário inspirado na natureza e na função.</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <img src="imagens/produto3.jpg" alt="Bolsa Modular 01">
+      <div class="carousel-text">
+        <h3>BOLSA MODULAR 01</h3>
+        <p>Peça experimental de edição limitada — forma e função em diálogo.</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <img src="imagens/produto4.jpg" alt="Mochila Studio 03">
+      <div class="carousel-text">
+        <h3>MOCHILA STUDIO 03</h3>
+        <p>Minimalismo e função — mochila híbrida urbana e outdoor.</p>
+      </div>
+    </div>
+
+    <div class="carousel-slide">
+      <img src="imagens/produto5.jpg" alt="Bolsa Transit 01">
+      <div class="carousel-text">
+        <h3>BOLSA TRANSIT 01</h3>
+        <p>Inspirada em design industrial — feita à mão com lona encerada.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button class="prev">‹</button>
+    <button class="next">›</button>
+  </div>
+</section>
+	<!-- ===== FIM CARROSSEL ===== -->
 
     <!-- ===== Hero Section ===== -->
 	<section class="hero">
@@ -178,5 +229,44 @@
 
     <!-- Ligação com o JavaScript externo -->
     <script src="script.js"></script>
+
+<!-- CARROSSEL CSS -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  });
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }, 5000);
+
+  showSlide(currentSlide);
+});
+</script>
+
+</body>
+</html>
+	
+	
 </body>
 </html>
