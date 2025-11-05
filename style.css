@@ -194,6 +194,25 @@ img{ max-width:100%; display:block; height:auto; }
   to{ transform: translateY(0); opacity:1; }
 }
 
+/* Hero Section */
+.hero {
+    background: #f2f2f2;
+    padding: 3rem 1.5rem;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.hero p { max-width: 600px; margin: 0 auto 2rem; }
+.btn-primary { padding: 0.8rem 1.5rem; background: rgb(104, 125, 125); color: #fff; border: none; cursor: pointer; }
+.btn-primary:hover { background: rgb(45, 52, 104); /* Roxo */ }
+.hero img {
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: 60%;
+    max-width: 500px;
+    height: auto;
+}
 /* ===== CARROSSEL DE PRODUTOS ===== */
 .product-carousel {
   position: relative;
@@ -315,26 +334,6 @@ img{ max-width:100%; display:block; height:auto; }
 }
 
 /* FIM CARROSSEL */
-
-/* Hero Section */
-.hero {
-    background: #f2f2f2;
-    padding: 3rem 1.5rem;
-    text-align: center;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-.hero p { max-width: 600px; margin: 0 auto 2rem; }
-.btn-primary { padding: 0.8rem 1.5rem; background: rgb(104, 125, 125); color: #fff; border: none; cursor: pointer; }
-.btn-primary:hover { background: rgb(45, 52, 104); /* Roxo */ }
-.hero img {
-    display: block;
-    margin: 0 auto 1.5rem;
-    width: 60%;
-    max-width: 500px;
-    height: auto;
-}
 
 /* ===== Cards Section ===== */
 .cards {
