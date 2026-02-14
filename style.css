@@ -86,6 +86,7 @@ img{ max-width:100%; display:block; height:auto; }
   height:auto;
   display:block;
 }
+
 .logo-text{
   display:flex;
   gap:0.15rem;
@@ -97,6 +98,10 @@ img{ max-width:100%; display:block; height:auto; }
   user-select:none;
 }
 .logo-text .VMORDEKAI{ color: var(--accent-2); } /* VERMELHO */
+
+
+
+/* FIM LOGO */
 
 /* Navegação desktop (visível por padrão) */
 #nav-menu{

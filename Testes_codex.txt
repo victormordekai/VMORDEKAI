@@ -1,0 +1,36 @@
+Dado o código do Logo:
+<<
+/* Logo */
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+}
+.logo-container img{
+  width:45px;
+  height:auto;
+  display:block;
+}
+
+.logo-text{
+  display:flex;
+  gap:0.15rem;
+  align-items:center;
+  font-size:1.1rem;
+  line-height:1;
+  font-weight:700;
+  color:var(--color-2);
+  user-select:none;
+}
+.logo-text .VMORDEKAI{ color: var(--accent-2); } /* VERMELHO */
+
+
+
+/* FIM LOGO */
+>>
+
+Comofazer para ao passar o mouse sobre ele ele também apresentar um ajuste no formato, semelhante como acontece nos cards:
+
+.hover {
+    transform: scale(1.08);
+}
