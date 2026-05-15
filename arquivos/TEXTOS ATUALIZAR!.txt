@@ -1,0 +1,164 @@
+TEXTO 1
+<div class="reveal text-block">
+
+        <span class="tag-section">
+            VMORDEKAI® LAB / CONSULTORIA E DESENVOLVIMENTO
+        </span>
+
+        <h3>PORTFÓLIO VMORDEKAI®</h3>
+
+        <p class="destaque">
+            <strong>Estratégia</strong>, 
+            <mark class="mark-red">design</mark> e 
+            <u>gestão aplicada</u> à moda.
+        </p>
+
+        <p>
+            Os projetos desenvolvidos pela <strong>VMORDEKAI®</strong> nascem da integração entre
+            pesquisa, <mark class="mark-blue">viabilidade técnica</mark> e identidade visual.
+        </p>
+
+        <p>
+            Utilizamos metodologias de <strong>Design Thinking</strong> para <mark class="mark-red">mapear necessidades reais</mark>,
+            identificar gargalos produtivos e estruturar soluções com foco em
+            <u>eficiência</u>, posicionamento e escalabilidade.
+        </p>
+
+        <p>
+            Os projetos são organizados em ciclos objetivos de desenvolvimento,
+            utilizando metodologias ágeis, acompanhamento técnico e
+            <mark class="mark-red">indicadores de performance</mark>.
+        </p>
+
+        <p>
+            Trabalhamos com <strong>OKRs</strong> e métricas operacionais para garantir
+            clareza estratégica, previsibilidade de execução e evolução contínua das entregas.
+        </p>
+
+        <p>
+            Em assessorias contínuas, o modelo de atuação é
+            <mark class="mark-blue">flexível e adaptável</mark> à evolução do negócio,
+            permitindo expansão gradual da operação conforme demanda,
+            capacidade produtiva e metas estabelecidas.
+        </p>
+
+    </div>
+
+TEXTO 2
+ <div class="reveal text-block">
+
+    <span class="tag-section">
+        ÁREAS DE ATUAÇÃO
+    </span>
+
+   <h3>DESIGN, OPERAÇÃO E DESENVOLVIMENTO</h3>
+
+<p class="destaque">
+    Estruturas criativas precisam funcionar no mundo real.
+    Enquanto sua empresa mantém o <mark class="mark-red">foco no crescimento e nas vendas</mark>.
+</p>
+
+<p>
+    A VMORDEKAI® atua no desenvolvimento de produtos,
+    organização produtiva e construção de identidade operacional
+    para marcas e empresas do setor têxtil.
+</p>
+
+<p>
+    Desenvolvemos projetos voltados para
+    <strong>private label</strong>,
+    <strong>design de produto</strong>,
+    <strong>estruturação técnica</strong>,
+    <strong>fluxos produtivos</strong>
+    e <strong>reposicionamento estratégico</strong>,
+    sempre alinhados aos
+    <mark class="mark-blue">objetivos estratégicos</mark>
+    de cada cliente.
+</p>
+
+<p>
+    Integramos
+    <mark class="mark-red">gestão e tecnologia</mark>
+    para estruturar operações mais eficientes,
+    organizadas e escaláveis.
+</p>
+
+<p>
+    Aplicamos modelagem operacional,
+    indicadores de desempenho
+    e sistemas de acompanhamento produtivo
+    para ampliar controle,
+    previsibilidade
+    e competitividade.
+</p>
+
+<p>
+    Cada solução é construída considerando
+    <mark class="mark-blue">
+        viabilidade prática,
+        capacidade real de execução
+        e crescimento sustentável.
+    </mark>
+</p>
+
+</div>
+
+
+
+TEXTO 3 
+
+<section id="quem-somos" class="quem-somos">
+
+  <div class="quem-somos-bg">
+
+    <div class="quem-somos-texto">
+
+      <h2>QUEM SOMOS</h2>
+
+      <p>
+        A VMORDEKAI® surgiu da integração entre design,
+        operação industrial e desenvolvimento técnico aplicado à moda.
+      </p>
+
+      <p>
+        Atuamos como um laboratório independente de criação,
+        pesquisa e estruturação estratégica,
+        conectando produto,
+        identidade visual,
+        engenharia produtiva
+        e inteligência operacional.
+      </p>
+        <p>
+            Como parte do nosso processo de pesquisa e desenvolvimento,
+            a VMORDEKAI® também atua como marca autoral de mochilas e bolsas conceituais,
+            explorando funcionalidade,
+            estética outdoor aplicada ao uso cotidiano. Conheça nosso catálogo 
+			<a href="shop.html" target="_blank" rel="noopener noreferrer">[AQUI]</a>!
+        </p>
+      <p>
+        Nossa atuação combina experiência prática em indústria têxtil,
+        desenvolvimento autoral
+        e implementação de sistemas voltados para produtividade,
+        organização e escalabilidade.
+      </p>
+
+      <p>
+         A VMORDEKAI® integra o ecossistema
+		<a href="https://victormordekai.github.io/RE-TEAR/" target="_blank" rel="noopener noreferrer">RETEAR®</a>,
+		projeto tecnológico de frameworks voltados para rastreabilidades,
+		reorganização produtiva, automação operacional
+		e gestão escalável aplicada ao setor têxtil e industrial.
+      <p>
+        Curitiba — PR • Brasil
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+</div>
+    <div class="quem-somos-img">
+      <img src="imagens/mochila_ambitus.jpg" alt="Mochila VMORDEKAI Ambitus">
+    </div>
+  </div>
