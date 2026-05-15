@@ -743,7 +743,108 @@ footer {
   .hero h2{ font-size:1.25rem; }
 }
 
+/* =========================================================
+   VMORDEKAI® — BLOCO EDITORIAL / PORTFÓLIO
+========================================================= */
 
+.text-block{
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.text-block h3{
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    color: var(--accent-2);
+    letter-spacing: 0.03em;
+}
+
+.text-block p{
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(20,15,22,0.88);
+    margin-bottom: 1.4rem;
+}
+
+.destaque{
+    font-size: 1.15rem !important;
+    color: var(--accent-1) !important;
+    font-weight: 600;
+}
+
+/* TAG SUPERIOR */
+
+.tag-section{
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.35rem 0.7rem;
+    border-left: 3px solid var(--accent-2);
+    background: rgba(255,255,255,0.04);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-3);
+}
+
+/* MARCADORES */
+
+.mark-red{
+    background: rgba(198,72,50,0.18);
+    color: #fff;
+    padding: 0.08rem 0.3rem;
+}
+
+.mark-blue{
+    background: rgba(131,180,187,0.18);
+    color: #fff;
+    padding: 0.08rem 0.3rem;
+}
+
+/* SUBLINHADO */
+
+.text-block u{
+    color: var(--accent-1) !important;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-2);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    font-weight: 500;
+}
+
+.text-block mark{
+    color: var(--accent-1) !important;
+}
+
+/* NEGRITOS */
+
+.text-block u{
+    color: var(--accent-1);
+    text-decoration-color: var(--accent-2);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    text-decoration-line: underline;
+}
+
+/* RESPONSIVIDADE */
+
+@media(max-width:768px){
+
+    .text-block{
+        padding: 1rem;
+    }
+
+    .text-block h3{
+        font-size: 1.5rem;
+    }
+
+    .text-block p{
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+}
 
 /* ----------------------------- */
 /* Fim do arquivo style.css */
