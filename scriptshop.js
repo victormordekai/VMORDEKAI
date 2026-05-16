@@ -130,3 +130,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // Nice initial animation: fade in world
   gsap.fromTo(world, {opacity:0, y:20}, {opacity:1, y:0, duration:0.9, ease:'power2.out'});
 });
+
+/* =========================================================
+   FEATURED FINAL — CARROSSEL OSCILANTE
+========================================================= */
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const featuredSlides =
+  document.querySelectorAll('.featured-slide');
+
+  let featuredIndex = 0;
+
+  if(featuredSlides.length > 1){
+
+    setInterval(() => {
+
+      featuredSlides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+
+      featuredIndex =
+      (featuredIndex + 1) % featuredSlides.length;
+
+      featuredSlides[featuredIndex]
+      .classList.add('active');
+
+    }, 4200);
+
+  }
+
+});
