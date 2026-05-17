@@ -1,81 +1,872 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VMORDEKAI® | Lab Consultoria</title>
-    <link rel="stylesheet" href="style.css">
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    VMORDEKAI® | Estrutura • Estratégia • Produto
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="stylelab.css"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="imagens/logo-corpo.png"
+  >
+
 </head>
+
 <body>
 
-    <!-- ===== HEADER ===== -->
-    <header>
-        <div class="logo">
-            <a href="index.html">
-                <img src="imagens/logo.png" alt="VMORDEKAI Logo">
-                <h1>VMORDEKAI®</h1>
-            </a>
-            <span>Laboratório de Ideias</span>
+<!-- ===================================== -->
+<!-- HEADER -->
+<!-- ===================================== -->
+
+<header class="header">
+
+  <a
+    href="index.html"
+    class="logo-container"
+  >
+
+    <img
+      src="imagens/logo-corpo.png"
+      alt="Logo VMORDEKAI®"
+    >
+
+    <span class="logo-text">
+      <span class="VMORDEKAI">
+        VMORDEKAI®
+      </span>
+    </span>
+
+  </a>
+
+  <button
+    class="menu-toggle"
+    id="menu-toggle"
+  >
+    ☰
+  </button>
+
+  <nav id="nav-menu">
+
+    <ul>
+
+      <li>
+        <a href="#home">HOME</a>
+      </li>
+
+      <li>
+        <a href="#sobre">SOBRE</a>
+      </li>
+
+      <li>
+        <a href="#retear">RETEAR</a>
+      </li>
+
+      <li>
+        <a href="#portfolio">PORTFOLIO</a>
+      </li>
+
+      <li>
+        <a href="#private-label">
+          PRIVATE LABEL
+        </a>
+      </li>
+
+      <li>
+        <a href="#consultoria">
+          CONSULTORIA
+        </a>
+      </li>
+
+      <li>
+        <a href="shop.html">
+          PRODUTOS
+        </a>
+      </li>
+
+      <li>
+        <a href="#contato">
+          CONTATO
+        </a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+</header>
+
+<!-- ===================================== -->
+<!-- HERO -->
+<!-- ===================================== -->
+
+<section
+  id="home"
+  class="portfolio-briefing"
+>
+
+  <div class="portfolio-left reveal left">
+
+    <span class="portfolio-tag">
+      VMORDEKAI® BUSINESS STRUCTURE
+    </span>
+
+    <h2>
+      Estrutura operacional,
+      posicionamento estratégico
+      e desenvolvimento visual
+      integrados.
+    </h2>
+
+    <p>
+      A VMORDEKAI® atua no desenvolvimento
+      de operações criativas e industriais
+      voltadas para escalabilidade,
+      organização sistêmica e fortalecimento
+      institucional.
+    </p>
+
+    <p>
+      A metodologia combina branding,
+      estrutura produtiva, gestão operacional
+      e inteligência visual dentro de uma
+      mesma lógica de implantação.
+    </p>
+
+    <p>
+      O objetivo é transformar negócios em
+      sistemas mais consistentes,
+      organizados e preparados para
+      crescimento sustentável.
+    </p>
+
+    <div class="portfolio-actions">
+
+      <a
+        href="arquivos/Portfolio_VMORDEKAI_Briefing_e_produtos_B2B_2025.pdf"
+        target="_blank"
+        class="portfolio-button"
+      >
+        Abrir Portfólio PDF
+      </a>
+
+      <a
+        href="https://victormordekai.github.io/RE-TEAR/"
+        target="_blank"
+        class="portfolio-link"
+      >
+        Conheça o RETEAR →
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- CAROUSEL -->
+
+  <div class="portfolio-right reveal right">
+
+    <div class="product-carousel">
+
+      <div class="carousel-container">
+
+        <!-- 1 -->
+
+        <div class="carousel-slide active">
+
+          <img
+            src="imagens/branding_e_producao_01.png"
+            alt=""
+          >
+
+          <div class="carousel-overlay">
+
+            <span>
+              VMORDEKAI® Handmade Systems
+            </span>
+
+            <h3>
+              Produto, percepção e narrativa.
+            </h3>
+
+          </div>
+
         </div>
-        <nav>
-            <ul>
-                <li><a href="shop.html">Produtos</a></li>
-                <li><a class="ativo" href="lab.html">Lab Consultoria</a></li>
-                <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="index.html#quem-somos">Quem Somos</a></li>
-                <li><a href="https://retear.com.br" target="_blank">RE-TEAR Projeto</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- ===== HERO ===== -->
-    <section class="hero">
-        <h2>Lab Consultoria</h2>
-        <p>Inovação e gestão para confecções e negócios de moda que buscam eficiência e identidade.</p>
-    </section>
+        <!-- 2 -->
 
-    <!-- ===== SOBRE O LAB ===== -->
-    <section class="conteudo">
-        <h3>Gestão Estratégica e Desenvolvimento Técnico</h3>
-        <p>O VMORDEKAI® Lab atua na interseção entre design, engenharia e gestão industrial. Nosso foco é transformar processos produtivos em sistemas inteligentes, integrando pessoas, tecnologia e propósito.</p>
+        <div class="carousel-slide">
 
-        <h3>Áreas de Atuação</h3>
-        <ul>
-            <li>• Estruturação de fluxos produtivos e modelagem técnica;</li>
-            <li>• Implementação de ERP e integração de dados;</li>
-            <li>• Controle de produtividade e indicadores de desempenho (KPIs);</li>
-            <li>• Desenvolvimento de produtos, coleções e Private Label;</li>
-            <li>• Consultoria em design circular e gestão sustentável.</li>
-        </ul>
+          <img
+            src="imagens/branding_e_producao_04.png"
+            alt=""
+          >
 
-        <h3>Metodologia</h3>
-        <p>Nosso processo combina diagnóstico técnico, imersão prática e acompanhamento operacional. Cada consultoria é construída sob medida, com entregas mensuráveis e indicadores de evolução (OKRs e KPIs).</p>
+          <div class="carousel-overlay">
 
-        <h3>Resultados Esperados</h3>
-        <p>• Redução de desperdícios e aumento de produtividade.<br>
-           • Padronização de processos e rastreabilidade de produção.<br>
-           • Integração entre design, planejamento e execução.<br>
-           • Expansão de marca e reposicionamento estratégico.</p>
+            <span>
+              VMORDEKAI® Industrial Vision
+            </span>
 
-        <a href="mailto:contato@vmordekai.com.br" class="botao">Agendar diagnóstico →</a>
-    </section>
+            <h3>
+              Organização aplicada à escala.
+            </h3>
 
-    <!-- ===== CONTATO ===== -->
-    <section class="contato">
-        <h2>Contato</h2>
-        <p>Curitiba – PR, Brasil</p>
-        <p><a href="mailto:contato@vmordekai.com.br">contato@vmordekai.com.br</a></p>
-        <div class="links">
-            <a href="https://instagram.com/vmordekai" target="_blank">Instagram</a>
-            <a href="https://linkedin.com/in/vmordekai" target="_blank">LinkedIn</a>
-            <a href="https://wa.me/5541999999999" target="_blank">WhatsApp</a>
+          </div>
+
         </div>
-    </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© VMORDEKAI® | Laboratório de Ideias | Curitiba – PR | 2025</p>
-    </footer>
+        <!-- 3 -->
+
+        <div class="carousel-slide">
+
+          <img
+            src="imagens/branding_e_producao_06.PNG"
+            alt=""
+          >
+
+          <div class="carousel-overlay">
+
+            <span>
+              VMORDEKAI® Strategic Flow
+            </span>
+
+            <h3>
+              Governança operacional integrada.
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- SOBRE -->
+<!-- ===================================== -->
+
+<section
+  id="sobre"
+  class="vm-editorial"
+>
+
+  <div class="vm-editorial-container">
+
+    <div class="vm-editorial-text reveal left">
+
+      <span class="vm-mini-tag">
+        VMORDEKAI® DESIGN & OPERATIONS
+      </span>
+
+      <h2>
+        Operação também comunica.
+      </h2>
+
+      <p>
+        Processos desalinhados geram ruído,
+        desperdício e perda de percepção
+        de valor dentro do mercado.
+      </p>
+
+      <p>
+        A VMORDEKAI® desenvolve estruturas
+        capazes de conectar branding,
+        produto, comunicação e operação
+        produtiva em um mesmo ecossistema.
+      </p>
+
+      <p>
+        O foco não está apenas na estética,
+        mas na construção de negócios
+        coerentes, organizados e preparados
+        para expansão.
+      </p>
+
+    </div>
+
+    <div class="vm-editorial-visual reveal right">
+
+      <div class="vm-featured-wrapper">
+
+        <div class="vm-featured-slide active">
+          <img src="imagens/produto1.jpg" alt="">
+        </div>
+
+        <div class="vm-featured-slide">
+          <img src="imagens/produto2.jpg" alt="">
+        </div>
+
+        <div class="vm-featured-slide">
+          <img src="imagens/produto3.jpg" alt="">
+        </div>
+
+        <div class="vm-featured-overlay">
+
+          <span>
+            VMORDEKAI® Operational Intelligence
+          </span>
+
+          <h3>
+            branding • estrutura • produto
+          </h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- RETEAR -->
+<!-- ===================================== -->
+
+<section
+  id="retear"
+  class="vm-section-light"
+>
+
+  <div class="vm-section-container">
+
+    <div class="vm-section-text reveal left">
+
+      <span class="portfolio-tag">
+        RETEAR® ECOSYSTEM
+      </span>
+
+      <h2>
+        Inteligência estrutural
+        aplicada ao setor têxtil.
+      </h2>
+
+      <p>
+        O RETEAR® funciona como um
+        ecossistema modular voltado para
+        rastreabilidade, reorganização
+        produtiva e padronização operacional.
+      </p>
+
+      <p>
+        Os frameworks foram desenvolvidos
+        para auxiliar empresas na redução
+        de ruídos internos, melhoria de fluxo
+        produtivo e integração entre setores.
+      </p>
+
+      <p>
+        A proposta combina tecnologia,
+        metodologia e visão sistêmica para
+        criação de operações mais previsíveis,
+        organizadas e escaláveis.
+      </p>
+
+      <div class="portfolio-actions">
+
+        <a
+          href="https://victormordekai.github.io/RE-TEAR/"
+          target="_blank"
+          class="portfolio-button"
+        >
+          Explorar RETEAR®
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="vm-section-image reveal right">
+
+      <img
+        src="imagens/branding_e_producao_02.png"
+        alt=""
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- PORTFOLIO -->
+<!-- ===================================== -->
+
+<section
+  id="portfolio"
+  class="vm-section-dark"
+>
+
+  <div class="vm-section-container reverse">
+
+    <div class="vm-section-image reveal left">
+
+      <img
+        src="imagens/branding_e_producao_03.png"
+        alt=""
+      >
+
+    </div>
+
+    <div class="vm-section-text reveal right">
+
+      <span class="vm-mini-tag">
+        VMORDEKAI® PORTFOLIO
+      </span>
+
+      <h2>
+        Projetos desenvolvidos
+        com foco em estrutura.
+      </h2>
+
+      <p>
+        O portfólio institucional reúne
+        aplicações relacionadas a branding,
+        organização produtiva,
+        desenvolvimento visual e
+        implantação estratégica.
+      </p>
+
+      <p>
+        Cada projeto considera contexto
+        operacional, identidade de marca,
+        percepção de mercado e viabilidade
+        de crescimento.
+      </p>
+
+      <div class="portfolio-actions">
+
+        <a
+          href="arquivos/Portfolio_VMORDEKAI_Briefing_e_produtos_B2B_2025.pdf"
+          target="_blank"
+          class="portfolio-button"
+        >
+          Abrir Portfolio PDF
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- PRIVATE LABEL -->
+<!-- ===================================== -->
+
+<section
+  id="private-label"
+  class="vm-section-light"
+>
+
+  <div class="vm-section-container">
+
+    <div class="vm-section-text reveal left">
+
+      <span class="portfolio-tag">
+        PRIVATE LABEL SYSTEM
+      </span>
+
+      <h2>
+        Desenvolvimento estratégico
+        para marcas e coleções.
+      </h2>
+
+      <p>
+        Estruturação de produtos,
+        direcionamento visual,
+        desenvolvimento técnico
+        e alinhamento produtivo.
+      </p>
+
+      <p>
+        O modelo Private Label foi pensado
+        para empresas que desejam lançar,
+        reposicionar ou profissionalizar
+        operações de moda com maior
+        consistência estrutural.
+      </p>
+
+      <p>
+        A atuação pode envolver criação,
+        organização operacional,
+        branding, implantação de fluxo
+        produtivo e suporte estratégico.
+      </p>
+
+    </div>
+
+    <div class="vm-section-image reveal right">
+
+      <img
+        src="imagens/branding_e_producao_05.png"
+        alt=""
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- CONSULTORIA -->
+<!-- ===================================== -->
+
+<section
+  id="consultoria"
+  class="vm-cta"
+>
+
+  <div class="vm-cta-container">
+
+    <div class="vm-cta-text reveal left">
+
+      <span class="portfolio-tag">
+        VMORDEKAI® CONSULTING SYSTEM
+      </span>
+
+      <h3>
+        Consultoria estratégica,
+        operacional e industrial.
+      </h3>
+
+      <p>
+        Implantação de processos,
+        organização produtiva,
+        desenvolvimento estrutural,
+        branding técnico e
+        direcionamento empresarial.
+      </p>
+
+    </div>
+
+    <div class="vm-cta-buttons reveal right">
+
+      <a
+        href="arquivos/Portfolio_VMORDEKAI_Briefing_e_produtos_B2B_2025.pdf"
+        target="_blank"
+        class="vm-btn"
+      >
+        Abrir PDF
+      </a>
+
+      <a
+        href="shop.html"
+        class="vm-btn vm-btn-outline"
+      >
+        Produtos
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- CONTATO -->
+<!-- ===================================== -->
+
+<section
+  id="contato"
+  class="contato-section"
+>
+
+  <h3>
+    Inscreva-se ou deixe seu comentário
+  </h3>
+
+  <div class="contato-container">
+
+    <!-- FORM -->
+
+    <form
+      class="contato-form"
+      action="https://formspree.io/f/xeedjleg"
+      method="POST"
+    >
+
+      <input
+        type="text"
+        name="nome"
+        placeholder="Nome *"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Email *"
+        required
+      >
+
+      <input
+        type="text"
+        name="telefone"
+        placeholder="Telefone"
+      >
+
+      <input
+        type="text"
+        name="assunto"
+        placeholder="Assunto"
+      >
+
+      <textarea
+        name="mensagem"
+        placeholder="Mensagem"
+        rows="5"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="btn-primary"
+      >
+        ENVIAR
+      </button>
+
+    </form>
+
+    <!-- INFO -->
+
+    <div class="contato-info">
+
+      <h3>
+        QUER SABER MAIS?
+      </h3>
+
+      <p>
+        Entre em contato pelo WhatsApp
+        ou acompanhe os canais
+        institucionais da VMORDEKAI®.
+      </p>
+
+      <div class="links">
+
+        <a
+          href="https://wa.me/message/LIKDPGYCWU5CF1"
+          target="_blank"
+          class="btn-primary"
+        >
+          WhatsApp
+        </a>
+
+        <a
+          href="https://instagram.com/vmordekai"
+          target="_blank"
+          class="btn-primary"
+        >
+          Instagram
+        </a>
+
+        <a
+          href="https://www.facebook.com/vmordekai/"
+          target="_blank"
+          class="btn-primary"
+        >
+          Facebook
+        </a>
+
+      </div>
+
+      <p>
+        Parcerias B2B, desenvolvimento
+        institucional e contato comercial.
+      </p>
+
+      <div class="links">
+
+        <a
+          href="https://www.linkedin.com/in/victormordekai/"
+          target="_blank"
+          class="btn-primary"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="mailto:vmordekai@hotmail.com"
+          target="_blank"
+          class="btn-primary"
+        >
+          E-mail
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================== -->
+<!-- FOOTER -->
+<!-- ===================================== -->
+
+<footer class="vm-footer">
+
+  <p>
+    © VMORDEKAI® | Laboratório de Ideias |
+    Curitiba – PR | 2026
+  </p>
+
+</footer>
+
+<!-- ===================================== -->
+<!-- MENU MOBILE -->
+<!-- ===================================== -->
+
+<script>
+
+const menuToggle =
+document.getElementById('menu-toggle');
+
+const navMenu =
+document.getElementById('nav-menu');
+
+menuToggle.addEventListener('click', () => {
+
+  navMenu.classList.toggle('active');
+
+});
+
+</script>
+
+<!-- ===================================== -->
+<!-- REVEAL -->
+<!-- ===================================== -->
+
+<script>
+
+const reveals =
+document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+
+  reveals.forEach((element) => {
+
+    const windowHeight =
+    window.innerHeight;
+
+    const revealTop =
+    element.getBoundingClientRect().top;
+
+    const revealPoint = 120;
+
+    if(revealTop < windowHeight - revealPoint){
+
+      element.classList.add('active');
+
+    }
+
+  });
+
+}
+
+window.addEventListener(
+'scroll',
+revealOnScroll
+);
+
+revealOnScroll();
+
+</script>
+
+<!-- ===================================== -->
+<!-- HERO CAROUSEL -->
+<!-- ===================================== -->
+
+<script>
+
+const heroSlides =
+document.querySelectorAll(
+'.carousel-slide'
+);
+
+let heroIndex = 0;
+
+function rotateHero(){
+
+  heroSlides[heroIndex]
+  .classList.remove('active');
+
+  heroIndex++;
+
+  if(heroIndex >= heroSlides.length){
+
+    heroIndex = 0;
+
+  }
+
+  heroSlides[heroIndex]
+  .classList.add('active');
+
+}
+
+setInterval(rotateHero, 4500);
+
+</script>
+
+<!-- ===================================== -->
+<!-- FEATURED CAROUSEL -->
+<!-- ===================================== -->
+
+<script>
+
+const vmSlides =
+document.querySelectorAll(
+'.vm-featured-slide'
+);
+
+let vmIndex = 0;
+
+function rotateVM(){
+
+  vmSlides[vmIndex]
+  .classList.remove('active');
+
+  vmIndex++;
+
+  if(vmIndex >= vmSlides.length){
+
+    vmIndex = 0;
+
+  }
+
+  vmSlides[vmIndex]
+  .classList.add('active');
+
+}
+
+setInterval(rotateVM, 5000);
+
+</script>
 
 </body>
 </html>

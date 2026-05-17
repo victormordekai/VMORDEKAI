@@ -1,0 +1,170 @@
+/* =========================================
+   SEÇÕES MODULARES
+========================================= */
+
+.vm-section-light{
+
+  width:100%;
+
+  padding:8rem 8%;
+
+  background:
+  rgb(245,245,242);
+
+}
+
+.vm-section-dark{
+
+  width:100%;
+
+  padding:8rem 8%;
+
+  background:
+  rgb(20,15,22);
+
+}
+
+.vm-section-container{
+
+  max-width:1400px;
+
+  margin:0 auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:5rem;
+
+}
+
+.vm-section-container.reverse{
+
+  flex-direction:row-reverse;
+
+}
+
+.vm-section-text{
+
+  flex:1;
+
+}
+
+.vm-section-dark .vm-section-text{
+
+  color:#fff;
+
+}
+
+.vm-section-text h2{
+
+  font-size:3rem;
+
+  line-height:1.1;
+
+  margin-bottom:2rem;
+
+  font-weight:300;
+
+}
+
+.vm-section-text p{
+
+  line-height:1.9;
+
+  margin-bottom:1.4rem;
+
+}
+
+.vm-section-dark .vm-section-text p{
+
+  color:
+  rgba(255,255,255,.78);
+
+}
+
+.vm-section-light .vm-section-text p{
+
+  color:
+  rgba(20,15,22,.75);
+
+}
+
+.vm-section-image{
+
+  flex:1;
+
+}
+
+.vm-section-image img{
+
+  width:100%;
+
+  height:720px;
+
+  object-fit:cover;
+
+  border-radius:24px;
+
+  display:block;
+
+}
+
+/* =========================================
+   RESPONSIVO EXTRA
+========================================= */
+
+@media(max-width:980px){
+
+  .vm-section-container,
+  .vm-section-container.reverse{
+
+    flex-direction:column;
+
+  }
+
+  .vm-section-text,
+  .vm-section-image{
+
+    width:100%;
+
+  }
+
+  .vm-section-text h2{
+
+    font-size:2.3rem;
+
+  }
+
+  .vm-section-image img{
+
+    height:520px;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .vm-section-light,
+  .vm-section-dark{
+
+    padding:5rem 7%;
+
+  }
+
+  .vm-section-text h2{
+
+    font-size:2rem;
+
+  }
+
+  .vm-section-image img{
+
+    height:420px;
+
+  }
+
+}
