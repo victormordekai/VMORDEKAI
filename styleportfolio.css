@@ -337,7 +337,9 @@ body{
 
   width:100%;
 
-  height:720px;
+  min-height:720px;
+
+  height:72vh;
 
   overflow:hidden;
 
@@ -355,6 +357,9 @@ body{
   position:relative;
 
   width:100%;
+
+  min-height:inherit;
+
   height:100%;
 
 }
@@ -772,6 +777,15 @@ body{
 
   }
 
+  .portfolio-left,
+  .portfolio-right,
+  .vm-editorial-text,
+  .vm-editorial-visual{
+
+    width:100%;
+
+  }
+
   .portfolio-left h2{
 
     font-size:2.6rem;
@@ -781,7 +795,11 @@ body{
   .product-carousel,
   .vm-featured-wrapper{
 
-    height:520px;
+    width:100%;
+
+    height:65vh;
+
+    min-height:420px;
 
   }
 
@@ -809,5 +827,28 @@ body{
     padding:5rem 7%;
 
   }
+
+}
+.carousel-slide,
+.vm-featured-slide{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+}
+
+.carousel-slide img,
+.vm-featured-slide img{
+
+  display:block;
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
 
 }
