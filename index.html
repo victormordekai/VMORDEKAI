@@ -414,15 +414,54 @@
 <section class="contato-section">
   <h3> Inscreva-se ou deixe seu comentário </h3>
   <div class="contato-container">
-    <!-- Formulário -->
-    <form class="contato-form" id="contatoForm">
-      <input type="text" name="nome" placeholder="Nome *" required>
-      <input type="email" name="email" placeholder="Email *" required>
-      <input type="text" name="telefone" placeholder="Telefone">
-      <input type="text" name="assunto" placeholder="Assunto">
-      <textarea name="mensagem" placeholder="Mensagem" rows="5"></textarea>
-      <button type="submit" class="btn-primary">ENVIAR</button>
-    </form>
+<!-- FORMULÁRIO -->
+
+<form
+  class="contato-form"
+  action="https://formspree.io/f/xeedjleg"
+  method="POST"
+>
+
+  <input
+    type="text"
+    name="nome"
+    placeholder="Nome *"
+    required
+  >
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Email *"
+    required
+  >
+
+  <input
+    type="text"
+    name="telefone"
+    placeholder="Telefone"
+  >
+
+  <input
+    type="text"
+    name="assunto"
+    placeholder="Assunto"
+  >
+
+  <textarea
+    name="mensagem"
+    placeholder="Mensagem"
+    rows="5"
+  ></textarea>
+
+  <button
+    type="submit"
+    class="btn-primary"
+  >
+    ENVIAR
+  </button>
+
+</form>
 
     <!-- Informações com engajamento -->
     <div class="contato-info">
