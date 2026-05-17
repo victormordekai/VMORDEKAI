@@ -190,6 +190,16 @@ body{
   }
 
 }
+.logo-container,
+.logo-container:visited,
+.logo-container:hover,
+.logo-container:active{
+
+  text-decoration:none;
+
+  color:inherit;
+
+}
 
 /* =========================================
    HERO
@@ -622,7 +632,9 @@ body{
 
   padding:6rem 8%;
 
-  background:#fff;
+  background:
+  url("imagens/imagem_madeiras.jpg")
+  center/cover no-repeat;
 
 }
 
@@ -640,7 +652,16 @@ body{
 
   gap:3rem;
 
+  padding:4rem;
+
+  border-radius:24px;
+
+  background:
+  rgba(20,15,22,.70);
+
 }
+
+/* TEXTO */
 
 .vm-cta-text{
 
@@ -654,6 +675,8 @@ body{
 
   margin-bottom:1rem;
 
+  color:#fff;
+
 }
 
 .vm-cta-text p{
@@ -663,9 +686,11 @@ body{
   line-height:1.8;
 
   color:
-  rgba(20,15,22,.72);
+  rgba(255,255,255,.82);
 
 }
+
+/* BOTÕES */
 
 .vm-cta-buttons{
 
@@ -689,7 +714,7 @@ body{
 
   padding:1rem 1.5rem;
 
-  border-radius:12px;
+  border-radius:8px;
 
   text-decoration:none;
 
@@ -704,7 +729,10 @@ body{
 
 .vm-btn:hover{
 
-  transform:translateY(-3px);
+  transform:translateY(-2px);
+
+  background:
+  rgb(169,61,32);
 
 }
 
@@ -713,10 +741,163 @@ body{
   background:transparent;
 
   border:
-  1px solid rgb(20,15,22);
+  1px solid rgba(255,255,255,.35);
+
+  color:#fff;
+
+}
+
+/* =========================================
+   CONTATO
+========================================= */
+
+.contato-section {
+
+  background:
+  rgba(20,15,22,.7);
+
+  padding:80px 20px;
+
+  color:#fff;
+
+}
+
+.contato-section > h3{
+
+  text-align:center;
+
+  margin-bottom:3rem;
+
+  font-size:2rem;
+
+}
+
+.contato-container {
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  justify-content:space-between;
+
+  gap:40px;
+
+  max-width:1100px;
+
+  margin:0 auto;
+
+}
+
+/* FORM */
+
+.contato-form {
+
+  flex:1 1 45%;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:15px;
+
+}
+
+.contato-form input,
+.contato-form textarea {
+
+  padding:12px;
+
+  border:none;
+
+  border-radius:8px;
+
+  background:
+  rgba(255,255,255,.1);
+
+  color:#fff;
+
+}
+
+.contato-form input::placeholder,
+.contato-form textarea::placeholder {
 
   color:
-  rgb(20,15,22);
+  rgba(255,255,255,.7);
+
+}
+
+/* INFO */
+
+.contato-info {
+
+  flex:1 1 45%;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  gap:20px;
+
+}
+
+.contato-info h3 {
+
+  font-size:1.6rem;
+
+}
+
+.contato-info p {
+
+  line-height:1.6;
+
+  color:
+  rgba(255,255,255,.88);
+
+}
+
+/* LINKS */
+
+.links {
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:15px;
+
+}
+
+.btn-primary {
+
+  background-color:
+  rgb(198,72,50);
+
+  color:#fff;
+
+  padding:10px 20px;
+
+  border-radius:8px;
+
+  text-decoration:none;
+
+  transition:all .3s ease;
+
+  text-align:center;
+
+  border:none;
+
+  cursor:pointer;
+
+}
+
+.btn-primary:hover {
+
+  background-color:
+  rgb(169,61,32);
+
+  transform:translateY(-2px);
 
 }
 
@@ -724,22 +905,20 @@ body{
    FOOTER
 ========================================= */
 
-.vm-footer{
-
-  width:100%;
-
-  padding:2rem;
-
-  text-align:center;
+.vm-footer {
 
   background:
   rgb(20,15,22);
 
-  color:
-  rgba(255,255,255,.7);
+  color:#fff;
+
+  padding:2rem 1rem;
+
+  text-align:center;
+
+  width:100%;
 
 }
-
 /* =========================================
    REVEAL
 ========================================= */
@@ -767,11 +946,16 @@ body{
    RESPONSIVO
 ========================================= */
 
+/* =========================================
+   RESPONSIVO
+========================================= */
+
 @media(max-width:980px){
 
   .portfolio-briefing,
   .vm-editorial-container,
-  .vm-cta-container{
+  .vm-cta-container,
+  .contato-container{
 
     flex-direction:column;
 
@@ -780,7 +964,11 @@ body{
   .portfolio-left,
   .portfolio-right,
   .vm-editorial-text,
-  .vm-editorial-visual{
+  .vm-editorial-visual,
+  .vm-cta-text,
+  .vm-cta-buttons,
+  .contato-form,
+  .contato-info{
 
     width:100%;
 
