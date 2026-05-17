@@ -1,5 +1,9 @@
-TEXTO 1
-<div class="reveal text-block">
+    <!-- ===== RESTAURAR A PARTIR DAQUI ===== -->
+	<section id="portfolio" class="portfolio">
+	
+	<section class="content-grid">
+
+    <div class="reveal text-block">
 
         <span class="tag-section">
             VMORDEKAI® LAB / CONSULTORIA E DESENVOLVIMENTO
@@ -44,8 +48,20 @@ TEXTO 1
 
     </div>
 
-TEXTO 2
- <div class="reveal text-block">
+    <div class="reveal right">
+        <img src="imagens/Design Thinking VMORDEKAI Briefing 2025 QUADRO 001.jpg" alt="Imagem 5">
+    </div>
+
+	<div class="reveal left image-hover">
+    <a href="portfolio.html">
+        <img 
+            src="imagens/okr_portfolio_001.png" 
+            alt="Portfólio VMORDEKAI®"
+        >
+    </a>
+	</div>
+
+    <div class="reveal text-block">
 
     <span class="tag-section">
         ÁREAS DE ATUAÇÃO
@@ -53,13 +69,12 @@ TEXTO 2
 
    <h3>DESIGN, OPERAÇÃO E DESENVOLVIMENTO</h3>
 
-<p class="destaque">
+	<p class="destaque">
     Estruturas criativas precisam funcionar no mundo real.
     Enquanto sua empresa mantém o <mark class="mark-red">foco no crescimento e nas vendas</mark>.
-</p>
+	</p>
 
-<p>
-    A VMORDEKAI® atua no desenvolvimento de produtos,
+	<p>    A VMORDEKAI® atua no desenvolvimento de produtos,
     organização produtiva e construção de identidade operacional
     para marcas e empresas do setor têxtil.
 </p>
@@ -93,20 +108,34 @@ TEXTO 2
 </p>
 
 <p>
-    Cada solução é construída considerando
-    <mark class="mark-blue">
+    As soluções são construídas considerando <strong>facilities</strong>
+    para seu negócio: como <mark class="mark-blue">
         viabilidade prática,
-        capacidade real de execução
-        e crescimento sustentável.
+        capacidade real de execução, preço justo e competitivo para
+        um crescimento sustentável.
     </mark>
 </p>
-
+<p>
+	Acesse nosso portfolio completo e conheça o briefing detalhado do nosso trabalho 
+	<a href="shop.html" target="_blank" rel="noopener noreferrer"><strong>[TOQUE AQUI]</strong></a> ou na imagem.
+</p>
 </div>
 
-
-
-TEXTO 3 
-
+</section>
+	
+<!-- ===== CARROSSEL CYLINDER ===== 
+<section class="cylinder-carousel">
+  <div class="carousel-3d" id="carousel3D">
+    <div class="carousel-item">NEWS 1</div>
+    <div class="carousel-item">NEWS 2</div>
+    <div class="carousel-item">NEWS 3</div>
+    <div class="carousel-item">NEWS 4</div>
+    <div class="carousel-item">NEWS 5</div>
+  </div>
+</section>
+<!-- ===== FIM CARROSSEL CYLINDER ===== --> 	
+	
+<!-- ===== QUEM SOMOS ===== -->
 <section id="quem-somos" class="quem-somos">
 
   <div class="quem-somos-bg">
@@ -132,8 +161,8 @@ TEXTO 3
             Como parte do nosso processo de pesquisa e desenvolvimento,
             a VMORDEKAI® também atua como marca autoral de mochilas e bolsas conceituais,
             explorando funcionalidade,
-            estética outdoor aplicada ao uso cotidiano. Conheça nosso catálogo 
-			<a href="shop.html" target="_blank" rel="noopener noreferrer">[AQUI]</a>!
+            estética outdoor aplicada ao uso cotidiano.  
+			<a href="shop.html" target="_blank" rel="noopener noreferrer">[TOQUE AQUI] e conheça nosso catálogo</a>!
         </p>
       <p>
         Nossa atuação combina experiência prática em indústria têxtil,
@@ -143,22 +172,99 @@ TEXTO 3
       </p>
 
       <p>
-         A VMORDEKAI® integra o ecossistema
-		<a href="https://victormordekai.github.io/RE-TEAR/" target="_blank" rel="noopener noreferrer">RETEAR®</a>,
+         A VMORDEKAI® utiliza o ecossistema
+		<a href="https://victormordekai.github.io/RE-TEAR/" target="_blank" rel="noopener noreferrer">RETEAR® [TOQUE AQUI]</a>,
 		projeto tecnológico de frameworks voltados para rastreabilidades,
 		reorganização produtiva, automação operacional
 		e gestão escalável aplicada ao setor têxtil e industrial.
-      <p>
-        Curitiba — PR • Brasil
-      </p>
+      <p>CNPJ: 26.732.865/0001-36.<br>Sede: Curitiba – PR.</p>
 
     </div>
-
-  </div>
-
-</section>
-</div>
     <div class="quem-somos-img">
       <img src="imagens/mochila_ambitus.jpg" alt="Mochila VMORDEKAI Ambitus">
     </div>
   </div>
+
+ <!-- ===== CONTATO ===== -->
+<section class="contato-section">
+  <h3> Inscreva-se ou deixe seu comentário </h3>
+  <div class="contato-container">
+    <!-- Formulário -->
+    <form class="contato-form" id="contatoForm">
+      <input type="text" name="nome" placeholder="Nome *" required>
+      <input type="email" name="email" placeholder="Email *" required>
+      <input type="text" name="telefone" placeholder="Telefone">
+      <input type="text" name="assunto" placeholder="Assunto">
+      <textarea name="mensagem" placeholder="Mensagem" rows="5"></textarea>
+      <button type="submit" class="btn-primary">ENVIAR</button>
+    </form>
+
+    <!-- Informações com engajamento -->
+    <div class="contato-info">
+      <h3>QUER SABER MAIS?</h3>
+      <p>Entre em contato pelo WhatsApp ou acompanhe nosso Instagram e Facebook, onde compartilhamos bastidores, cases e processos de desenvolvimento.</p>
+      <div class="links">
+	    <a href="https://wa.me/message/LIKDPGYCWU5CF1" target="_blank" class="btn-primary">WhatsApp</a>
+        <a href="https://instagram.com/vmordekai" target="_blank" class="btn-primary">Instagram</a>
+		 <a href="https://www.facebook.com/vmordekai/" target="_blank" class="btn-primary">Facebook</a>
+	  </div>
+		<! <br !>
+		<p>E nosso LinkedIn e e-mail é apresentação e contato mais formal.</p>
+	  <div class="links">
+        <a href="https://linkedin.com/in/vmordekai" target="_blank" class="btn-primary">LinkedIn</a>
+        <a href="mailto:vmordekai@hotmail.com" target="_blank" class="btn-primary">e-mail</a>
+		<a href="https://linkedin.com/in/vmordekai" target="_blank" class="btn-primary">Trabalhe Conosco</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <p>© VMORDEKAI® | Laboratório de Ideias | Curitiba – PR | 2026</p>
+</footer>
+
+
+    <!-- Ligação com o JavaScript externo -->
+    <script src="script.js"></script>
+
+<!-- CARROSSEL CSS -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.carousel-slide');
+  const totalSlides = slides.length;
+  const nextBtn = document.querySelector('.next');
+  const prevBtn = document.querySelector('.prev');
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[index].classList.add('active');
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  });
+
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }, 5000);
+
+  showSlide(currentSlide);
+});
+
+<!-- ===== CARROSSEL CYLINDER ====== -->
+
+<!-- ===== CARROSSEL CYLINDER ====== -->
+</script>
+
+</body>
+</html>

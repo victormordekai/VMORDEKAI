@@ -3,11 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Portfólio VMORDEKAI® | Briefing Estratégico</title>
-
-  <link rel="stylesheet" href="style.css">
-
+  <title>VMORDEKAI® | Portfólio Briefing Estratégico</title>
+  <link rel="stylesheet" href="styleportfolio.css">
+  <link rel="icon" type="image/png" href="imagens/logo-corpo.png">
 </head>
 
 <body>
@@ -71,7 +69,7 @@
         Estruturação operacional,
         branding industrial e
         implantação estratégica
-        para negócios reais.
+        para negócios.
       </h2>
 
       <p>
@@ -197,13 +195,20 @@
 
   </section>
 
- <!-- BLOCO EDITORIAL -->
-<section class="quem-somos">
+<!-- ========================= -->
+<!-- EDITORIAL VMORDEKAI -->
+<!-- ========================= -->
 
-  <div class="quem-somos-bg">
+<section class="vm-editorial">
+
+  <div class="vm-editorial-container">
 
     <!-- TEXTO -->
-    <div class="quem-somos-texto reveal left">
+    <div class="vm-editorial-text reveal left">
+
+      <span class="vm-mini-tag">
+        VMORDEKAI® STRUCTURAL SYSTEM
+      </span>
 
       <h2>
         Estrutura antes da estética.
@@ -211,63 +216,50 @@
 
       <p>
         A VMORDEKAI® atua na integração entre
-        produto, branding, engenharia operacional
-        e posicionamento estratégico.
+        branding, engenharia operacional,
+        produto e posicionamento estratégico.
       </p>
 
       <p>
-        Cada projeto é estruturado considerando
-        realidade produtiva, organização sistêmica,
-        escalabilidade e coerência visual.
+		A implantação é construída considerando
+        realidade produtiva, escalabilidade,
+        organização sistêmica e coerência visual.
       </p>
 
       <p>
-        O objetivo não é apenas desenvolver estética,
-        mas construir operações sustentáveis,
-        eficientes e reconhecíveis.
+        O objetivo não é apenas desenvolver
+        imagem, mas construir operações sólidas,
+        eficientes e sustentáveis.
       </p>
 
     </div>
 
-    <!-- IMAGEM -->
-    <div class="quem-somos-img reveal right">
+    <!-- VISUAL -->
+    <div class="vm-editorial-visual reveal right">
 
-      <div class="featured-image">
+      <div class="vm-featured-wrapper">
 
-        <!-- SLIDE 1 -->
-        <div class="featured-slide active">
-          <img
-            src="imagens/produto1.jpg"
-            alt="Produto VMORDEKAI"
-          >
+        <div class="vm-featured-slide active">
+          <img src="imagens/produto1.jpg" alt="">
         </div>
 
-        <!-- SLIDE 2 -->
-        <div class="featured-slide">
-          <img
-            src="imagens/produto2.jpg"
-            alt="Produto VMORDEKAI"
-          >
+        <div class="vm-featured-slide">
+          <img src="imagens/produto2.jpg" alt="">
         </div>
 
-        <!-- SLIDE 3 -->
-        <div class="featured-slide">
-          <img
-            src="imagens/produto3.jpg"
-            alt="Produto VMORDEKAI"
-          >
+        <div class="vm-featured-slide">
+          <img src="imagens/produto3.jpg" alt="">
         </div>
 
-        <!-- META -->
-        <div class="featured-meta">
-
-          <h3>
-            VMORDEKAI® Strategic Systems
-          </h3>
+        <div class="vm-featured-overlay">
 
           <span>
-            governança • branding • operações
+            VMORDEKAI® Strategic Systems
           </span>
+
+          <h3>
+            governança • branding • operações
+          </h3>
 
         </div>
 
@@ -279,12 +271,15 @@
 
 </section>
 
-<!-- CONTATO -->
-<section class="contato-section">
+<!-- ========================= -->
+<!-- CTA -->
+<!-- ========================= -->
 
-  <div class="contato-container">
+<section class="vm-cta">
 
-    <div class="contato-info reveal left">
+  <div class="vm-cta-container">
+
+    <div class="vm-cta-text reveal left">
 
       <h3>
         Desenvolvimento estratégico e operacional.
@@ -298,19 +293,19 @@
 
     </div>
 
-    <div class="links reveal right">
+    <div class="vm-cta-buttons reveal right">
 
       <a
-        href="arquivos/site VMORDEKAI Briefing e produtos B2B 2025.pdf"
+        href="arquivos/Portfolio_VMORDEKAI_Briefing_e_produtos_B2B_2025.pdf"
         target="_blank"
-        class="btn-primary"
+        class="vm-btn"
       >
         Abrir PDF
       </a>
 
       <a
         href="shop.html"
-        class="btn-primary"
+        class="vm-btn vm-btn-outline"
       >
         Produtos
       </a>
@@ -321,136 +316,144 @@
 
 </section>
 
-<!-- SCRIPT CARROSSEL FEATURED -->
+<!-- FOOTER -->
+<footer class="vm-footer">
+
+  <p>
+    © VMORDEKAI® — Estrutura • Produto • Estratégia
+  </p>
+
+</footer>
+
+<!-- ========================= -->
+<!-- MENU MOBILE -->
+<!-- ========================= -->
+
 <script>
 
-  const featuredSlides =
-    document.querySelectorAll('.featured-slide');
+const menuToggle =
+document.getElementById('menu-toggle');
 
-  let featuredCurrent = 0;
+const navMenu =
+document.getElementById('nav-menu');
 
-  function featuredCarousel(){
+menuToggle.addEventListener('click', () => {
 
-    featuredSlides[featuredCurrent]
-      .classList.remove('active');
+  navMenu.classList.toggle('active');
 
-    featuredCurrent++;
-
-    if(featuredCurrent >= featuredSlides.length){
-
-      featuredCurrent = 0;
-
-    }
-
-    featuredSlides[featuredCurrent]
-      .classList.add('active');
-
-  }
-
-  setInterval(featuredCarousel, 4000);
+});
 
 </script>
 
-  <!-- FOOTER -->
-  <footer>
+<!-- ========================= -->
+<!-- REVEAL -->
+<!-- ========================= -->
 
-    <p>
-      © VMORDEKAI® — Estrutura • Produto • Estratégia
-    </p>
+<script>
 
-  </footer>
+const reveals =
+document.querySelectorAll('.reveal');
 
-  <!-- MENU MOBILE -->
-  <script>
+function revealOnScroll(){
 
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.getElementById('nav-menu');
+  reveals.forEach((element) => {
 
-    menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
+    const windowHeight =
+    window.innerHeight;
 
-  </script>
+    const revealTop =
+    element.getBoundingClientRect().top;
 
-  <!-- REVEAL -->
-  <script>
+    const revealPoint = 120;
 
-    const reveals = document.querySelectorAll('.reveal');
+    if(revealTop < windowHeight - revealPoint){
 
-    const revealOnScroll = () => {
-
-      reveals.forEach((element) => {
-
-        const windowHeight = window.innerHeight;
-        const revealTop = element.getBoundingClientRect().top;
-        const revealPoint = 120;
-
-        if(revealTop < windowHeight - revealPoint){
-          element.classList.add('active');
-        }
-
-      });
-
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-
-    revealOnScroll();
-
-  </script>
-
-  <!-- CARROSSEL PRINCIPAL -->
-  <script>
-
-    const slides = document.querySelectorAll('.carousel-slide');
-
-    let currentSlide = 0;
-
-    function changeSlide(){
-
-      slides[currentSlide].classList.remove('active');
-
-      currentSlide++;
-
-      if(currentSlide >= slides.length){
-        currentSlide = 0;
-      }
-
-      slides[currentSlide].classList.add('active');
+      element.classList.add('active');
 
     }
 
-    setInterval(changeSlide, 4500);
+  });
 
-  </script>
+}
 
-  <!-- FEATURED IMAGE -->
-  <script>
+window.addEventListener(
+'scroll',
+revealOnScroll
+);
 
-    const featuredSlides =
-      document.querySelectorAll('.featured-slide');
+revealOnScroll();
 
-    let featuredIndex = 0;
+</script>
 
-    function rotateFeatured(){
+<!-- ========================= -->
+<!-- HERO CAROUSEL -->
+<!-- ========================= -->
 
-      featuredSlides[featuredIndex]
-        .classList.remove('active');
+<script>
 
-      featuredIndex++;
+const heroSlides =
+document.querySelectorAll(
+'.carousel-slide'
+);
 
-      if(featuredIndex >= featuredSlides.length){
-        featuredIndex = 0;
-      }
+let heroIndex = 0;
 
-      featuredSlides[featuredIndex]
-        .classList.add('active');
+function rotateHero(){
 
-    }
+  heroSlides[heroIndex]
+  .classList.remove('active');
 
-    setInterval(rotateFeatured, 5000);
+  heroIndex++;
 
-  </script>
+  if(heroIndex >= heroSlides.length){
+
+    heroIndex = 0;
+
+  }
+
+  heroSlides[heroIndex]
+  .classList.add('active');
+
+}
+
+setInterval(rotateHero, 4500);
+
+</script>
+
+<!-- ========================= -->
+<!-- FEATURED CAROUSEL -->
+<!-- ========================= -->
+
+<script>
+
+const vmSlides =
+document.querySelectorAll(
+'.vm-featured-slide'
+);
+
+let vmIndex = 0;
+
+function rotateVM(){
+
+  vmSlides[vmIndex]
+  .classList.remove('active');
+
+  vmIndex++;
+
+  if(vmIndex >= vmSlides.length){
+
+    vmIndex = 0;
+
+  }
+
+  vmSlides[vmIndex]
+  .classList.add('active');
+
+}
+
+setInterval(rotateVM, 5000);
+
+</script>
 
 </body>
 </html>
