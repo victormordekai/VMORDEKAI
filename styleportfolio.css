@@ -2,7 +2,6 @@
    VMORDEKAI® — PORTFOLIO PAGE
 ========================================= */
 
-/* RESET */
 
 *{
   margin:0;
@@ -30,6 +29,49 @@ body{
   rgb(20,15,22);
 
   overflow-x:hidden;
+
+}
+/* =========================================
+   LINKS <a>
+========================================= */
+a,
+a:visited,
+a:hover,
+a:active{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+/* LINK SELECIONADO / ATIVO */
+
+a:focus,
+a:active{
+
+  background:
+  rgba(198,72,50,0.18);
+
+  color:#fff;
+
+  padding:
+  0.08rem 0.3rem;
+
+  border-radius:4px;
+
+}
+
+/* BOTÕES NÃO HERDAM COR GLOBAL */
+
+.portfolio-button,
+.portfolio-button:visited,
+.portfolio-button:hover,
+.portfolio-button:active{
+
+  color:#fff;
+
+  text-decoration:none;
 
 }
 
@@ -627,17 +669,25 @@ body{
 ========================================= */
 
 .vm-cta{
-
-  width:100%;
-
-  padding:6rem 8%;
-
-  background:
-  url("imagens/imagem_madeiras.jpg")
-  center/cover no-repeat;
-
+  position: relative;
+  background: url("imagens/imagem_madeiras.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 5rem 2rem;
+  margin-bottom: 0; /* ✅ remove espaço que empurra footer */
+  overflow: hidden; /* ✅ impede que o background "vaze" para fora */
 }
 
+vm-cta-bg {
+  display: flex;
+  align-items: stretch; /* <-- ADICIONE: faz os elementos internos terem mesma altura */
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+
+/*===TESTE COPY CSS DE INDEX===*/
 .vm-cta-container{
 
   max-width:1300px;
@@ -747,178 +797,235 @@ body{
 
 }
 
-/* =========================================
-   CONTATO
-========================================= */
+/* ----------------------------- */
+/* SEÇÃO QUEM SOMOS */
+/* ----------------------------- */
 
-.contato-section {
-
-  background:
-  rgba(20,15,22,.7);
-
-  padding:80px 20px;
-
-  color:#fff;
-
+.quem-somos {
+  position: relative;
+  background: url("imagens/imagem_madeiras.jpg") center/cover no-repeat;
+  color: #fff;
+  padding: 5rem 2rem;
+  margin-bottom: 0; /* ✅ remove espaço que empurra footer */
+  overflow: hidden; /* ✅ impede que o background "vaze" para fora */
 }
 
-.contato-section > h3{
 
-  text-align:center;
+.quem-somos-bg {
+  display: flex;
+  align-items: stretch; /* <-- ADICIONE: faz os elementos internos terem mesma altura */
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
 
-  margin-bottom:3rem;
+.quem-somos-texto {
+  flex: 1;
+  background: rgba(20, 15, 22, 0.7); /* Roxo 30% opaco */
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: justify;
+  line-height: 1.6;
+}
 
-  font-size:2rem;
+.quem-somos-texto h2 {
+  font-size: 2rem;
+  color: var(--accent-2);
+  margin-bottom: 1rem;
+  text-align: left;
+}
 
+.quem-somos-texto p {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.quem-somos-img {
+  flex: 1;
+  text-align: center;
+}
+
+.quem-somos-img img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
+}
+
+.quem-somos-img img:hover {
+  transform: scale(1.05);
+}
+
+/* -------- Responsividade -------- */
+@media (max-width: 900px) { 
+  .quem-somos-bg { 
+  flex-direction: column; 
+  text-align: center; }
+
+  .quem-somos-texto {
+    order: 1;
+    text-align: justify;
+  }
+
+  .quem-somos-img {
+    order: 2;
+  }
+
+  .quem-somos-img img {
+    max-width: 90%;
+    margin: 1.5rem auto;
+  }
+}
+/* ----------------------------- */
+/* FIM SEÇÃO QUEM SOMOS */
+/* ----------------------------- */
+
+/* ===== CONTATO ===== */
+.contato-section {
+  background: rgba(20, 15, 22, 0.7); /* Roxo 30% opaco */
+  padding: 80px 20px;
+  color: #fff;
 }
 
 .contato-container {
-
-  display:flex;
-
-  flex-wrap:wrap;
-
-  justify-content:space-between;
-
-  gap:40px;
-
-  max-width:1100px;
-
-  margin:0 auto;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-/* FORM */
-
 .contato-form {
-
-  flex:1 1 45%;
-
-  display:flex;
-
-  flex-direction:column;
-
-  gap:15px;
-
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .contato-form input,
 .contato-form textarea {
-
-  padding:12px;
-
-  border:none;
-
-  border-radius:8px;
-
-  background:
-  rgba(255,255,255,.1);
-
-  color:#fff;
-
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 .contato-form input::placeholder,
 .contato-form textarea::placeholder {
-
-  color:
-  rgba(255,255,255,.7);
-
+  color: rgba(255, 255, 255, 0.7);
 }
 
-/* INFO */
-
 .contato-info {
-
-  flex:1 1 45%;
-
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:center;
-
-  gap:20px;
-
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
 .contato-info h3 {
-
-  font-size:1.6rem;
-
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 .contato-info p {
-
-  line-height:1.6;
-
-  color:
-  rgba(255,255,255,.88);
-
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-/* LINKS */
-
 .links {
-
-  display:flex;
-
-  flex-wrap:wrap;
-
-  gap:15px;
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .btn-primary {
-
-  background-color:
-  rgb(198,72,50);
-
-  color:#fff;
-
-  padding:10px 20px;
-
-  border-radius:8px;
-
-  text-decoration:none;
-
-  transition:all .3s ease;
-
-  text-align:center;
-
+  background-color: rgb(198,72,50);
+  color: #fff;
+  padding: 10px 20px;
   border:none;
-
-  cursor:pointer;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
 
 }
 
 .btn-primary:hover {
-
-  background-color:
-  rgb(169,61,32);
-
-  transform:translateY(-2px);
-
+  background-color: #a93d20;
+  transform: translateY(-2px);
+}
+.contato-section {
+  background: rgba(20, 15, 22, 0.7);
+  padding: 80px 20px;
+  color: #fff;
+  margin-bottom: 0; 
 }
 
-/* =========================================
-   FOOTER
-========================================= */
 
-.vm-footer {
-
-  background:
-  rgb(20,15,22);
-
-  color:#fff;
-
-  padding:2rem 1rem;
-
-  text-align:center;
-
-  width:100%;
-
+/* ----------------------------- */
+/* Footer */
+/* ----------------------------- */
+footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  width: 100%;
+  margin: 0;          /* ✅ remove espaçamento forçado */
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
+
+
+/* ----------------------------- */
+/* Efeito de "revelar" com scroll (Intersection Observer) */
+/* ----------------------------- */
+.reveal{
+  opacity:0;
+  transform: translateY(32px);
+  transition: all 0.9s cubic-bezier(.2,.9,.25,1);
+}
+.reveal.active{
+  opacity:1;
+  transform: translateY(0);
+}
+.reveal.left{ transform: translateX(-30px); }
+.reveal.right{ transform: translateX(30px); }
+.reveal.active.left, .reveal.active.right{ transform: translateX(0); }
+
+/* ----------------------------- */
+/* Seletores auxiliares e acessibilidade */
+/* ----------------------------- */
+:focus{ outline: 2px solid rgba(45,52,104,0.12); outline-offset:3px; }
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0;
+}
+
+/* ----------------------------- */
+/* Efeito para esmaecer elementos abaixo de um título específico */
+/* Use .titulo-principal na tag do título */
+/* ----------------------------- */
+.titulo-principal ~ *{ opacity:0.28; transition: opacity .35s ease; }
+.titulo-principal ~ *:hover{ opacity:1; }
+
+/* ----------------------------- */
+/* Pequenos ajustes finais (espaçamentos, responsividade fina) */
+/* ----------------------------- */
+@media (min-width:1200px){
+  .container{ max-width:1200px; }
+}
+@media (max-width:420px){
+  .logo-text{ font-size:1rem; }
+  .hero h2{ font-size:1.25rem; }
+}
+
 /* =========================================
    REVEAL
 ========================================= */
@@ -941,10 +1048,6 @@ body{
   transform:translateY(0);
 
 }
-
-/* =========================================
-   RESPONSIVO
-========================================= */
 
 /* =========================================
    RESPONSIVO
@@ -1038,5 +1141,212 @@ body{
   height:100%;
 
   object-fit:cover;
+
+}
+/* =========================================
+   PRIVATE LABEL
+========================================= */
+
+.vm-structure{
+
+  position:relative;
+
+  width:100%;
+
+  padding:0;
+
+  overflow:hidden;
+
+  background:
+  rgb(245,245,242);
+
+}
+
+/* CONTAINER */
+
+.vm-structure-container{
+
+  width:100%;
+
+  max-width:1400px;
+
+  margin:0 auto;
+
+  padding:0 8%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:5rem;
+
+}
+
+/* =========================================
+   VISUAL
+========================================= */
+
+.vm-structure-visual{
+
+  flex:1;
+
+  min-width:0;
+
+}
+
+.vm-structure-visual img{
+
+  width:100%;
+
+  display:block;
+
+  border-radius:24px;
+
+  object-fit:cover;
+
+  box-shadow:
+  0 25px 60px rgba(0,0,0,.12);
+
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.vm-structure-text{
+
+  flex:1;
+
+  min-width:0;
+
+}
+
+.vm-structure-text h2{
+
+  font-size:3rem;
+
+  line-height:1.05;
+
+  margin-bottom:2.5rem;
+
+  color:
+  rgb(20,15,22);
+
+}
+
+/* TAG */
+
+.portfolio-tag{
+
+  display:inline-block;
+
+  margin-bottom:1.5rem;
+
+  font-size:.78rem;
+
+  letter-spacing:.2rem;
+
+  text-transform:uppercase;
+
+  color:
+  rgba(20,15,22,.55);
+
+}
+
+/* =========================================
+   LISTA
+========================================= */
+
+.vm-structure-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:2rem;
+
+}
+
+.vm-structure-item{
+
+  padding-bottom:1.8rem;
+
+  border-bottom:
+  1px solid rgba(20,15,22,.08);
+
+}
+
+.vm-structure-item:last-child{
+
+  border-bottom:none;
+
+  padding-bottom:0;
+
+}
+
+.vm-structure-item h3{
+
+  font-size:1.15rem;
+
+  margin-bottom:.8rem;
+
+  color:
+  rgb(198,72,50);
+
+}
+
+.vm-structure-item p{
+
+  line-height:1.8;
+
+  color:
+  rgba(20,15,22,.76);
+
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media(max-width:980px){
+
+  .vm-structure-container{
+
+    flex-direction:column;
+
+    gap:4rem;
+
+  }
+
+  .vm-structure-visual,
+  .vm-structure-text{
+
+    width:100%;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .vm-structure{
+
+    padding:5rem 0;
+
+  }
+
+  .vm-structure-container{
+
+    padding:0 7%;
+
+  }
+
+  .vm-structure-text h2{
+
+    font-size:2rem;
+
+  }
 
 }
