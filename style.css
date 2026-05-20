@@ -935,6 +935,320 @@ footer {
 
 }
 
+/* =========================================================
+   VMORDEKAI® — BRIEFING HERO
+========================================================= */
+
+.vm-briefing-hero{
+
+  position: relative;
+
+  width: 100%;
+
+  min-height: 95vh;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 6rem 2rem;
+
+  background: #f5f5f5;
+
+}
+
+/* Background */
+
+.vm-briefing-bg{
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.25),
+      rgba(255,255,255,0.35)
+    ),
+    url("imagens/IMG_20211115_235118583~2.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  opacity: 0.80;
+
+  transform: scale(1.02);
+
+}
+
+/* Conteúdo */
+
+.vm-briefing-content{
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1200px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+}
+
+/* Forma geométrica */
+
+.vm-briefing-shape{
+
+  position: relative;
+
+  width: min(780px, 92vw);
+
+  aspect-ratio: 1.35 / 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 4rem;
+
+  background:
+    rgba(20,15,22,0.62);
+
+clip-path: polygon(
+  4% 0%,    /* A */
+  90% 0%,   /* B */
+  86% 50%,  /* D */
+  96% 100%, /* F */
+  10% 100%, /* E */
+  14% 50%   /* C */
+);
+
+  border:
+    2px solid rgba(198,72,50,0.95);
+
+  backdrop-filter: blur(3px);
+
+  transition:
+    transform .45s ease,
+    background .45s ease,
+    box-shadow .45s ease;
+
+}
+
+/* Hover elegante */
+
+.vm-briefing-shape:hover{
+
+  transform: scale(1.02);
+
+  background:
+    rgba(20,15,22,0.74);
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.28);
+
+}
+
+/* Conteúdo interno */
+
+.vm-briefing-inner{
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+}
+
+/* Logo */
+
+.vm-briefing-logo{
+
+  width: 45%;
+
+  opacity: 0.95;
+
+}
+
+/* Marca */
+
+.vm-briefing-brand{
+
+  color: var(--accent-2);
+
+  letter-spacing: .12em;
+
+  font-size: .95rem;
+
+}
+
+/* BRIEFING */
+
+.vm-briefing-inner h2{
+
+  font-size: clamp(3rem, 9vw, 7rem);
+
+  line-height: .95;
+
+  font-weight: 300;
+
+  color: #fff;
+
+  letter-spacing: .04em;
+
+}
+
+/* Pergunta azul */
+
+.vm-briefing-question{
+
+  font-size: clamp(1.2rem, 3vw, 3rem);
+
+  line-height: 1.15;
+
+  font-weight: 300;
+
+  color: var(--accent-3);
+
+  max-width: 680px;
+
+}
+
+/* Texto inferior */
+
+.vm-briefing-bottom{
+
+  margin-top: 3rem;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: .8rem;
+
+  transition:
+    opacity .4s ease,
+    transform .4s ease;
+
+}
+
+/* Fade elegante */
+
+.vm-briefing-bottom{
+
+  opacity: .28;
+
+}
+
+.vm-briefing-content:hover .vm-briefing-bottom{
+
+  opacity: 1;
+
+}
+
+/* Linha principal */
+
+.vm-briefing-bottom p{
+
+  font-size: clamp(1rem, 2vw, 2rem);
+
+  color: #111;
+
+  letter-spacing: .03em;
+
+}
+
+/* DESIGN THINKING */
+
+.vm-briefing-bottom strong{
+
+  font-weight: 700;
+
+  color: #000;
+
+}
+
+/* Linha inferior */
+
+.vm-briefing-bottom span{
+
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
+
+  color: rgba(0,0,0,0.78);
+
+  letter-spacing: .08em;
+
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media(max-width:768px){
+
+  .vm-briefing-hero{
+
+    min-height: auto;
+
+    padding: 5rem 1rem;
+
+  }
+
+  .vm-briefing-shape{
+
+    width: 100%;
+
+    padding: 2rem;
+
+  }
+
+  .vm-briefing-question{
+
+    line-height: 1.2;
+
+  }
+
+  .vm-briefing-bottom{
+
+    margin-top: 2rem;
+
+    opacity: 1;
+
+  }
+
+}
+
+@media(min-width:1800px){
+
+  .vm-briefing-shape{
+
+    width: 900px;
+
+  }
+
+}
 
 /* ----------------------------- */
 /* Fim do arquivo style.css */
