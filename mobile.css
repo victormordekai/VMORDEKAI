@@ -1,0 +1,11 @@
+@media(max-width:768px){
+
+  .featured-wrapper{
+    flex-direction:column;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+}

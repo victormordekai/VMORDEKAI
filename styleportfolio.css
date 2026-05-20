@@ -913,6 +913,7 @@ vm-cta-bg {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
+  resize: none;
 }
 
 .contato-form input::placeholder,
