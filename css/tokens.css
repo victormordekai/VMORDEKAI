@@ -1,0 +1,59 @@
+/* =========================================================
+   VMORDEKAI® · TOKENS
+   Fonte única de cores, tipografia, formas e movimento.
+   Nenhum outro arquivo declara cor de marca em valor literal.
+========================================================= */
+
+:root{
+  /* ---------- Paleta institucional ---------- */
+  --vm-red:        rgb(198, 72, 50);   /* VERMELHO */
+  --vm-red-dark:   rgb(169, 61, 32);   /* VERMELHO · hover */
+  --vm-purple:     rgb(20, 15, 22);    /* ROXO */
+  --vm-blue:       rgb(131, 180, 187); /* AZUL CALMO */
+  --vm-white:      rgb(255, 255, 255); /* BRANCO */
+
+  /* ---------- Neutros ---------- */
+  --vm-paper:      rgb(245, 245, 242); /* fundo editorial claro */
+  --vm-hero:       rgb(242, 242, 242); /* fundo do hero do index */
+  --vm-graphite:   rgb(34, 34, 34);    /* barra e footer */
+  --vm-muted:      rgb(104, 125, 125);
+  --vm-line:       rgba(20, 15, 22, .08);
+
+  /* ---------- Transparências recorrentes ---------- */
+  --vm-purple-70:  rgba(20, 15, 22, .70);
+  --vm-purple-78:  rgba(20, 15, 22, .78);
+  --vm-red-18:     rgba(198, 72, 50, .18);
+  --vm-blue-18:    rgba(131, 180, 187, .18);
+
+  /* ---------- Tipografia ---------- */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  --tracking-tag: .2rem;               /* etiquetas em caixa alta */
+
+  /* ---------- Formas ---------- */
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 18px;
+  --radius-xl: 24px;
+  /* Polígono da marca (forma do BRIEFING): A, B, D, F, E, C */
+  --vm-shape: polygon(4% 0%, 90% 0%, 86% 50%, 96% 100%, 10% 100%, 14% 50%);
+
+  /* ---------- Sombras ---------- */
+  --shadow-header: 0 2px 8px rgba(0, 0, 0, .08);
+  --shadow-panel:  0 12px 30px rgba(0, 0, 0, .12);
+  --shadow-card:   0 10px 25px rgba(0, 0, 0, .15);
+  --shadow-deep:   0 30px 70px rgba(0, 0, 0, .18);
+
+  /* ---------- Estrutura ---------- */
+  --header-height: 64px;
+  --page-gutter: 8%;
+  --z-header: 1100;
+  --z-menu: 1200;
+  --z-overlay: 1300;
+
+  /* ---------- Movimento ---------- */
+  --ease-reveal: cubic-bezier(.2, .9, .25, 1);
+  --ease-out: cubic-bezier(.2, .75, .2, 1);
+  --dur-fast: .18s;
+  --dur-base: .3s;
+  --dur-slow: .9s;
+}

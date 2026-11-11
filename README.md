@@ -1,41 +1,67 @@
-# RE-TEAR ♻️  
-**Plataforma Colaborativa para Destinação Sustentável de Resíduos Têxteis**
+# VMORDEKAI® · V02-0. | 26.11
 
-O **RE-TEAR** é uma iniciativa de impacto socioambiental que conecta confecções, indústrias têxteis, costureiras, cooperativas, designers e projetos sociais para promover **economia circular** através do **reaproveitamento de resíduos têxteis**. O projeto atua como uma **rede de colaboração** que transforma descarte em oportunidade, reduzindo impactos ambientais e fortalecendo comunidades produtivas.
+Laboratório de design, produto, branding e produção têxtil. Site estático (HTML, CSS e JavaScript) publicado no GitHub Pages.
 
----
+## Páginas
 
-## 🚀 Objetivo do Projeto
-Desenvolver um **MVP funcional** de uma plataforma digital que possibilite:
-- ✔️ Mapear e conectar **doadores e receptores** de resíduos têxteis
-- ✔️ Reduzir descarte irregular e estimular práticas sustentáveis
-- ✔️ Fortalecer redes produtivas locais e economia de baixo carbono
-- ✔️ Construir **cadeias circulares** dentro do setor têxtil
-- ✔️ Incentivar a inovação em **design sustentável**
+| Arquivo | Conteúdo |
+|---|---|
+| `index.html` | Início |
+| `portfolio-1.html` | Portfólio Briefing Estratégico B2B |
+| `lab.html` | LAB: estrutura, estratégia, private label e consultoria |
+| `shop.html` | Catálogo com ficha do produto em overlay |
+| `produto_<slug>.html` | Uma página por produto (gerada) |
+| `portfolio.html`, `index-1.html` | Endereços antigos que redirecionam |
 
----
+## Estrutura
 
-## 🌱 Natureza do Projeto
-O RE-TEAR é uma iniciativa **sem fins lucrativos**, com sustentabilidade financeira estruturada via:
-- Parcerias institucionais (Prefeitura de Curitiba, Governo do Paraná, universidades, etc.)
-- Projetos de extensão e pesquisa
-- Patrocínios socioambientais
-- Editais e fundos ESG
-- Prestação de serviços educacionais e socioambientais
-- Programas de logística reversa e compensação sustentável
+```
+css/tokens.css        cores, tipografia, formas, movimento (fonte única)
+css/base.css          reset e revelação no scroll
+css/components.css    navbar, footer, contato, botões
+css/pages/            estilos e animações de cada página
+js/config.js          versão, copy, contatos e mapa do site
+js/components/        <vm-header>, <vm-footer>, <vm-contato>
+js/modules/           reveal, rotator (carrosséis)
+js/shop/              catálogo, ficha, overlay e página do produto
+data/produtos.json    catálogo (fonte única)
+tools/                gerador do catálogo
+imagens/              imagens em uso · produtos/ · padroes/ · acervo/ (não usadas)
+arquivos/             PDF e materiais do portfólio
+docs/                 registros de versão e notas
+```
 
----
+## Navbar e footer
 
-## 🛠️ Tecnologias utilizadas
-Este repositório contém a primeira versão do site institucional do projeto, desenvolvido com:
+Todas as páginas usam os mesmos componentes. Cada página declara apenas os próprios links:
 
-| Tecnologia | Uso |
-|------------|-----|
-| 🌐 **HTML5** | Estrutura semântica do site |
-| 🎨 **CSS3** | Estilização e identidade visual |
-| ⚙️ **JavaScript (ES6+)** | Interatividade e comportamento dinâmico |
+```html
+<vm-header>
+  <a href="#top">INÍCIO</a>
+  <a href="shop.html">SHOP</a>
+</vm-header>
+...
+<vm-footer></vm-footer>
+<script type="module" src="js/site.js"></script>
+```
 
----
+Versão, copy e contatos ficam em `js/config.js`.
 
-## 📂 Estrutura do Projeto
+## Produtos
 
+1. Edite `data/produtos.json` (referência, nome, dados, imagens).
+2. Rode `python3 tools/build_produtos.py`.
+3. O script atualiza o catálogo, as páginas `produto_<slug>.html` e a lista do shop, e mostra os dados ainda pendentes.
+
+`python3 tools/build_produtos.py --check` confirma que tudo está em dia.
+
+## Rodar localmente
+
+Os módulos JavaScript exigem servidor HTTP:
+
+```bash
+python3 -m http.server 8000
+# http://localhost:8000
+```
+
+Registro desta versão: `docs/V02-0_REESTRUTURACAO_2026-11-11.md`.

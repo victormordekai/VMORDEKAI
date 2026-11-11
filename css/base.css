@@ -1,0 +1,58 @@
+/* =========================================================
+   VMORDEKAI® · BASE
+   Reset, tipografia de corpo, utilitários e revelação no scroll.
+   Depende de: tokens.css
+========================================================= */
+
+*{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ scroll-behavior:smooth; scroll-padding-top:var(--header-height); }
+
+body{
+  font-family:var(--font-sans);
+  line-height:1.2;
+  color:var(--vm-purple);
+  background:var(--vm-white);
+  overflow-x:clip;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+[hidden]{ display:none !important; }   /* o atributo hidden sempre vence o display dos componentes */
+
+a{ color:inherit; text-decoration:none; }
+img{ max-width:100%; height:auto; display:block; }
+
+:focus{ outline:2px solid rgba(45, 52, 104, .12); outline-offset:3px; }
+
+.sr-only{
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0, 0, 0, 0); border:0;
+}
+
+/* ---------- Etiqueta editorial ---------- */
+.tag-section{
+  display:inline-block;
+  margin-bottom:1rem;
+  padding:.35rem .7rem;
+  border-left:3px solid var(--vm-red);
+  font-size:.75rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--vm-blue);
+}
+
+/* ---------- Revelação no scroll (js/modules/reveal.js) ---------- */
+.reveal{
+  opacity:0;
+  transform:translateY(32px);
+  transition:all var(--dur-slow) var(--ease-reveal);
+}
+.reveal.left{ transform:translateX(-30px); }
+.reveal.right{ transform:translateX(30px); }
+.reveal.active{ opacity:1; transform:none; }
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  .reveal{ opacity:1; transform:none; transition:none; }
+}

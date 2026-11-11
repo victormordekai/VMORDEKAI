@@ -1,0 +1,56 @@
+/* =========================================================
+   VMORDEKAI® · LAB (lab.html)
+   Reaproveita as seções editoriais de portfolio.css e acrescenta
+   blocos modulares claro/escuro.
+   Depende de: tokens.css, components.css, pages/portfolio.css
+========================================================= */
+
+.vm-section-light,
+.vm-section-dark{ width:100%; padding:8rem var(--page-gutter); }
+.vm-section-light{ background:var(--vm-paper); }
+.vm-section-dark{ background:var(--vm-purple); }
+
+.vm-section-container{
+  max-width:1400px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:5rem;
+}
+.vm-section-container.reverse{ flex-direction:row-reverse; }
+
+.vm-section-text{ flex:1; }
+.vm-section-text h2{ margin-bottom:2rem; font-size:3rem; font-weight:300; line-height:1.1; }
+.vm-section-text p{ margin-bottom:1.4rem; line-height:1.9; }
+.vm-section-light .vm-section-text p{ color:rgba(20, 15, 22, .75); }
+.vm-section-dark .vm-section-text{ color:var(--vm-white); }
+.vm-section-dark .vm-section-text p{ color:rgba(255, 255, 255, .78); }
+
+.vm-section-image{ flex:1; }
+.vm-section-image img{
+  display:block;
+  width:100%;
+  height:720px;
+  object-fit:cover;
+  border-radius:var(--radius-xl);
+  transition:transform .6s var(--ease-out);
+}
+.vm-section-image:hover img{ transform:scale(1.02); }
+
+@media (max-width:980px){
+  .vm-section-container,
+  .vm-section-container.reverse{ flex-direction:column; }
+  .vm-section-text,
+  .vm-section-image{ width:100%; }
+  .vm-section-text h2{ font-size:2.3rem; }
+  .vm-section-image img{ height:520px; }
+}
+@media (max-width:768px){
+  .vm-section-light,
+  .vm-section-dark{ padding:5rem 7%; }
+  .vm-section-text h2{ font-size:2rem; }
+  .vm-section-image img{ height:420px; }
+}
+
+.portfolio-link--light{ color:var(--vm-white); }

@@ -1,0 +1,246 @@
+/* =========================================================
+   VMORDEKAI® · INÍCIO (index.html)
+   Abertura (hero, cards e barra) preservada; seções editoriais abaixo.
+   Depende de: tokens.css, base.css, components.css
+========================================================= */
+
+/* ---------- HERO (preservado) ---------- */
+.hero{
+  padding:3rem 1.5rem;
+  background:var(--vm-hero);
+  text-align:center;
+}
+.hero img{ display:block; width:60%; max-width:500px; height:auto; margin:0 auto 1.5rem; }
+.hero p{ max-width:600px; margin:0 auto 2rem; }
+
+/* Esmaece o que vem abaixo do título até o hover (animação da abertura) */
+.titulo-principal ~ *{ opacity:.28; transition:opacity .35s ease; }
+.titulo-principal ~ *:hover{ opacity:1; }
+
+/* ---------- CARDS INICIAIS (preservados) ---------- */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:1.5rem;
+  padding:3rem 2rem;
+}
+.card{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  padding:1rem;
+  border:1px solid #ddd;
+  border-radius:var(--radius-s);
+  background:var(--vm-white);
+  text-align:center;
+  cursor:pointer;
+  transition:transform var(--dur-base) ease, box-shadow var(--dur-base) ease;
+}
+.card:hover{ transform:scale(1.08); box-shadow:var(--shadow-card); z-index:2; }
+.card-image{ position:relative; width:100%; aspect-ratio:16 / 9; overflow:hidden; border-radius:var(--radius-s); }
+.card-image img{ width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+.overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:opacity .4s ease;
+}
+.overlay-form{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.5; z-index:1; }
+.overlay-text{
+  position:relative;
+  z-index:2;
+  color:var(--vm-white);
+  font-size:1.4rem;
+  font-weight:bold;
+  text-align:center;
+  text-shadow:1px 1px 4px rgba(0, 0, 0, .6);
+}
+.card:hover .card-image img{ transform:scale(1.08); }
+.card:hover .overlay{ opacity:1; }
+
+@media (max-width:768px){
+  .card:hover{ transform:none; box-shadow:none; }
+  .card:active{ transform:scale(1.03); box-shadow:0 8px 20px rgba(0, 0, 0, .08); }
+  .card:hover .card-image img{ transform:none; }
+  .card:active .card-image img{ transform:scale(1.03); }
+  .card:hover .overlay,
+  .card:active .overlay{ opacity:1; }
+}
+
+/* ---------- INTRODUÇÃO B2B ---------- */
+.intro-section{ padding:4rem 1rem; }
+.intro-section__inner{ max-width:900px; margin:0 auto; text-align:center; }
+.intro-section h1{ margin-bottom:1rem; font-size:clamp(1.6rem, 3vw, 2.2rem); }
+.intro-section p{ line-height:1.6; color:rgba(20, 15, 22, .8); }
+
+/* ---------- BRIEFING (forma da marca) ---------- */
+.vm-briefing-hero{
+  position:relative;
+  width:100%;
+  min-height:95vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:6rem 2rem;
+  overflow:hidden;
+  background:#f5f5f5;
+}
+.vm-briefing-bg{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(255, 255, 255, .25), rgba(255, 255, 255, .35)),
+    url("../../imagens/padroes/croqui.jpg") center / cover;
+  opacity:.8;
+  transform:scale(1.02);
+}
+.vm-briefing-content{
+  position:relative;
+  z-index:2;
+  width:100%;
+  max-width:1200px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.vm-briefing-shape{
+  position:relative;
+  width:min(780px, 92vw);
+  aspect-ratio:1.35 / 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:4rem;
+  background:rgba(20, 15, 22, .62);
+  clip-path:var(--vm-shape);
+  border:2px solid rgba(198, 72, 50, .95);
+  backdrop-filter:blur(3px);
+  transition:transform .45s ease, background .45s ease, box-shadow .45s ease;
+}
+.vm-briefing-shape:hover{ transform:scale(1.02); background:rgba(20, 15, 22, .74); box-shadow:0 30px 70px rgba(0, 0, 0, .28); }
+.vm-briefing-inner{ display:flex; flex-direction:column; align-items:center; gap:1rem; }
+.vm-briefing-logo{ width:45%; opacity:.95; }
+.vm-briefing-inner h2{
+  font-size:clamp(3rem, 9vw, 7rem);
+  line-height:.95;
+  font-weight:300;
+  letter-spacing:.04em;
+  color:var(--vm-white);
+}
+.vm-briefing-question{
+  max-width:680px;
+  font-size:clamp(1.2rem, 3vw, 3rem);
+  line-height:1.15;
+  font-weight:300;
+  color:var(--vm-blue);
+}
+.vm-briefing-bottom{
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+  margin-top:3rem;
+  opacity:.28;
+  transition:opacity .4s ease, transform .4s ease;
+}
+.vm-briefing-content:hover .vm-briefing-bottom{ opacity:1; }
+.vm-briefing-bottom p{ font-size:clamp(1rem, 2vw, 2rem); letter-spacing:.03em; color:#111; }
+.vm-briefing-bottom strong{ font-weight:700; color:#000; }
+.vm-briefing-bottom span{ font-size:clamp(1rem, 1.6vw, 1.5rem); letter-spacing:.08em; color:rgba(0, 0, 0, .78); }
+
+/* ---------- PORTFÓLIO EDITORIAL ---------- */
+.content-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1.5rem;
+  align-items:center;
+  max-width:1400px;
+  margin:0 auto;
+  padding:4rem 1rem;
+}
+.content-grid img{ width:100%; border-radius:var(--radius-s); }
+.image-hover img{ transition:transform .4s ease, box-shadow .4s ease; }
+.image-hover:hover img{ transform:scale(1.02); box-shadow:var(--shadow-card); }
+
+.text-block{ max-width:640px; margin:0 auto; padding:2rem; }
+.text-block h3{
+  margin-bottom:1.5rem;
+  font-size:2rem;
+  line-height:1;
+  letter-spacing:.03em;
+  color:var(--vm-red);
+}
+.text-block p{ margin-bottom:1.4rem; font-size:1rem; line-height:1.8; color:rgba(20, 15, 22, .88); }
+.text-block .destaque{ font-size:1.15rem; font-weight:600; color:var(--vm-purple); }
+.text-block mark{ padding:.08rem .3rem; color:var(--vm-purple); }
+.mark-red{ background:var(--vm-red-18); }
+.mark-blue{ background:var(--vm-blue-18); }
+.text-block u{
+  font-weight:500;
+  color:var(--vm-purple);
+  text-decoration:underline var(--vm-red) 2px;
+  text-underline-offset:3px;
+}
+.text-link{ font-weight:700; color:var(--vm-red); border-bottom:1px solid currentColor; }
+
+/* ---------- QUEM SOMOS ---------- */
+.quem-somos{
+  position:relative;
+  padding:5rem 2rem;
+  overflow:hidden;
+  background:url("../../imagens/padroes/madeiras.jpg") center / cover no-repeat;
+  color:var(--vm-white);
+}
+.quem-somos-bg{
+  display:flex;
+  align-items:stretch;
+  justify-content:space-between;
+  gap:2rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+.quem-somos-texto{
+  flex:1;
+  padding:2rem;
+  border-radius:var(--radius-m);
+  background:var(--vm-purple-70);
+  text-align:justify;
+  line-height:1.6;
+}
+.quem-somos-texto h2{ margin-bottom:1rem; font-size:2rem; text-align:left; color:var(--vm-red); }
+.quem-somos-texto p{ margin-bottom:1rem; }
+.quem-somos-texto a{ color:var(--vm-blue); border-bottom:1px solid currentColor; }
+.quem-somos-img{ flex:1; display:flex; align-items:center; justify-content:center; }
+.quem-somos-img img{
+  width:100%;
+  max-width:480px;
+  border-radius:var(--radius-m);
+  box-shadow:0 8px 20px rgba(0, 0, 0, .25);
+  transition:transform .4s ease;
+}
+.quem-somos-img img:hover{ transform:scale(1.05); }
+
+/* ---------- Responsivo ---------- */
+@media (max-width:900px){
+  .content-grid{ grid-template-columns:1fr; }
+  .quem-somos-bg{ flex-direction:column; }
+  .quem-somos-img img{ max-width:90%; margin:1.5rem auto 0; }
+}
+@media (max-width:768px){
+  .vm-briefing-hero{ min-height:auto; padding:5rem 1rem; }
+  .vm-briefing-shape{ width:100%; padding:2rem; }
+  .vm-briefing-question{ line-height:1.2; }
+  .vm-briefing-bottom{ margin-top:2rem; opacity:1; }
+  .text-block{ padding:1rem; }
+  .text-block h3{ font-size:1.5rem; }
+  .text-block p{ font-size:.95rem; line-height:1.7; }
+}
+@media (max-width:420px){
+  .hero h2{ font-size:1.25rem; }
+}
+@media (min-width:1800px){
+  .vm-briefing-shape{ width:900px; }
+}

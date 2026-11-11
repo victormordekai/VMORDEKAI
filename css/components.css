@@ -1,0 +1,302 @@
+/* =========================================================
+   VMORDEKAI® · COMPONENTES COMUNS
+   Navbar, footer, barra de marca, botão primário e contato.
+   Mesma disposição e animação em todas as páginas.
+   Depende de: tokens.css
+========================================================= */
+
+/* ---------- NAVBAR · <vm-header> ---------- */
+
+vm-header{ display:block; height:var(--header-height); }   /* reserva a altura do header fixo no fluxo */
+vm-header[overlay]{ height:0; }                             /* páginas cujo hero já compensa o header */
+vm-header:not(:defined) > *{ display:none; }   /* evita piscar os links antes do componente montar */
+
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:var(--header-height);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:0 1rem;
+  background:var(--vm-white);
+  box-shadow:var(--shadow-header);
+  font-family:var(--font-sans);
+  line-height:1.2;
+  z-index:var(--z-header);
+}
+
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  color:inherit;
+  text-decoration:none;
+  transition:transform var(--dur-fast) ease;
+}
+.logo-container:hover,
+.logo-container:focus-visible{ transform:scale(1.06); }
+.logo-container img{ width:45px; height:auto; display:block; }
+
+.logo-text{
+  display:flex;
+  align-items:center;
+  font-size:1.1rem;
+  line-height:1;
+  font-weight:700;
+  color:var(--vm-red);
+  user-select:none;
+}
+
+.nav-menu{ display:flex; align-items:center; gap:1rem; }
+.nav-menu ul{
+  display:flex;
+  align-items:center;
+  gap:1.2rem;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.nav-menu a{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:6px;
+  color:var(--vm-red);
+  font-weight:600;
+  text-decoration:none;
+  transition:color var(--dur-fast) ease, transform var(--dur-fast) ease, background var(--dur-fast) ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.nav-menu a:hover,
+.nav-menu a:focus-visible,
+.nav-menu a[aria-current="page"]{
+  color:var(--vm-purple);
+  transform:scale(1.06);
+  background:rgba(0, 0, 0, .04);
+  outline:none;
+}
+
+.menu-toggle{
+  display:none;
+  padding:6px;
+  border:0;
+  background:none;
+  color:var(--vm-purple);
+  font-size:1.6rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+@media (max-width:768px){
+  .menu-toggle{ display:block; }
+  .nav-menu{ display:none; }
+  .nav-menu.is-open{
+    display:flex;
+    position:fixed;
+    top:calc(var(--header-height) + 8px);
+    right:12px;
+    width:92%;
+    max-width:320px;
+    flex-direction:column;
+    padding:.9rem;
+    background:var(--vm-white);
+    border-radius:10px;
+    box-shadow:var(--shadow-panel);
+    z-index:var(--z-menu);
+    animation:vm-slide-in .22s ease-out;
+  }
+  .nav-menu.is-open ul{ width:100%; flex-direction:column; gap:.6rem; }
+  .nav-menu a{ display:block; padding:10px 12px; text-align:center; }
+}
+
+@keyframes vm-slide-in{
+  from{ transform:translateY(-8px); opacity:0; }
+  to{ transform:translateY(0); opacity:1; }
+}
+
+@media (max-width:420px){
+  .logo-text{ font-size:1rem; }
+}
+
+/* ---------- BARRA DE MARCA (separador grafite) ---------- */
+
+.brand-bar{
+  width:100%;
+  padding:2rem 1rem;
+  background:var(--vm-graphite);
+  color:var(--vm-white);
+  text-align:center;
+}
+
+/* ---------- FOOTER · <vm-footer> ---------- */
+
+.site-footer{
+  width:100%;
+  padding:2.4rem 1rem 2rem;
+  background:var(--vm-graphite);
+  color:var(--vm-white);
+  font-family:var(--font-sans);
+  line-height:1.5;
+  text-align:center;
+}
+.site-footer__links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.4rem 1.2rem;
+  margin:0 0 1.4rem;
+  padding:0;
+  list-style:none;
+}
+.site-footer__links a{
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:6px;
+  color:rgba(255, 255, 255, .78);
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-decoration:none;
+  transition:color var(--dur-fast) ease, transform var(--dur-fast) ease, background var(--dur-fast) ease;
+}
+.site-footer__links a:hover,
+.site-footer__links a:focus-visible{
+  color:var(--vm-white);
+  transform:scale(1.06);
+  background:rgba(255, 255, 255, .06);
+  outline:none;
+}
+.site-footer__copy{ margin:0; font-size:.95rem; }
+.site-footer__version{
+  display:inline-block;
+  margin-top:.9rem;
+  padding:.3rem .7rem;
+  border-left:3px solid var(--vm-red);
+  color:var(--vm-blue);
+  font-size:.72rem;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+/* ---------- BOTÃO PRIMÁRIO ---------- */
+
+.btn-primary{
+  padding:10px 20px;
+  border:none;
+  border-radius:var(--radius-s);
+  background-color:var(--vm-red);
+  color:var(--vm-white);
+  text-align:center;
+  text-decoration:none;
+  cursor:pointer;
+  transition:all var(--dur-base) ease;
+}
+.btn-primary:hover{
+  background-color:var(--vm-red-dark);
+  transform:translateY(-2px);
+}
+
+/* ---------- CONTATO · <vm-contato> ---------- */
+
+.vm-contact{
+  padding:6rem var(--page-gutter);
+  background:var(--vm-purple);
+  color:var(--vm-white);
+}
+.vm-contact__grid{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(0, 1.25fr) minmax(0, .75fr);
+  gap:4rem;
+  align-items:start;
+}
+.vm-contact__tag{
+  display:inline-block;
+  margin-bottom:1.2rem;
+  padding:.35rem .7rem;
+  border-left:3px solid var(--vm-red);
+  color:var(--vm-blue);
+  font-size:.75rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.vm-contact h2{
+  margin:0 0 2rem;
+  font-size:clamp(1.8rem, 3.4vw, 2.8rem);
+  font-weight:300;
+  line-height:1.1;
+}
+.vm-form{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1rem;
+}
+.vm-form label{ display:flex; flex-direction:column; gap:.45rem; }
+.vm-form label > span{
+  color:rgba(255, 255, 255, .7);
+  font-size:.72rem;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.vm-form__wide{ grid-column:1 / -1; }
+.vm-form input,
+.vm-form textarea{
+  width:100%;
+  padding:.85rem 1rem;
+  border:1px solid rgba(255, 255, 255, .14);
+  border-radius:var(--radius-s);
+  background:rgba(255, 255, 255, .06);
+  color:var(--vm-white);
+  font:inherit;
+  resize:vertical;
+  transition:border-color var(--dur-base) ease, background var(--dur-base) ease;
+}
+.vm-form input:focus,
+.vm-form textarea:focus{
+  border-color:var(--vm-red);
+  background:rgba(255, 255, 255, .1);
+  outline:none;
+}
+.vm-form__footer{
+  grid-column:1 / -1;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.vm-form__note{ margin:0; color:rgba(255, 255, 255, .55); font-size:.78rem; }
+.vm-contact__aside h3{ margin:0 0 1rem; font-size:1.3rem; }
+.vm-contact__aside p{ margin:0 0 1.2rem; color:rgba(255, 255, 255, .78); line-height:1.6; }
+.vm-contact__links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+  margin:0 0 2rem;
+  padding:0;
+  list-style:none;
+}
+.vm-contact__links a{
+  display:inline-block;
+  padding:.55rem 1rem;
+  border:1px solid rgba(255, 255, 255, .22);
+  border-radius:var(--radius-s);
+  color:var(--vm-white);
+  font-size:.85rem;
+  text-decoration:none;
+  transition:all var(--dur-base) ease;
+}
+.vm-contact__links a:hover{ background:var(--vm-red); border-color:var(--vm-red); transform:translateY(-2px); }
+
+@media (max-width:900px){
+  .vm-contact__grid{ grid-template-columns:1fr; gap:3rem; }
+}
+@media (max-width:600px){
+  .vm-contact{ padding:4.5rem 7%; }
+  .vm-form{ grid-template-columns:1fr; }
+}

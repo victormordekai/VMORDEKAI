@@ -52,58 +52,23 @@
 	<meta name="robots" content="index, follow">
 	<meta name="googlebot" content="index, follow">
 
-    <!-- Ligação com o CSS externo -->
-	<link rel="stylesheet" href="styleportfolio.css">
+    <!-- CSS: tokens e componentes comuns + estilos desta página -->
+	<link rel="stylesheet" href="css/tokens.css">
+	<link rel="stylesheet" href="css/components.css">
+	<link rel="stylesheet" href="css/pages/portfolio.css">
 </head>
 
 <body id="top">
 
-  <!-- HEADER -->
-<header class="header">
-	<a href="https://victormordekai.github.io/VMORDEKAI/index-1.html" class="logo-container">
-		<img src="imagens/logo-corpo.png" alt="Logo do Site">
-		<span class="logo-text">
-			<span class="VMORDEKAI">VMORDEKAI®</span>
-		</span>
-	</a>
-
-    <button class="menu-toggle" id="menu-toggle">
-      ☰
-    </button>
-
-    <nav id="nav-menu">
-
-      <ul>
-
-        <li>
-          <a href="#top">INÍCIO</a>
-        </li>
-
-        <li>
-          <a href="#vm-structure">PRIVATE LABEL</a>
-        </li>		
-
-        <li>
-          <a href="#vm-cta">PORTFOLIO</a>
-        </li>
-		
-        <li>
-          <a href="shop.html">SHOP</a>
-        </li>
-		
-        <li>
-          <a href="#vm-editorial" target="_blank">RETEAR</a>
-        </li>
-    <!--contato-section-->
-		<li> 
-		  <a href="#contato-section">CONTATO</a>
-		</li>		
-
-      </ul>
-
-    </nav>
-
-  </header>
+  <!-- NAVBAR (componente comum: js/components/site-header.js) -->
+  <vm-header overlay>
+    <a href="#top">INÍCIO</a>
+    <a href="#vm-structure">PRIVATE LABEL</a>
+    <a href="#vm-cta">PORTFOLIO</a>
+    <a href="shop.html">SHOP</a>
+    <a href="#vm-editorial">RETEAR</a>
+    <a href="#contato-section">CONTATO</a>
+  </vm-header>
 
   <!-- HERO / BRIEFING -->
   <section class="portfolio-briefing">
@@ -245,12 +210,10 @@
 
   </section>
   
-<!-- ========================= -->  
-<!-- ===== Footer ===== -->
-<!-- ========================= -->
-    <footer>
-        <p>VMORDEKAI® | Praticidade ao alcance das mãos </p>
-    </footer>
+<!-- BARRA DE MARCA -->
+<div class="brand-bar">
+  <p>VMORDEKAI® | Praticidade ao alcance das mãos</p>
+</div>
 
 <!-- ========================= -->
 <!-- PRIVATE LABEL -->
@@ -656,31 +619,13 @@
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <p>© VMORDEKAI® | Laboratório de Ideias | Curitiba – PR | 2026</p>
-</footer>
+</section><!-- fecha #quem-somos: o footer comum fica fora das seções -->
+<!-- FOOTER (componente comum: js/components/site-footer.js) -->
+<vm-footer></vm-footer>
 
 
-<!-- ========================= -->
-<!-- MENU MOBILE -->
-<!-- ========================= -->
-
-<script>
-
-const menuToggle =
-document.getElementById('menu-toggle');
-
-const navMenu =
-document.getElementById('nav-menu');
-
-menuToggle.addEventListener('click', () => {
-
-  navMenu.classList.toggle('active');
-
-});
-
-</script>
+<!-- Navbar e footer comuns -->
+<script type="module" src="js/components.js"></script>
 
 <!-- ========================= -->
 <!-- REVEAL -->

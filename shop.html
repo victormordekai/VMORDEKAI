@@ -1,238 +1,124 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-	<!-- ====================== -->
-	<!-- META TAGS — VMORDEKAI® -->
-	<!-- ====================== -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VMORDEKAI® SHOP | Mochilas e Bolsas Autorais</title>
+  <meta name="description" content="Catálogo autoral da VMORDEKAI®: mochilas e bolsas com funcionalidade outdoor, materiais técnicos e produção em ciclos limitados. Cada peça com referência, ficha e reserva pelo WhatsApp.">
+  <meta name="keywords" content="mochilas autorais, bolsas autorais, mochila outdoor, mochila rip-stop, design utilitário, VMORDEKAI, DARK KNIGHT, CYLINDER BAG, MINIBAG">
+  <meta name="author" content="Victor Mordekai Ferreira">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://victormordekai.github.io/VMORDEKAI/shop.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="VMORDEKAI®">
+  <meta property="og:title" content="VMORDEKAI® SHOP | Mochilas e Bolsas Autorais">
+  <meta property="og:description" content="Mochilas e bolsas autorais VMORDEKAI®: outdoor, funcionalidade e identidade operacional aplicada ao cotidiano.">
+  <meta property="og:url" content="https://victormordekai.github.io/VMORDEKAI/shop.html">
+  <meta property="og:image" content="https://victormordekai.github.io/VMORDEKAI/imagens/produtos/dark-knight-01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-	<!-- Codificação e idioma -->
-	<meta charset="utf-8">
-	<meta http-equiv="content-language" content="pt-BR">
+  <link rel="icon" type="image/png" sizes="32x32" href="imagens/logo-corpo.png">
+  <link rel="apple-touch-icon" href="imagens/logo-corpo.png">
 
-	<!-- Título e descrição SEO shop-->
-	<title>VMORDEKAI® | Mochilas e Bolsas Autorais • Design, Produção e Terceirização</title>
-
-	<meta name="description"
-	content="Catálogo autoral da VMORDEKAI® com mochilas, bolsas e peças utilitárias desenvolvidas artesanalmente. Design funcional, brutalismo minimalista, estética outdoor e produção em ciclos limitados.">
-
-	<link rel="canonical"
-	href="https://victormordekai.github.io/VMORDEKAI/shop.html">
-
-	<!-- Palavras-chave estratégicas -->
-	<meta name="keywords"
-	content="mochilas artesanais, bolsas autorais, mochila outdoor, design utilitário, moda com propósito, bolsas conceituais, mochilas minimalistas, handmade design, VMORDEKAI, moda funcional, mochila urbana, brutalismo minimalista">
-
-	<!-- Autor e direitos -->
-	<meta name="author"
-	content="Victor Mordekai Ferreira">
-
-	<meta name="copyright"
-	content="© VMORDEKAI® — Handmade & Conceptual Design">
-
-	<!-- Responsividade e comportamento mobile -->
-	<meta name="viewport"
-	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-	<meta name="mobile-web-app-capable"
-	content="yes">
-
-	<meta name="apple-mobile-web-app-capable"
-	content="yes">
-
-	<meta name="theme-color"
-	content="#000000">
-
-	<meta name="apple-mobile-web-app-status-bar-style"
-	content="black-translucent">
-
-	<!-- Open Graph -->
-	<meta property="og:title"
-	content="VMORDEKAI® | Mochilas e Bolsas Autorais • Design, Produção e Terceirização">
-
-	<meta property="og:description"
-	content="Mochilas e bolsas conceituais desenvolvidas artesanalmente pela VMORDEKAI®. Outdoor, funcionalidade e identidade operacional aplicada ao cotidiano.">
-
-	<meta property="og:image"
-	content="https://victormordekai.github.io/VMORDEKAI/imagens/logo.png">
-
-	<meta property="og:url"
-	content="https://victormordekai.github.io/VMORDEKAI/shop.html">
-
-	<meta property="og:type"
-	content="website">
-
-	<meta property="og:locale"
-	content="pt_BR">
-
-	<meta property="og:site_name"
-	content="VMORDEKAI®">
-
-	<!-- Twitter Card -->
-	<meta name="twitter:card"
-	content="summary_large_image">
-
-	<meta name="twitter:title"
-	content="VMORDEKAI® | Mochilas e Bolsas Autorais • Design, Produção e Terceirização">
-
-	<meta name="twitter:description"
-	content="Peças autorais produzidas artesanalmente com funcionalidade outdoor, brutalismo minimalista e identidade operacional.">
-
-	<meta name="twitter:image"
-	content="https://victormordekai.github.io/VMORDEKAI/imagens/logo.png">
-
-	<!-- Favicons -->
-	<link rel="icon"
-	type="image/png"
-	sizes="32x32"
-	href="imagens/logo-corpo.png">
-
-	<link rel="apple-touch-icon"
-	href="imagens/logo-corpo.png">
-
-	<!-- Indexação -->
-	<meta name="robots"
-	content="index, follow">
-
-	<meta name="googlebot"
-	content="index, follow">
-
-	<!-- CSS -->
-	<link rel="stylesheet"
-	href="styleshop.css">
-
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/shop.css">
 </head>
 
-<body id="top">
-<header class="header">
-  <a href="https://victormordekai.github.io/VMORDEKAI/index-1.html" class="logo-container">
-    <img src="imagens/logo-corpo.png" alt="Logo VMORDEKAI">
-    <span class="logo-text"><span class="VMORDEKAI">VMORDEKAI®</span></span>
-  </a>
+<body id="top" class="page-shop">
 
-  <button class="menu-toggle" id="menu-toggle">☰</button>
+  <vm-header>
+    <a href="index.html">INÍCIO</a>
+    <a href="#catalogo">CATÁLOGO</a>
+    <a href="#ultimas-unidades">ÚLTIMAS UNIDADES</a>
+    <a href="#como-comprar">COMO COMPRAR</a>
+    <a href="portfolio-1.html#vm-structure">PRIVATE LABEL</a>
+    <a href="https://wa.me/message/LIKDPGYCWU5CF1">CONTATO</a>
+  </vm-header>
 
-  <nav id="nav-menu">
-    <ul>
-      <li><a href="#top">INÍCIO</a></li>
-	  <li> <a href="portfolio-1.html">PRIVATE LABEL</a> </li>
-      <li><a href="https://www.instagram.com/vmordekai/" target="_blank">INSTAGRAM</a></li>
-      <li><a href="https://wa.me/message/LIKDPGYCWU5CF1" target="_blank">CONTATO</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
 
-<main>
-  <section class="hero shop-hero">
-	<h1>Mochilas e Bolsas VMORDEKAI®</h1>
-	<p>Praticidade ao alcance das mãos</p>
-  </section>
-
-  <section class="cards reveal">
-    <div class="card">
-      <img src="imagens/produto1.jpg" alt="Bolsa Urbana 02">
-      <h3>MOCHILA DARK KNIGHT</h3>
-      <p>Mochila em nylon rip-stop, 27L. Perfeita para dia a dia ou viagens.</p>
-    </div>
-    <div class="card">
-      <img src="imagens/Mochila VON HUMBOLDT 1 x 1 (1500x1500).png" alt="Mochila Térrea 05">
-      <h3>MOCHILA VON HUMBOLDT</h3>
-      <p>Design utilitário em lona e couro, inspirado na natureza do viajante, 36L-46L.</p>
-    </div>
-    <div class="card">
-      <img src="imagens/Mochila POKEMON Charizard 000 00.png" alt="Bolsa Modular 01">
-      <h3>Mochila Temática - POKÉMON</h3>
-      <p>Peça experimental de edição limitada — Escolha seu POKÉMON! Tecido poliéster, 22L.</p>
-    </div>
-  </section>
-
-  <section class="featured-final reveal">
-
-  <div class="featured-wrapper">
-
-    <!-- TEXTO -->
-    <div class="featured-content">
-
-      <span class="featured-tag">
-        VMORDEKAI® OUTDOOR SERIES
-      </span>
-
-      <h2>
-        ÚLTIMAS<br>
-        UNIDADES
-      </h2>
-
-      <p>
-        Mochilas e bolsas autorais produzidas em ciclos limitados,
-        explorando funcionalidade outdoor,
-        brutalismo minimalista
-        e identidade operacional aplicada ao cotidiano.
-      </p>
-
-      <p>
-        As peças nascem da integração entre
-        <strong>design utilitário</strong>,
-        materiais resistentes
-        e desenvolvimento artesanal escaláveis.
-      </p>
-
-      <div class="featured-actions">
-
-        <a href="https://wa.me/message/LIKDPGYCWU5CF1"
-           target="_blank"
-           class="btn-primary">
-          RESERVAR PEÇA
-        </a>
-
-        <a href="https://instagram.com/vmordekai"
-           target="_blank"
-           class="btn-primary">
-          VER MAIS
-        </a>
-
+    <!-- ===== HERO ===== -->
+    <section class="shop-hero">
+      <span class="shop-hero__tag">VMORDEKAI® SHOP · OUTDOOR SERIES</span>
+      <h1>Mochilas e bolsas<br>VMORDEKAI®</h1>
+      <p>Praticidade ao alcance das mãos. Peças autorais produzidas em ciclos limitados, com materiais técnicos e funcionalidade outdoor aplicada ao cotidiano.</p>
+      <div class="shop-hero__actions">
+        <a class="btn-primary btn-primary--lg" href="#catalogo">VER CATÁLOGO</a>
+        <a class="btn-ghost" href="https://wa.me/message/LIKDPGYCWU5CF1" target="_blank" rel="noopener noreferrer">ENCOMENDAS PELO WHATSAPP</a>
       </div>
+    </section>
 
-    </div>
+    <!-- ===== CATÁLOGO ===== -->
+    <section id="catalogo" class="shop-catalog" aria-labelledby="catalogo-titulo">
+      <header class="shop-catalog__head">
+        <div>
+          <span class="tag-section">CATÁLOGO</span>
+          <h2 id="catalogo-titulo">Cada peça com referência própria.</h2>
+        </div>
+        <div class="shop-catalog__tools">
+          <div class="shop-filters" data-filters role="group" aria-label="Filtrar por categoria"></div>
+          <span class="shop-count" data-count aria-live="polite"></span>
+        </div>
+      </header>
 
-<!-- IMAGEM OSCILANTE -->
-<div class="featured-image">
+      <div class="shop-grid" data-catalog></div>
 
-  <div class="featured-carousel">
+      <!-- produtos:inicio · lista gerada por tools/build_produtos.py (sem JavaScript) -->
+      <noscript>
+        <ul class="shop-fallback">
+          <li><a href="produto_dark-knight.html">DARK KNIGHT · VMK-MOC-001</a></li>
+          <li><a href="produto_von-humboldt.html">VON HUMBOLDT · VMK-MOC-002</a></li>
+          <li><a href="produto_ambitus.html">AMBITUS · VMK-MOC-003</a></li>
+          <li><a href="produto_ambitus-iter.html">AMBITUS ITER 2024.002 DARK · VMK-MOC-004</a></li>
+          <li><a href="produto_tematica-pokemon.html">TEMÁTICA — POKÉMON · VMK-MOC-005</a></li>
+          <li><a href="produto_cylinder-bag.html">CYLINDER BAG · VMK-BOL-001</a></li>
+          <li><a href="produto_minibag.html">MINIBAG · VMK-BOL-002</a></li>
+        </ul>
+      </noscript>
+      <!-- produtos:fim -->
+    </section>
 
-    <div class="featured-slide active">
-      <img src="imagens/produto1.jpg" alt="Produto VMORDEKAI">
-    </div>
+    <!-- ===== ÚLTIMAS UNIDADES ===== -->
+    <section id="ultimas-unidades" class="featured-final">
+      <div class="featured-wrapper">
+        <div class="featured-content reveal left">
+          <span class="featured-tag">VMORDEKAI® OUTDOOR SERIES</span>
+          <h2>ÚLTIMAS<br>UNIDADES</h2>
+          <p>Mochilas e bolsas autorais produzidas em ciclos limitados, explorando funcionalidade outdoor, brutalismo minimalista e identidade operacional aplicada ao cotidiano.</p>
+          <p>As peças nascem da integração entre <strong>design utilitário</strong>, materiais resistentes e desenvolvimento artesanal escalável.</p>
+          <div class="featured-actions">
+            <a href="https://wa.me/message/LIKDPGYCWU5CF1" target="_blank" rel="noopener noreferrer" class="btn-primary btn-primary--lg">RESERVAR PEÇA</a>
+            <a href="https://instagram.com/vmordekai" target="_blank" rel="noopener noreferrer" class="btn-ghost">VER MAIS NO INSTAGRAM</a>
+          </div>
+        </div>
+        <div class="featured-image reveal right">
+          <div class="featured-carousel" data-rotator data-interval="4200" data-showcase></div>
+          <div class="featured-meta">
+            <h3>VMORDEKAI® Handmade Series</h3>
+            <span>Edição limitada • Outdoor • Conceitual</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="featured-slide">
-      <img src="imagens/produto2.jpg" alt="Produto VMORDEKAI">
-    </div>
+    <!-- ===== COMO COMPRAR ===== -->
+    <section id="como-comprar" class="shop-steps" aria-labelledby="como-comprar-titulo">
+      <h2 id="como-comprar-titulo" class="sr-only">Como comprar</h2>
+      <ol>
+        <li class="reveal"><span>01</span><h3>Escolha a peça</h3><p>Abra a ficha do produto e anote a referência (ex.: VMK-MOC-001).</p></li>
+        <li class="reveal"><span>02</span><h3>Reserve pelo WhatsApp</h3><p>O botão de reserva já envia a mensagem com o nome e a referência da peça.</p></li>
+        <li class="reveal"><span>03</span><h3>Personalize</h3><p>Cores, variações e produção para a sua marca via <a href="portfolio-1.html#vm-structure">Private Label</a>.</p></li>
+      </ol>
+    </section>
 
-    <div class="featured-slide">
-      <img src="imagens/produto3.jpg" alt="Produto VMORDEKAI">
-    </div>
+  </main>
 
-  </div>
+  <vm-footer></vm-footer>
 
-  <div class="featured-meta">
-    <h3>VMORDEKAI® Handmade Series</h3>
-    <span>Edição limitada • Outdoor • Conceitual</span>
-  </div>
-
-</div>
-
-    </div>
-
-  </div>
-
-</section>
-</main>
-
-<footer>
-  <p>
-    © VMORDEKAI® | Handmade & Conceptual Design |
-    Curitiba – PR | 2026
-  </p>
-</footer>
-
-<script src="script.js"></script>
+  <script type="module" src="js/shop/shop.js"></script>
 </body>
 </html>
