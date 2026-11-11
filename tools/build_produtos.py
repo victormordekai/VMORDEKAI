@@ -2,8 +2,8 @@
 
 Fonte única:  data/produtos.json
 Gera:         js/data/produtos.js            (catálogo usado pelo shop e pelas páginas)
-              produto_<slug>.html            (uma página por produto, com SEO próprio)
-              shop.html                      (lista sem JavaScript entre os marcadores produtos:inicio/fim)
+              pages/produtos/produto_<slug>.html  (uma página por produto, com SEO próprio)
+              pages/shop.html                      (lista sem JavaScript entre os marcadores produtos:inicio/fim)
 
 Uso:
     python3 tools/build_produtos.py           # gera e mostra pendências de dados
@@ -22,7 +22,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SOURCE = ROOT / "data" / "produtos.json"
 CATALOG_JS = ROOT / "js" / "data" / "produtos.js"
-SHOP = ROOT / "shop.html"
+SHOP = ROOT / "pages" / "shop.html"
+PRODUCTS_DIR = ROOT / "pages" / "produtos"
 SITE = "https://victormordekai.github.io/VMORDEKAI/"
 
 REQUIRED = ("ref", "slug", "nome", "categoria", "resumo", "descricao", "imagens")
@@ -49,29 +50,29 @@ PAGE = """<!DOCTYPE html>
   <meta property="og:image" content="{imagem_url}">
   <meta name="twitter:card" content="summary_large_image">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="imagens/logo-corpo.png">
-  <link rel="apple-touch-icon" href="imagens/logo-corpo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../imagens/logo-corpo.png">
+  <link rel="apple-touch-icon" href="../../imagens/logo-corpo.png">
 
-  <link rel="stylesheet" href="css/tokens.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/shop.css">
+  <link rel="stylesheet" href="../../css/tokens.css">
+  <link rel="stylesheet" href="../../css/base.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/pages/shop.css">
 </head>
 
 <body id="top" class="page-product" data-produto="{slug}">
 
   <vm-header>
-    <a href="index.html">INÍCIO</a>
-    <a href="shop.html">SHOP</a>
-    <a href="shop.html#catalogo">CATÁLOGO</a>
+    <a href="../../index.html">INÍCIO</a>
+    <a href="../shop.html">SHOP</a>
+    <a href="../shop.html#catalogo">CATÁLOGO</a>
     <a href="#relacionados">VEJA TAMBÉM</a>
     <a href="https://wa.me/message/LIKDPGYCWU5CF1">CONTATO</a>
   </vm-header>
 
   <main class="product-page">
     <ol class="breadcrumb">
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="shop.html#catalogo">{categoria}s</a></li>
+      <li><a href="../shop.html">Shop</a></li>
+      <li><a href="../shop.html#catalogo">{categoria}s</a></li>
       <li aria-current="page">{nome}</li>
     </ol>
 
@@ -79,7 +80,7 @@ PAGE = """<!DOCTYPE html>
       <noscript>
         <h1>{nome}</h1>
         <p>{ref} · {categoria}</p>
-        <img src="{imagem}" alt="{imagem_alt}">
+        <img src="../../{imagem}" alt="{imagem_alt}">
         <p>{descricao}</p>
       </noscript>
     </div>
@@ -92,7 +93,7 @@ PAGE = """<!DOCTYPE html>
 
   <vm-footer></vm-footer>
 
-  <script type="module" src="js/shop/product-page.js"></script>
+  <script type="module" src="../../js/shop/product-page.js"></script>
 </body>
 </html>
 """
@@ -121,7 +122,7 @@ def validate(data: dict) -> list[str]:
         if not re.fullmatch(r"[a-z0-9-]+", p.get("slug", "")):
             errors.append(f"{name}: slug inválido '{p.get('slug')}' (use a-z, 0-9 e hífen)")
         for img in p.get("imagens", []):
-            if not (ROOT / img["src"]).exists():
+            if not (ROOT / img["src"]).exists():  # caminhos do catálogo são relativos à raiz
                 errors.append(f"{name}: imagem não encontrada {img['src']}")
     for p in products:
         for ref in p.get("complementos", []):
@@ -152,7 +153,7 @@ def page_html(p: dict) -> str:
     return PAGE.format(
         nome=e(p["nome"]), ref=e(p["ref"]), slug=e(p["slug"]), categoria=e(p["categoria"]),
         descricao=e(p["descricao"]), resumo=e(p["resumo"]),
-        url=f"{SITE}produto_{p['slug']}.html",
+        url=f"{SITE}pages/produtos/produto_{p['slug']}.html",
         imagem=e(first["src"]), imagem_alt=e(first["alt"]), imagem_url=f"{SITE}{first['src']}",
     )
 
@@ -160,7 +161,7 @@ def page_html(p: dict) -> str:
 def shop_html(data: dict) -> str:
     current = SHOP.read_text(encoding="utf-8")
     items = "\n".join(
-        f'          <li><a href="produto_{p["slug"]}.html">{html.escape(p["nome"])} · {p["ref"]}</a></li>'
+        f'          <li><a href="produtos/produto_{p["slug"]}.html">{html.escape(p["nome"])} · {p["ref"]}</a></li>'
         for p in data["produtos"]
     )
     block = (
@@ -174,7 +175,7 @@ def shop_html(data: dict) -> str:
 def outputs(data: dict) -> dict[Path, str]:
     files = {CATALOG_JS: catalog_js(data), SHOP: shop_html(data)}
     for p in data["produtos"]:
-        files[ROOT / f"produto_{p['slug']}.html"] = page_html(p)
+        files[PRODUCTS_DIR / f"produto_{p['slug']}.html"] = page_html(p)
     return files
 
 
@@ -186,7 +187,7 @@ def main() -> None:
 
     files = outputs(data)
     stale = sorted(
-        {path.name for path in ROOT.glob("produto_*.html")} - {path.name for path in files}
+        {path.name for path in PRODUCTS_DIR.glob("produto_*.html")} - {path.name for path in files}
     )
 
     if "--check" in sys.argv:
@@ -197,10 +198,11 @@ def main() -> None:
         return
 
     CATALOG_JS.parent.mkdir(parents=True, exist_ok=True)
+    PRODUCTS_DIR.mkdir(parents=True, exist_ok=True)
     for path, text in files.items():
         path.write_text(text, encoding="utf-8")
     for name in stale:
-        (ROOT / name).unlink()
+        (PRODUCTS_DIR / name).unlink()
         print(f"removido (produto saiu do catálogo): {name}")
     print(f"gerados: {len(files)} arquivos ({len(data['produtos'])} produtos)")
 

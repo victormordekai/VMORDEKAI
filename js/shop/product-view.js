@@ -3,14 +3,15 @@
 // e a página produto_[slug].html. Dados: js/data/produtos.js (gerado).
 
 import { CATALOGO } from "../data/produtos.js";
-import { CONTACT, whatsappWith } from "../config.js";
+import { CONTACT, PAGES, url, whatsappWith } from "../config.js";
 
 export const PRODUTOS = CATALOGO.produtos;
 const BY_REF = new Map(PRODUTOS.map(p => [p.ref, p]));
 const BY_SLUG = new Map(PRODUTOS.map(p => [p.slug, p]));
 
 export const findBySlug = slug => BY_SLUG.get(slug);
-export const pageOf = p => `produto_${p.slug}.html`;
+export const pageOf = p => PAGES.product(p.slug);
+const asset = src => url(src);   // caminhos de imagem do catálogo são relativos à raiz
 
 const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const brl = v => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v);
@@ -26,9 +27,9 @@ export function cardHtml(p) {
     <article class="product-card reveal" data-categoria="${esc(p.categoria)}">
       <a class="product-card__link" href="${pageOf(p)}" data-open-product="${esc(p.slug)}" aria-label="Ver detalhes de ${esc(p.nome)}">
         <div class="product-card__media">
-          <img src="${esc(p.imagens[0].src)}" alt="${esc(p.imagens[0].alt)}" loading="lazy">
+          <img src="${esc(asset(p.imagens[0].src))}" alt="${esc(p.imagens[0].alt)}" loading="lazy">
           <div class="product-card__veil" aria-hidden="true">
-            <img src="imagens/forms_z.png" alt="">
+            <img src="${asset("imagens/forms_z.png")}" alt="">
             <span>VER DETALHES</span>
           </div>
         </div>
@@ -70,12 +71,12 @@ function galleryHtml(p) {
   const thumbs = p.imagens.length > 1
     ? `<div class="product-sheet__thumbs">${p.imagens.map((img, i) => `
         <button type="button" data-thumb="${i}" aria-label="Imagem ${i + 1} de ${p.imagens.length}"${i === 0 ? ' aria-current="true"' : ""}>
-          <img src="${esc(img.src)}" alt="">
+          <img src="${esc(asset(img.src))}" alt="">
         </button>`).join("")}</div>`
     : "";
   return `
     <div class="product-sheet__media">
-      <img class="product-sheet__main" src="${esc(first.src)}" alt="${esc(first.alt)}">
+      <img class="product-sheet__main" src="${esc(asset(first.src))}" alt="${esc(first.alt)}">
       ${thumbs}
     </div>`;
 }
@@ -122,7 +123,7 @@ export function bindGallery(root) {
     const main = sheet.querySelector(".product-sheet__main");
     main.classList.remove("is-swapping");
     void main.offsetWidth;                       // reinicia a animação de troca
-    main.src = img.src;
+    main.src = asset(img.src);
     main.alt = img.alt;
     main.classList.add("is-swapping");
     sheet.querySelectorAll("[data-thumb]").forEach(b => b.toggleAttribute("aria-current", b === thumb));

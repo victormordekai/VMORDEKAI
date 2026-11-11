@@ -2,7 +2,7 @@
    VMORDEKAI® · LAB (lab.html)
    Reaproveita as seções editoriais de portfolio.css e acrescenta
    blocos modulares claro/escuro.
-   Depende de: tokens.css, components.css, pages/portfolio.css
+   Depende de: tokens.css, base.css, components.css, pages/portfolio.css
 ========================================================= */
 
 .vm-section-light,

@@ -1,4 +1,4 @@
-# VMORDEKAI® · V02-0. | 26.11
+# VMORDEKAI® · V02-1. | 26.11
 
 Laboratório de design, produto, branding e produção têxtil. Site estático (HTML, CSS e JavaScript) publicado no GitHub Pages.
 
@@ -6,12 +6,11 @@ Laboratório de design, produto, branding e produção têxtil. Site estático (
 
 | Arquivo | Conteúdo |
 |---|---|
-| `index.html` | Início |
-| `portfolio-1.html` | Portfólio Briefing Estratégico B2B |
-| `lab.html` | LAB: estrutura, estratégia, private label e consultoria |
-| `shop.html` | Catálogo com ficha do produto em overlay |
-| `produto_<slug>.html` | Uma página por produto (gerada) |
-| `portfolio.html`, `index-1.html` | Endereços antigos que redirecionam |
+| `index.html` | Início (única página na raiz) |
+| `pages/portfolio-1.html` | Portfólio Briefing Estratégico B2B |
+| `pages/lab.html` | LAB: estrutura, estratégia, private label e consultoria |
+| `pages/shop.html` | Catálogo com ficha do produto em overlay |
+| `pages/produtos/produto_<slug>.html` | Uma página por produto (gerada) |
 
 ## Estrutura
 
@@ -20,12 +19,13 @@ css/tokens.css        cores, tipografia, formas, movimento (fonte única)
 css/base.css          reset e revelação no scroll
 css/components.css    navbar, footer, contato, botões
 css/pages/            estilos e animações de cada página
-js/config.js          versão, copy, contatos e mapa do site
+js/config.js          versão, copy, contatos, endereços das páginas (PAGES)
 js/components/        <vm-header>, <vm-footer>, <vm-contato>
 js/modules/           reveal, rotator (carrosséis)
 js/shop/              catálogo, ficha, overlay e página do produto
 data/produtos.json    catálogo (fonte única)
 tools/                gerador do catálogo
+pages/                páginas internas · produtos/ (geradas)
 imagens/              imagens em uso · produtos/ · padroes/ · acervo/ (não usadas)
 arquivos/             PDF e materiais do portfólio
 docs/                 registros de versão e notas
@@ -42,16 +42,16 @@ Todas as páginas usam os mesmos componentes. Cada página declara apenas os pr�
 </vm-header>
 ...
 <vm-footer></vm-footer>
-<script type="module" src="js/site.js"></script>
+<script type="module" src="../js/site.js"></script>   <!-- em pages/; na raiz: js/site.js -->
 ```
 
-Versão, copy e contatos ficam em `js/config.js`.
+Versão, copy, contatos e endereços das páginas ficam em `js/config.js`. Os componentes calculam a raiz do site sozinhos, então funcionam em qualquer pasta.
 
 ## Produtos
 
 1. Edite `data/produtos.json` (referência, nome, dados, imagens).
 2. Rode `python3 tools/build_produtos.py`.
-3. O script atualiza o catálogo, as páginas `produto_<slug>.html` e a lista do shop, e mostra os dados ainda pendentes.
+3. O script atualiza o catálogo, as páginas em `pages/produtos/` e a lista do shop, e mostra os dados ainda pendentes.
 
 `python3 tools/build_produtos.py --check` confirma que tudo está em dia.
 
@@ -64,4 +64,4 @@ python3 -m http.server 8000
 # http://localhost:8000
 ```
 
-Registro desta versão: `docs/V02-0_REESTRUTURACAO_2026-11-11.md`.
+Registros: `docs/V02-0_REESTRUTURACAO_2026-11-11.md` (auditoria e reestruturação) e `docs/V02-1_PAGINAS_E_PORTFOLIO_2026-11-11.md` (pastas e portfólio).

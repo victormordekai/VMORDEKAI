@@ -3,8 +3,13 @@
 
 import { SITE, SITE_MAP, isExternal } from "../config.js";
 
-const linkHtml = ({ label, href }) =>
-  `<li><a href="${href}"${isExternal(href) ? ' target="_blank" rel="noopener noreferrer"' : ""}>${label}${isExternal(href) ? " ↗" : ""}</a></li>`;
+const isCurrent = href => new URL(href, location.href).pathname === location.pathname;
+
+const linkHtml = ({ label, href }) => {
+  const external = isExternal(href);
+  const attrs = external ? ' target="_blank" rel="noopener noreferrer"' : (isCurrent(href) ? ' aria-current="page"' : "");
+  return `<li><a href="${href}"${attrs}>${label}${external ? " ↗" : ""}</a></li>`;
+};
 
 class SiteFooter extends HTMLElement {
   connectedCallback() {

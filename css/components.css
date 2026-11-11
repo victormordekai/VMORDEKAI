@@ -163,7 +163,8 @@ vm-header:not(:defined) > *{ display:none; }   /* evita piscar os links antes do
   transition:color var(--dur-fast) ease, transform var(--dur-fast) ease, background var(--dur-fast) ease;
 }
 .site-footer__links a:hover,
-.site-footer__links a:focus-visible{
+.site-footer__links a:focus-visible,
+.site-footer__links a[aria-current="page"]{
   color:var(--vm-white);
   transform:scale(1.06);
   background:rgba(255, 255, 255, .06);
@@ -197,6 +198,49 @@ vm-header:not(:defined) > *{ display:none; }   /* evita piscar os links antes do
 .btn-primary:hover{
   background-color:var(--vm-red-dark);
   transform:translateY(-2px);
+}
+
+/* ---------- SEÇÃO QUEM SOMOS (index e portfólio) ---------- */
+.quem-somos{
+  position:relative;
+  padding:5rem 2rem;
+  overflow:hidden;
+  background:url("../imagens/padroes/madeiras.jpg") center / cover no-repeat;
+  color:var(--vm-white);
+}
+.quem-somos-bg{
+  display:flex;
+  align-items:stretch;
+  justify-content:space-between;
+  gap:2rem;
+  max-width:1200px;
+  margin:0 auto;
+}
+.quem-somos-texto{
+  flex:1;
+  padding:2rem;
+  border-radius:var(--radius-m);
+  background:var(--vm-purple-70);
+  text-align:justify;
+  line-height:1.6;
+}
+.quem-somos-texto h2{ margin-bottom:1rem; font-size:2rem; text-align:left; color:var(--vm-red); }
+.quem-somos-texto p{ margin-bottom:1rem; }
+.quem-somos-texto a{ color:var(--vm-blue); border-bottom:1px solid currentColor; }
+.quem-somos-img{ flex:1; display:flex; align-items:center; justify-content:center; }
+.quem-somos-img img{
+  width:100%;
+  max-width:480px;
+  border-radius:var(--radius-m);
+  box-shadow:0 8px 20px rgba(0, 0, 0, .25);
+  transition:transform .4s ease;
+}
+.quem-somos-img img:hover{ transform:scale(1.05); }
+
+.quem-somos .vm-mini-tag{ display:inline-block; margin-bottom:1rem; color:rgba(255, 255, 255, .55); font-size:.75rem; letter-spacing:var(--tracking-tag); text-transform:uppercase; }
+@media (max-width:900px){
+  .quem-somos-bg{ flex-direction:column; }
+  .quem-somos-img img{ max-width:90%; margin:1.5rem auto 0; }
 }
 
 /* ---------- CONTATO · <vm-contato> ---------- */

@@ -8,7 +8,7 @@
 //
 // Atributo opcional `overlay`: o header não reserva altura no fluxo (hero já compensa).
 
-import { SITE, isExternal } from "../config.js";
+import { SITE, PAGES, isExternal } from "../config.js";
 
 class SiteHeader extends HTMLElement {
   connectedCallback() {
@@ -25,7 +25,7 @@ class SiteHeader extends HTMLElement {
 
     this.innerHTML = `
       <header class="header">
-        <a class="logo-container" href="${SITE.home}" aria-label="${SITE.name} — início">
+        <a class="logo-container" href="${PAGES.home}" aria-label="${SITE.name} — início">
           <img src="${SITE.logo}" alt="" width="45" height="45">
           <span class="logo-text">${SITE.name}</span>
         </a>

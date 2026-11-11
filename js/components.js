@@ -1,6 +1,5 @@
 // VMORDEKAI® · componentes comuns de moldura (navbar e footer).
-// Carregado sozinho por páginas que mantêm scripts próprios (portfolio-1.html)
-// e importado por js/site.js nas demais.
+// Importado por js/site.js; pode ser carregado sozinho por uma página que só precise da moldura.
 
 import "./components/site-header.js";
 import "./components/site-footer.js";
