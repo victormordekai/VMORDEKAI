@@ -14,11 +14,19 @@ export const pageOf = p => PAGES.product(p.slug);
 const asset = src => url(src);   // caminhos de imagem do catálogo são relativos à raiz
 
 const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-const brl = v => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v);
+export const brl = v => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v);
 
-export const priceText = p => (p.preco ? brl(p.preco) : "Sob consulta");
+/** Plural da categoria para filtros e trilha ("Sob encomenda" não flexiona). */
+export const categoryLabel = c => (c.includes(" ") ? c : `${c}s`);
 
-const reserveLink = p => whatsappWith(`Olá! Tenho interesse no produto ${p.nome} (ref. ${p.ref}) da VMORDEKAI®.`);
+/** Preço de vitrine, "a partir de …" ou o texto de quem não tem preço fixo (sob encomenda). */
+export const priceText = p => (p.preco ? `${p.preco_prefixo || ""}${brl(p.preco)}` : p.preco_texto || "Sob consulta");
+
+const isCustom = p => !p.preco && Boolean(p.preco_texto);
+
+const reserveLink = p => whatsappWith(isCustom(p)
+  ? `Olá! Gostaria de um orçamento sob encomenda: ${p.nome} (ref. ${p.ref}) da VMORDEKAI®.`
+  : `Olá! Tenho interesse no produto ${p.nome} (ref. ${p.ref}) da VMORDEKAI®.`);
 
 /** Card do catálogo. Sem JS, o link abre a página do produto; com JS, abre o overlay. */
 export function cardHtml(p) {
@@ -38,9 +46,10 @@ export function cardHtml(p) {
           <h3>${esc(p.nome)}</h3>
           <p>${esc(p.resumo)}</p>
           ${chips ? `<ul class="product-chips">${chips}</ul>` : ""}
-          <div class="product-card__price">${priceText(p)}</div>
+          <div class="product-card__price">${esc(priceText(p))}</div>
         </div>
       </a>
+      <button type="button" class="product-card__add" data-cart-toggle="${esc(p.ref)}" aria-pressed="false" aria-label="Adicionar ${esc(p.nome)} à seleção">+</button>
     </article>`;
 }
 
@@ -63,20 +72,22 @@ function priceHtml(p) {
     .filter(c => c && c.preco)
     .map(c => ` <span class="product-sheet__plus">+ <a href="${pageOf(c)}" data-open-product="${esc(c.slug)}">${esc(c.nome)}</a> ${brl(c.preco)}</span>`)
     .join("");
-  return `<p class="product-sheet__price"><span>Valor</span> <strong>${priceText(p)}</strong>${p.preco ? extras : ""}</p>`;
+  const note = p.preco_nota ? `<small class="product-sheet__note">${esc(p.preco_nota)}</small>` : "";
+  return `<p class="product-sheet__price"><span>Valor</span> <strong>${esc(priceText(p))}</strong>${p.preco ? extras : ""}${note}</p>`;
 }
 
 function galleryHtml(p) {
   const [first] = p.imagens;
   const thumbs = p.imagens.length > 1
     ? `<div class="product-sheet__thumbs">${p.imagens.map((img, i) => `
-        <button type="button" data-thumb="${i}" aria-label="Imagem ${i + 1} de ${p.imagens.length}"${i === 0 ? ' aria-current="true"' : ""}>
+        <button type="button" data-thumb="${i}" title="${esc(img.rotulo || "")}" aria-label="${esc(img.rotulo || `Imagem ${i + 1}`)} (${i + 1} de ${p.imagens.length})"${i === 0 ? ' aria-current="true"' : ""}>
           <img src="${esc(asset(img.src))}" alt="">
         </button>`).join("")}</div>`
     : "";
   return `
     <div class="product-sheet__media">
       <img class="product-sheet__main" src="${esc(asset(first.src))}" alt="${esc(first.alt)}">
+      <span class="product-sheet__label" data-label${first.rotulo ? "" : " hidden"}>${esc(first.rotulo || "")}</span>
       ${thumbs}
     </div>`;
 }
@@ -104,7 +115,8 @@ export function sheetHtml(p, context = "page") {
         ${specsHtml(p)}
         ${priceHtml(p)}
         <div class="product-sheet__actions">
-          <a class="product-action" href="${reserveLink(p)}" target="_blank" rel="noopener noreferrer">Reservar pelo WhatsApp</a>
+          <button type="button" class="product-action product-action--select" data-cart-toggle="${esc(p.ref)}" aria-pressed="false"><span data-cart-label>+ Adicionar à seleção</span></button>
+          <a class="product-action product-action--ghost" href="${reserveLink(p)}" target="_blank" rel="noopener noreferrer">${isCustom(p) ? "Pedir orçamento pelo WhatsApp" : "Reservar pelo WhatsApp"}</a>
           ${instagram}
           ${pageLink}
         </div>
@@ -126,6 +138,9 @@ export function bindGallery(root) {
     main.src = asset(img.src);
     main.alt = img.alt;
     main.classList.add("is-swapping");
+    const label = sheet.querySelector("[data-label]");
+    label.textContent = img.rotulo || "";
+    label.hidden = !img.rotulo;
     sheet.querySelectorAll("[data-thumb]").forEach(b => b.toggleAttribute("aria-current", b === thumb));
   });
 }

@@ -1,4 +1,4 @@
-# VMORDEKAI® · V02-1. | 26.11
+# VMORDEKAI® · V02-2. | 26.11
 
 Laboratório de design, produto, branding e produção têxtil. Site estático (HTML, CSS e JavaScript) publicado no GitHub Pages.
 
@@ -9,7 +9,7 @@ Laboratório de design, produto, branding e produção têxtil. Site estático (
 | `index.html` | Início (única página na raiz) |
 | `pages/portfolio-1.html` | Portfólio Briefing Estratégico B2B |
 | `pages/lab.html` | LAB: estrutura, estratégia, private label e consultoria |
-| `pages/shop.html` | Catálogo com ficha do produto em overlay |
+| `pages/shop.html` | Catálogo com filtros, ficha em overlay e seleção enviada pelo WhatsApp |
 | `pages/produtos/produto_<slug>.html` | Uma página por produto (gerada) |
 
 ## Estrutura
@@ -64,4 +64,4 @@ python3 -m http.server 8000
 # http://localhost:8000
 ```
 
-Registros: `docs/V02-0_REESTRUTURACAO_2026-11-11.md` (auditoria e reestruturação) e `docs/V02-1_PAGINAS_E_PORTFOLIO_2026-11-11.md` (pastas e portfólio).
+Registros: `docs/V02-2_CATALOGO_2027_E_SELECAO_2026-11-12.md` (catálogo 2027, filtros e seleção pelo WhatsApp), `docs/V02-0_REESTRUTURACAO_2026-11-11.md` (auditoria e reestruturação) e `docs/V02-1_PAGINAS_E_PORTFOLIO_2026-11-11.md` (pastas e portfólio).

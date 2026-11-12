@@ -1,8 +1,9 @@
 // GERADO por tools/build_produtos.py a partir de data/produtos.json — não editar à mão.
 export const CATALOGO = {
-  "versao": "1.0",
-  "atualizado": "2026-11-11",
+  "versao": "2.0",
+  "atualizado": "2026-11-12",
   "moeda": "BRL",
+  "regra_precos": "Base Portfólio Store 2025 + 4,5% (matriz 2027). Acima de R$ 260, reduz R$ 10. Arredondamento de vitrine: múltiplo de R$ 5 mais próximo menos R$ 0,10.",
   "produtos": [
     {
       "ref": "VMK-MOC-001",
@@ -11,7 +12,8 @@ export const CATALOGO = {
       "categoria": "Mochila",
       "linha": "Outdoor Series",
       "destaque": true,
-      "resumo": "Mochila outdoor e urbana de 29 L, com bolso para notebook e estojos removíveis.",
+      "preco": 339.9,
+      "resumo": "Mochila esportiva de 29 L, com bolso para notebook e dois estojos removíveis.",
       "descricao": "Com 29 litros de volume interno e bolso para notebook, conta ainda com diversos bolsos e dois estojos removíveis. Perfeita para rotinas com atividades outdoor ou viagens. Fundo reforçado e suportes na base para acoplar a bolsa removível CYLINDER, aumentando a carga em +9 L.",
       "volume": "29 L",
       "dimensoes": "49 × 33 × 18 cm",
@@ -25,19 +27,532 @@ export const CATALOGO = {
         "Suportes para a CYLINDER (+9 L)"
       ],
       "cores": "Preto · outras cores disponíveis",
-      "preco": 250.0,
       "complementos": [
         "VMK-BOL-001"
       ],
       "disponibilidade": "Disponível",
       "instagram": "https://www.instagram.com/p/CAP5tmPhdsv/",
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 335,00).",
       "imagens": [
         {
           "src": "imagens/produtos/dark-knight-01.jpg",
-          "alt": "Mochila DARK KNIGHT em uso, com a CYLINDER acoplada na base"
+          "alt": "Mochila DARK KNIGHT preta em uso, com a CYLINDER acoplada",
+          "rotulo": "Em uso"
+        },
+        {
+          "src": "imagens/produtos/dark-knight-02.jpg",
+          "alt": "Mochila DARK KNIGHT preta, vista frontal",
+          "rotulo": "Estúdio"
+        },
+        {
+          "src": "imagens/produtos/dark-knight-03.jpg",
+          "alt": "Mochila DARK KNIGHT, vista lateral",
+          "rotulo": "Lateral"
+        },
+        {
+          "src": "imagens/produtos/dark-knight-04.jpg",
+          "alt": "Interior da DARK KNIGHT com forro azul",
+          "rotulo": "Interior azul"
         }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-016",
+      "slug": "dk-war",
+      "nome": "DK WAR VINTAGE",
+      "categoria": "Mochila",
+      "linha": "Outdoor Series",
+      "destaque": true,
+      "preco": 339.9,
+      "resumo": "Mochila vintage em lona, 29 L, com bolso para notebook e dois estojos removíveis.",
+      "descricao": "Modelo vintage em lona, da mesma família da DARK KNIGHT. Com 29 litros de volume interno e bolso para notebook, conta ainda com diversos bolsos e dois estojos removíveis. Perfeita para rotinas com atividades outdoor ou viagens. Fundo reforçado e suportes na base para acoplar a bolsa removível CYLINDER, aumentando a carga em +9 L.",
+      "volume": "29 L",
+      "dimensoes": "49 × 33 × 18 cm",
+      "material": "Lona ou brim rip-stop (militar)",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "Bolso para notebook",
+        "Diversos bolsos",
+        "+2 estojos removíveis",
+        "Fundo reforçado",
+        "Suportes para a CYLINDER (+9 L)"
       ],
-      "fonte": "Ficha comercial DARK KNIGHT (imagem de referência enviada em 2026-11-11)."
+      "cores": "Verde militar · outras cores disponíveis",
+      "complementos": [
+        "VMK-BOL-001"
+      ],
+      "disponibilidade": "Disponível",
+      "instagram": "https://www.instagram.com/p/CAQQT5tBnGU/",
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 335,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/dk-war-01.jpg",
+          "alt": "Mochila DK WAR VINTAGE verde em uso, com a CYLINDER acoplada",
+          "rotulo": "Em uso"
+        },
+        {
+          "src": "imagens/produtos/dk-war-02.jpg",
+          "alt": "Mochila DK WAR VINTAGE verde, vista frontal",
+          "rotulo": "Frente"
+        },
+        {
+          "src": "imagens/produtos/dk-war-03.jpg",
+          "alt": "Mochila DK WAR VINTAGE, costas e alças",
+          "rotulo": "Costas"
+        },
+        {
+          "src": "imagens/produtos/dk-war-04.jpg",
+          "alt": "Estojos removíveis da DK WAR VINTAGE",
+          "rotulo": "Estojos"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-003",
+      "slug": "ambitus-iter",
+      "nome": "AMBITUS ITER",
+      "categoria": "Mochila",
+      "linha": "AMBITUS",
+      "destaque": false,
+      "preco": 264.9,
+      "resumo": "Mochila outdoor vintage com 5 bolsos externos, bolso para notebook e estojo removível.",
+      "descricao": "Mochila no estilo outdoor vintage com 5 bolsos externos: 2 laterais para garrafa d'água e sombrinha e 2 frontais para itens diversos, um fechado com zíper e outro por botão magnético e engate. Internamente possui diversos bolsos, incluindo bolso para notebook e estojo removível no estilo da mochila. Também possui suportes para acoplar a bolsa removível CYLINDER, aumentando a carga em +9 L.",
+      "volume": null,
+      "dimensoes": "47 × 30 × 16 cm ou 45 × 28 × 14 cm",
+      "material": "Nylon Chicago ou brim",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "5 bolsos externos",
+        "Bolso para notebook",
+        "Estojo removível",
+        "Fecho com botão magnético e engate",
+        "Suportes para a CYLINDER (+9 L)"
+      ],
+      "cores": "Mescla cinza · Cinza chumbo · DARK",
+      "complementos": [
+        "VMK-BOL-001"
+      ],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 265,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/ambitus-iter-01.jpg",
+          "alt": "Mochila AMBITUS ITER em mescla cinza, em uso",
+          "rotulo": "Mescla cinza"
+        },
+        {
+          "src": "imagens/produtos/ambitus-iter-02.jpg",
+          "alt": "Mochila AMBITUS ITER 2024.002 DARK",
+          "rotulo": "DARK 2024.002"
+        },
+        {
+          "src": "imagens/produtos/ambitus-iter-03.jpg",
+          "alt": "Mochila AMBITUS ITER em cinza chumbo",
+          "rotulo": "Cinza chumbo"
+        },
+        {
+          "src": "imagens/produtos/ambitus-iter-04.jpg",
+          "alt": "Interior da AMBITUS ITER com forro vermelho",
+          "rotulo": "Interior"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-006",
+      "slug": "mutatio",
+      "nome": "MUTATIO BAG",
+      "categoria": "Mochila",
+      "linha": "Outdoor Series",
+      "destaque": false,
+      "preco": 379.9,
+      "resumo": "Versátil: transforma-se em mala tiracolo ou mochila.",
+      "descricao": "Versátil, transforma-se em mala tiracolo ou mochila: basta acoplar as alças tiracolo, e as alças de mochila podem ser guardadas em um bolso localizado na costa. Conta com diversos bolsos removíveis, como porta-laptop e estojos, e outros para várias utilidades, como porta-sombrinha e garrafa d'água. Além disso, pode ser acoplada na base uma bolsa CYLINDER, aumentando a carga em +9 L.",
+      "volume": null,
+      "dimensoes": "47 × 33 × 14 cm",
+      "material": "Nylon ou poliéster 1680D",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "Mochila ou mala tiracolo",
+        "Bolsos removíveis (porta-laptop e estojos)",
+        "Porta-sombrinha e garrafa d'água",
+        "Alças guardadas na costa",
+        "Suportes para a CYLINDER (+9 L)"
+      ],
+      "cores": "Preto e prata · outras cores disponíveis",
+      "complementos": [
+        "VMK-BOL-001"
+      ],
+      "disponibilidade": "Disponível",
+      "instagram": "https://www.instagram.com/p/BrFX4ZshArs/",
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 375,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/mutatio-01.jpg",
+          "alt": "Mochila MUTATIO BAG preta com detalhe prata",
+          "rotulo": "Preto e prata"
+        },
+        {
+          "src": "imagens/produtos/mutatio-02.jpg",
+          "alt": "Mochila MUTATIO BAG em uso",
+          "rotulo": "Em uso"
+        },
+        {
+          "src": "imagens/produtos/mutatio-03.jpg",
+          "alt": "MUTATIO BAG usada como mala tiracolo",
+          "rotulo": "Modo tiracolo"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-007",
+      "slug": "zen",
+      "nome": "ZEN",
+      "categoria": "Mochila",
+      "linha": "Outdoor Series",
+      "destaque": true,
+      "preco": 249.9,
+      "resumo": "Design ergonômico que distribui e disfarça o volume. Em cinco cores e texturas.",
+      "descricao": "Seu design ergonômico distribui o volume de forma confortável, além de disfarçar o volume da mochila. Ao todo possui 4 bolsos externos, com porta-sombrinha e garrafa d'água nos bolsos laterais. O acesso principal possui bolso para notebook, porta-documentos, porta-livro de bolso e estojo removível no estilo da mochila; na lateral, porta-celular. Além disso, pode ser acoplada na base uma bolsa CYLINDER, aumentando a carga em +9 L e deixando o conjunto perfeito para viagens.",
+      "volume": null,
+      "dimensoes": "47 × 28 × 15 cm",
+      "material": "Nylon e courvin",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "4 bolsos externos",
+        "Bolso para notebook",
+        "Porta-documentos e porta-livro",
+        "Estojo removível",
+        "Suportes para a CYLINDER (+9 L)"
+      ],
+      "cores": "Courvin marrom · Azul · Red · Gray · Black Wood",
+      "complementos": [
+        "VMK-BOL-001"
+      ],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 250,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/zen-01.jpg",
+          "alt": "Mochila ZEN em courvin marrom",
+          "rotulo": "Courvin marrom"
+        },
+        {
+          "src": "imagens/produtos/zen-02.jpg",
+          "alt": "Mochila ZEN azul",
+          "rotulo": "Azul"
+        },
+        {
+          "src": "imagens/produtos/zen-03.jpg",
+          "alt": "Mochila ZEN vermelha",
+          "rotulo": "Red"
+        },
+        {
+          "src": "imagens/produtos/zen-04.jpg",
+          "alt": "Mochila ZEN cinza",
+          "rotulo": "Gray"
+        },
+        {
+          "src": "imagens/produtos/zen-05.jpg",
+          "alt": "Mochila ZEN Black Wood",
+          "rotulo": "Black Wood"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-008",
+      "slug": "wilk",
+      "nome": "WILK",
+      "categoria": "Mochila",
+      "linha": "Outdoor Series",
+      "destaque": false,
+      "preco": 349.9,
+      "resumo": "Modelo esportivo com 5 bolsos externos e 5 internos, em várias cores.",
+      "descricao": "Modelo esportivo feito em nylon, com forro em nylon paraquedas. Tem 5 bolsos externos e 5 internos. O acesso principal, de volume maior, traz bolso para notebook, porta-documentos, porta-livros de bolso e estojo removível. Bolsos frontais para óculos ou acessórios, bolso lateral esquerdo para garrafa d'água ou sombrinha e bolso lateral direito porta-celular. Na base, suporte para a CYLINDER BAG.",
+      "volume": null,
+      "dimensoes": null,
+      "material": "Nylon",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "5 bolsos externos e 5 internos",
+        "Bolso para notebook",
+        "Estojo removível",
+        "Bolsos para óculos e celular",
+        "Suporte para a CYLINDER (+9 L)"
+      ],
+      "cores": "Orange · Yellow · Cinza",
+      "complementos": [
+        "VMK-BOL-001"
+      ],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 345,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/wilk-01.jpg",
+          "alt": "Mochila WILK preta com detalhes laranja",
+          "rotulo": "Orange"
+        },
+        {
+          "src": "imagens/produtos/wilk-02.jpg",
+          "alt": "Mochila WILK preta com detalhes amarelos",
+          "rotulo": "Yellow"
+        },
+        {
+          "src": "imagens/produtos/wilk-03.jpg",
+          "alt": "Mochila WILK cinza com detalhes laranja",
+          "rotulo": "Cinza"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-011",
+      "slug": "types",
+      "nome": "TYPES",
+      "categoria": "Mochila",
+      "linha": "Casual",
+      "destaque": false,
+      "preco": 299.9,
+      "resumo": "Modelo casual em sarjas e nylons estampados, para a escola e a universidade.",
+      "descricao": "Modelo casual em combinações de sarjas e nylons estampados, com forro em nylon paraquedas. Perfeita para o dia a dia escolar e a universidade.",
+      "volume": null,
+      "dimensoes": null,
+      "material": "Sarjas e nylons estampados",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "Combinações de estampas",
+        "Dia a dia escolar e universidade"
+      ],
+      "cores": "Estampas variadas",
+      "complementos": [],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 295,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/types-01.jpg",
+          "alt": "Mochila TYPES com estampa paisley",
+          "rotulo": "Estampa paisley"
+        },
+        {
+          "src": "imagens/produtos/types-02.jpg",
+          "alt": "Mochila TYPES, vista lateral",
+          "rotulo": "Lateral"
+        },
+        {
+          "src": "imagens/produtos/types-03.jpg",
+          "alt": "Mochila TYPES com os bolsos abertos",
+          "rotulo": "Aberta"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-012",
+      "slug": "inception",
+      "nome": "INCEPTION",
+      "categoria": "Mochila",
+      "linha": "Vintage",
+      "destaque": false,
+      "preco": 274.9,
+      "resumo": "Modelo vintage: a aba se transforma em bolsa independente.",
+      "descricao": "Modelo vintage em combinação de chenille e tecidos com estampas. A aba se transforma em bolsa independente, e a mochila também pode ser usada sem ela.",
+      "volume": null,
+      "dimensoes": null,
+      "material": "Chenille e tecidos estampados",
+      "forro": null,
+      "destaques": [
+        "Aba que vira bolsa independente",
+        "Pode ser usada sem a aba"
+      ],
+      "cores": "Étnico listrado · Étnico laranja · Courvin",
+      "complementos": [],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 275,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/inception-01.jpg",
+          "alt": "Mochila INCEPTION com aba étnica listrada",
+          "rotulo": "Étnico listrado"
+        },
+        {
+          "src": "imagens/produtos/inception-02.jpg",
+          "alt": "Mochila INCEPTION com aba étnica laranja",
+          "rotulo": "Étnico laranja"
+        },
+        {
+          "src": "imagens/produtos/inception-03.jpg",
+          "alt": "Mochila INCEPTION com aba em courvin",
+          "rotulo": "Courvin"
+        },
+        {
+          "src": "imagens/produtos/inception-04.jpg",
+          "alt": "Mochila INCEPTION aberta, com a aba destacada",
+          "rotulo": "Aba destacada"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-004",
+      "slug": "terrae",
+      "nome": "TERRAE",
+      "categoria": "Mochila",
+      "linha": "Vintage",
+      "destaque": false,
+      "preco": 249.9,
+      "resumo": "Mochila roll-top de estilo retrô, com fecho por tiras e fivelas.",
+      "descricao": "Mochila roll-top de estilo retrô: a boca enrola e fecha por duas tiras com fivelas. Tem bolso frontal com aba e acompanha estojo no estilo da mochila.",
+      "volume": null,
+      "dimensoes": null,
+      "material": null,
+      "forro": null,
+      "destaques": [
+        "Fecho roll-top",
+        "Tiras com fivelas",
+        "Bolso frontal com aba",
+        "Estojo no estilo da mochila"
+      ],
+      "cores": "Verde",
+      "complementos": [],
+      "disponibilidade": null,
+      "instagram": null,
+      "fonte": "Foto 'Retro Mirian 2016' do acervo. Nome comercial e preço definidos pela marca em 2026-11-12 (valor da AMBITUS ITER menos R$ 15).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/terrae-01.jpg",
+          "alt": "Mochila roll-top TERRAE verde com tiras claras e estojo",
+          "rotulo": "Verde"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-015",
+      "slug": "baby",
+      "nome": "BABY",
+      "categoria": "Mochila",
+      "linha": "Infantil",
+      "destaque": false,
+      "preco": 204.9,
+      "resumo": "Mochila escolar infantil.",
+      "descricao": "Mochila escolar infantil, com estojo e bolsa removíveis no estilo da mochila.",
+      "volume": null,
+      "dimensoes": null,
+      "material": null,
+      "forro": null,
+      "destaques": [
+        "Tamanho infantil",
+        "Estojo e bolsa removíveis"
+      ],
+      "cores": "Azul e vermelho com estampa",
+      "complementos": [],
+      "disponibilidade": null,
+      "instagram": null,
+      "fonte": "Tabela de orçamentos do Portfólio Store 2025 (mochilas escolares infantis: R$ 195,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/baby-01.jpg",
+          "alt": "Mochila BABY azul e vermelha com estampa",
+          "rotulo": "Frente"
+        },
+        {
+          "src": "imagens/produtos/baby-02.jpg",
+          "alt": "Mochila BABY, costas e alças",
+          "rotulo": "Costas"
+        },
+        {
+          "src": "imagens/produtos/baby-03.jpg",
+          "alt": "Estojo e bolsa removíveis da mochila BABY",
+          "rotulo": "Estojos"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-013",
+      "slug": "peregrine",
+      "nome": "PEREGRINE",
+      "categoria": "Mochila",
+      "linha": "Vintage",
+      "destaque": true,
+      "preco": 334.9,
+      "resumo": "Mochila de estilo vintage com alça de mão e fechos frontais por tiras.",
+      "descricao": "Mochila de estilo vintage com alça de mão, tampa e fechos frontais por tiras e fivelas.",
+      "volume": null,
+      "dimensoes": null,
+      "material": null,
+      "forro": null,
+      "destaques": [
+        "Alça de mão",
+        "Fechos por tiras e fivelas"
+      ],
+      "cores": "Verde e azul",
+      "complementos": [],
+      "disponibilidade": null,
+      "instagram": null,
+      "fonte": "Preço 2027 definido pela marca em 2026-11-12 (R$ 335).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/peregrine-01.jpg",
+          "alt": "Mochila PEREGRINE verde e azul, vista frontal",
+          "rotulo": "Verde e azul"
+        },
+        {
+          "src": "imagens/produtos/peregrine-02.jpg",
+          "alt": "Mochila PEREGRINE, costas e alças",
+          "rotulo": "Costas"
+        },
+        {
+          "src": "imagens/produtos/peregrine-03.jpg",
+          "alt": "Mochila PEREGRINE aberta",
+          "rotulo": "Aberta"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-014",
+      "slug": "fly",
+      "nome": "FLY",
+      "categoria": "Mochila",
+      "linha": "Outdoor Series",
+      "destaque": false,
+      "preco": 364.9,
+      "resumo": "Mochila esportiva de treino, com cerca de 35 L.",
+      "descricao": "Com cerca de 35 litros de volume, possui diversos bolsos e estojo removível. Perfeita para carregar os materiais de treino, como luvas, caneleiras e uniforme. Com fundo reforçado, na base também possui suportes para acoplar a CYLINDER BAG, aumentando a carga em +9 L. O material é leve, permite ventilação e é fácil de limpar.",
+      "volume": "cerca de 35 L",
+      "dimensoes": "53 × 33 × 22 cm",
+      "material": "Tela spacer e poliéster",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "Cerca de 35 L",
+        "Estojo removível",
+        "Fundo reforçado",
+        "Material leve e ventilado",
+        "Suportes para a CYLINDER (+9 L)"
+      ],
+      "cores": "Azul e laranja",
+      "complementos": [
+        "VMK-BOL-001"
+      ],
+      "disponibilidade": null,
+      "instagram": null,
+      "fonte": "Especificações da versão FLYGHT (Store 2025 e Store Academias 2026). Preço 2027 definido pela marca em 2026-11-12 (R$ 365).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/fly-01.jpg",
+          "alt": "Mochila FLY azul, vista lateral, com estojo",
+          "rotulo": "Azul e laranja"
+        },
+        {
+          "src": "imagens/produtos/fly-02.jpg",
+          "alt": "Mochila FLY azul e laranja, vista frontal",
+          "rotulo": "Frente"
+        },
+        {
+          "src": "imagens/produtos/fly-03.jpg",
+          "alt": "Mochila FLY aberta, com forro laranja",
+          "rotulo": "Aberta"
+        }
+      ]
     },
     {
       "ref": "VMK-MOC-002",
@@ -46,6 +561,7 @@ export const CATALOGO = {
       "categoria": "Mochila",
       "linha": "Outdoor Series",
       "destaque": true,
+      "preco": 364.9,
       "resumo": "Design utilitário em lona e couro, inspirado na natureza do viajante.",
       "descricao": "Mochila de design utilitário em lona e couro, inspirada na natureza do viajante, com volume de 36 a 46 litros.",
       "volume": "36–46 L",
@@ -54,82 +570,37 @@ export const CATALOGO = {
       "forro": null,
       "destaques": [
         "Lona e couro",
-        "Volume de 36 a 46 L"
+        "Volume de 36 a 46 L",
+        "Bolsos laterais com aba",
+        "Fechos por tiras e fivelas"
       ],
-      "cores": null,
-      "preco": null,
+      "cores": "Marrom",
       "complementos": [],
       "disponibilidade": null,
       "instagram": null,
+      "fonte": "Site anterior (texto) e fotos enviadas em 2026-11-12. Preço 2027 definido pela marca em 2026-11-12 (R$ 365).",
       "imagens": [
         {
           "src": "imagens/produtos/von-humboldt-01.jpg",
-          "alt": "Mochila VON HUMBOLDT em lona marrom com tiras de couro"
+          "alt": "Mochila VON HUMBOLDT em lona marrom com tiras de couro, vista frontal",
+          "rotulo": "Estúdio"
         },
         {
           "src": "imagens/produtos/von-humboldt-02.jpg",
-          "alt": "Mochila VON HUMBOLDT carregada pela alça de mão"
-        }
-      ],
-      "fonte": "shop.html (versão anterior)."
-    },
-    {
-      "ref": "VMK-MOC-003",
-      "slug": "ambitus",
-      "nome": "AMBITUS",
-      "categoria": "Mochila",
-      "linha": "AMBITUS",
-      "destaque": false,
-      "resumo": "Mochila da linha AMBITUS.",
-      "descricao": "Mochila da linha AMBITUS, apresentada no site institucional da VMORDEKAI®. Especificações sob consulta.",
-      "volume": null,
-      "dimensoes": null,
-      "material": null,
-      "forro": null,
-      "destaques": [],
-      "cores": "Mescla cinza",
-      "preco": null,
-      "complementos": [],
-      "disponibilidade": null,
-      "instagram": null,
-      "imagens": [
-        {
-          "src": "imagens/produtos/ambitus-01.jpg",
-          "alt": "Mochila AMBITUS em mescla cinza, vista de costas"
-        }
-      ],
-      "fonte": "index.html e portfolio-1.html (imagem 'Mochila VMORDEKAI Ambitus')."
-    },
-    {
-      "ref": "VMK-MOC-004",
-      "slug": "ambitus-iter",
-      "nome": "AMBITUS ITER 2024.002 DARK",
-      "categoria": "Mochila",
-      "linha": "AMBITUS",
-      "destaque": true,
-      "resumo": "Edição 2024.002 DARK da linha AMBITUS ITER.",
-      "descricao": "Edição 2024.002 DARK da linha AMBITUS ITER. Especificações sob consulta.",
-      "volume": null,
-      "dimensoes": null,
-      "material": null,
-      "forro": null,
-      "destaques": [],
-      "cores": "Preto (DARK)",
-      "preco": null,
-      "complementos": [],
-      "disponibilidade": null,
-      "instagram": null,
-      "imagens": [
-        {
-          "src": "imagens/produtos/ambitus-iter-01.jpg",
-          "alt": "Mochila AMBITUS ITER 2024.002 DARK, vista frontal"
+          "alt": "Mochila VON HUMBOLDT, vista em três quartos",
+          "rotulo": "Três quartos"
         },
         {
-          "src": "imagens/produtos/ambitus-iter-02.jpg",
-          "alt": "Mochila AMBITUS ITER 2024.002 DARK, detalhe da parte superior"
+          "src": "imagens/produtos/von-humboldt-03.jpg",
+          "alt": "Mochila VON HUMBOLDT em uso, nas costas",
+          "rotulo": "Em uso"
+        },
+        {
+          "src": "imagens/produtos/von-humboldt-04.jpg",
+          "alt": "Mochila VON HUMBOLDT carregada pela alça de mão",
+          "rotulo": "Alça de mão"
         }
-      ],
-      "fonte": "Nomes dos arquivos de imagem 'Mochila AMBITUS ITER 2024.002 DARK'."
+      ]
     },
     {
       "ref": "VMK-MOC-005",
@@ -138,28 +609,40 @@ export const CATALOGO = {
       "categoria": "Mochila",
       "linha": "Edição limitada",
       "destaque": false,
+      "preco": 339.9,
       "resumo": "Peça experimental de edição limitada — escolha seu Pokémon.",
-      "descricao": "Peça experimental de edição limitada: escolha seu Pokémon. Tecido poliéster, 22 litros.",
+      "descricao": "Peça experimental de edição limitada: escolha seu Pokémon. Tecido poliéster, 22 litros, com bordado do personagem. Também é um exemplo de personalização: o mesmo modelo pode receber outros bordados sob encomenda.",
       "volume": "22 L",
       "dimensoes": null,
       "material": "Poliéster",
       "forro": null,
       "destaques": [
         "Edição limitada",
-        "Personagem à escolha"
+        "Personagem à escolha",
+        "Bordado"
       ],
       "cores": null,
-      "preco": null,
       "complementos": [],
       "disponibilidade": null,
       "instagram": null,
+      "fonte": "Site anterior (texto). Preço estimado pela tabela de orçamentos do Store 2025 (com bordado: R$ 335,00).",
       "imagens": [
         {
           "src": "imagens/produtos/tematica-pokemon-01.jpg",
-          "alt": "Mochila temática com bordado de Pokémon"
+          "alt": "Mochila temática com bordado do Charizard",
+          "rotulo": "Charizard"
+        },
+        {
+          "src": "imagens/produtos/tematica-pokemon-02.jpg",
+          "alt": "Mochila temática com bordado do Gengar",
+          "rotulo": "Gengar"
+        },
+        {
+          "src": "imagens/produtos/tematica-pokemon-03.jpg",
+          "alt": "Duas mochilas temáticas lado a lado",
+          "rotulo": "Dupla"
         }
-      ],
-      "fonte": "shop.html (versão anterior)."
+      ]
     },
     {
       "ref": "VMK-BOL-001",
@@ -168,32 +651,244 @@ export const CATALOGO = {
       "categoria": "Bolsa",
       "linha": "Outdoor Series",
       "destaque": false,
-      "resumo": "Bolsa cilíndrica esportiva — sozinha ou acoplada à DARK KNIGHT (+9 L).",
-      "descricao": "Bolsa esportiva, casual e fitness em formato cilíndrico. Pode ser usada de forma independente ou acoplada aos suportes da base da mochila DARK KNIGHT, ampliando a carga em +9 L.",
+      "preco": 104.9,
+      "resumo": "Bag tiracolo de 9 L: sozinha no dia a dia ou acoplada na base das mochilas.",
+      "descricao": "Aonde você vai hoje? Bag tiracolo que você pode acoplar na base das mochilas quando em viagem ou usar separadamente na rotina. Seja para ir ao trabalho levando o material da academia, seja em um tour de reconhecimento de novos lugares, quando não precisar carregar muita coisa.",
       "volume": "9 L",
-      "dimensoes": "37 cm × Ø 18 cm (croqui técnico, aproximado)",
-      "material": "Nylon Chicago e tela spacer",
+      "dimensoes": "Ø 18 × 36 cm",
+      "material": "Nylon, sarjas ou courvins",
       "forro": "Nylon paraquedas",
       "destaques": [
-        "Acopla na DARK KNIGHT",
-        "Alça de mão e argolas para alça tiracolo",
-        "Mosquetão interno porta-chaves",
-        "Variações: bolsos e estojo removível em plástico cristal"
+        "Tiracolo",
+        "Acopla na base das mochilas (+9 L)",
+        "Uso independente"
       ],
-      "cores": "Mescla cinza (peça piloto)",
-      "preco": 89.9,
-      "complementos": [
-        "VMK-MOC-001"
-      ],
-      "disponibilidade": null,
-      "instagram": null,
+      "cores": "Black · Oliver · Red · Spacer · Vintage",
+      "complementos": [],
+      "disponibilidade": "Disponível",
+      "instagram": "https://www.instagram.com/p/BzsssQahrr6/",
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 99,90).",
       "imagens": [
         {
           "src": "imagens/produtos/cylinder-bag-01.jpg",
-          "alt": "CYLINDER BAG em mescla cinza sobre banco de madeira"
+          "alt": "CYLINDER BAG preta",
+          "rotulo": "Black"
+        },
+        {
+          "src": "imagens/produtos/cylinder-bag-02.jpg",
+          "alt": "CYLINDER BAG verde oliva",
+          "rotulo": "Oliver"
+        },
+        {
+          "src": "imagens/produtos/cylinder-bag-03.jpg",
+          "alt": "CYLINDER BAG vermelha",
+          "rotulo": "Red"
+        },
+        {
+          "src": "imagens/produtos/cylinder-bag-04.jpg",
+          "alt": "CYLINDER BAG prata em tela spacer",
+          "rotulo": "Spacer"
+        },
+        {
+          "src": "imagens/produtos/cylinder-bag-05.jpg",
+          "alt": "CYLINDER BAG vintage",
+          "rotulo": "Vintage"
         }
+      ]
+    },
+    {
+      "ref": "VMK-BOL-003",
+      "slug": "mala-cylinder",
+      "nome": "MALA CYLINDER",
+      "categoria": "Bolsa",
+      "linha": "Outdoor Series",
+      "destaque": false,
+      "preco": 199.9,
+      "resumo": "Mala tiracolo cilíndrica de 24 L para treino ou viagem.",
+      "descricao": "Mala tiracolo de formato cilíndrico na qual você pode guardar equipamentos de treino ou mesmo usar em viagens, pois permite carregar muita coisa. Além do acesso principal, possui bolso interno e estojo removível.",
+      "volume": "24 L",
+      "dimensoes": "Ø 24 × 54 cm",
+      "material": "Poliéster",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "Formato cilíndrico",
+        "Bolso interno",
+        "Estojo removível"
       ],
-      "fonte": "Portfólio Briefing B2B 2025 (projeto técnico, confecção e peça piloto) e ficha DARK KNIGHT (preço)."
+      "cores": null,
+      "complementos": [],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 190,00). Volume: adotado 24 L (Ø 24 × 54 cm); um slide cita 30 a 44 L.",
+      "imagens": [
+        {
+          "src": "imagens/produtos/mala-cylinder-01.jpg",
+          "alt": "MALA CYLINDER preta e vermelha com estojo laranja",
+          "rotulo": "Preta e vermelha"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-BOL-004",
+      "slug": "messenger",
+      "nome": "MESSENGER",
+      "categoria": "Bolsa",
+      "linha": "Vintage",
+      "destaque": false,
+      "preco": 194.9,
+      "resumo": "Bolsa messenger de estilo vintage, edição Cruzeiro do Sul.",
+      "descricao": "Bolsa messenger de estilo vintage. Edição Cruzeiro do Sul, com a constelação bordada na aba.",
+      "volume": null,
+      "dimensoes": null,
+      "material": null,
+      "forro": null,
+      "destaques": [
+        "Edição Cruzeiro do Sul",
+        "Alça tiracolo"
+      ],
+      "cores": null,
+      "complementos": [],
+      "disponibilidade": null,
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 185,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/messenger-01.jpg",
+          "alt": "Bolsa MESSENGER Cruzeiro do Sul",
+          "rotulo": "Cruzeiro do Sul"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-BOL-005",
+      "slug": "bolsa-box",
+      "nome": "BOLSA BOX",
+      "categoria": "Bolsa",
+      "linha": "Vintage",
+      "destaque": false,
+      "preco": 154.9,
+      "resumo": "Bolsa casual vintage e retrô, em courvin ou tecidos étnicos.",
+      "descricao": "Bolsa casual de estilo vintage e retrô, em courvin ou em tecidos étnicos, com alça tiracolo.",
+      "volume": null,
+      "dimensoes": null,
+      "material": "Courvin ou tecidos étnicos",
+      "forro": null,
+      "destaques": [
+        "Alça tiracolo",
+        "Três acabamentos"
+      ],
+      "cores": "Courvin · Étnico Vintage · Étnico",
+      "complementos": [],
+      "disponibilidade": null,
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 149,00).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/bolsa-box-01.jpg",
+          "alt": "BOLSA BOX em courvin marrom",
+          "rotulo": "Courvin"
+        },
+        {
+          "src": "imagens/produtos/bolsa-box-02.jpg",
+          "alt": "BOLSA BOX étnico vintage",
+          "rotulo": "Étnico Vintage"
+        },
+        {
+          "src": "imagens/produtos/bolsa-box-03.jpg",
+          "alt": "BOLSA BOX étnico",
+          "rotulo": "Étnico"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-BOL-006",
+      "slug": "pocket-bag",
+      "nome": "POCKET BAG",
+      "categoria": "Bolsa",
+      "linha": "Casual",
+      "destaque": false,
+      "preco": 104.9,
+      "resumo": "Bolsa tiracolo compacta em tecidos étnicos.",
+      "descricao": "Bolsa tiracolo compacta em tecidos étnicos. Também recebe versões temáticas sob encomenda.",
+      "volume": null,
+      "dimensoes": null,
+      "material": "Tecidos étnicos",
+      "forro": null,
+      "destaques": [
+        "Compacta",
+        "Alça tiracolo"
+      ],
+      "cores": "Ethnic · Retrô",
+      "complementos": [],
+      "disponibilidade": null,
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 99,90).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/pocket-bag-01.jpg",
+          "alt": "POCKET BAG Ethnic",
+          "rotulo": "Ethnic"
+        },
+        {
+          "src": "imagens/produtos/pocket-bag-02.jpg",
+          "alt": "POCKET BAG Ethnic, segunda estampa",
+          "rotulo": "Ethnic II"
+        },
+        {
+          "src": "imagens/produtos/pocket-bag-03.jpg",
+          "alt": "POCKET BAG Retrô",
+          "rotulo": "Retrô"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-BOL-007",
+      "slug": "termobag",
+      "nome": "TERMOBAG",
+      "categoria": "Bolsa",
+      "linha": "Da floresta à cidade",
+      "destaque": false,
+      "preco": 104.9,
+      "preco_prefixo": "a partir de ",
+      "resumo": "Bolsa térmica para as refeições do dia, com materiais que evocam a brasilidade.",
+      "descricao": "Bolsa térmica ideal para quem busca praticidade e saúde: desenvolvida para carregar as refeições diárias de quem tem uma rotina de trabalho e precisa se alimentar com qualidade. O exemplar da coleção \"Da floresta à cidade\" combina materiais e cores que evocam a brasilidade, como as alças de látex, que remetem ao ciclo da borracha amazônico, e a estampa em tecido acquablock (impermeável) com folhagens típicas das florestas brasileiras.",
+      "volume": null,
+      "dimensoes": "Variáveis",
+      "material": "Acquablock (impermeável)",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "Térmica",
+        "Tecido impermeável",
+        "Alças de látex",
+        "Outros estilos disponíveis"
+      ],
+      "cores": "Da floresta à cidade · TB23A001",
+      "complementos": [],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: a partir de R$ 99,90).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/termobag-01.jpg",
+          "alt": "TERMOBAG com estampa de folhagens e alças de látex",
+          "rotulo": "Da floresta à cidade"
+        },
+        {
+          "src": "imagens/produtos/termobag-02.jpg",
+          "alt": "TERMOBAG com talheres",
+          "rotulo": "Em uso"
+        },
+        {
+          "src": "imagens/produtos/termobag-03.jpg",
+          "alt": "Interior térmico da TERMOBAG",
+          "rotulo": "Interior"
+        },
+        {
+          "src": "imagens/produtos/termobag-04.jpg",
+          "alt": "TERMOBAG TB23A001 vermelha e preta",
+          "rotulo": "TB23A001"
+        }
+      ]
     },
     {
       "ref": "VMK-BOL-002",
@@ -202,31 +897,274 @@ export const CATALOGO = {
       "categoria": "Bolsa",
       "linha": "Outdoor Series",
       "destaque": false,
-      "resumo": "Bolsa transversal compacta, esportiva outdoor e casual.",
-      "descricao": "Bolsa esportiva outdoor e casual de uso transversal, com bolso frontal de fecho magnético, bolso na costa com zíper e bolso interno.",
+      "preco": 99.9,
+      "resumo": "Bolsa compacta: a tiracolo ou presa no cinto e na perna.",
+      "descricao": "Bolsa compacta, esportiva e casual, usável a tiracolo ou presa no cinto e na perna. Tem bolso frontal com fecho magnético, bolso na costa com zíper e bolso interno. Disponível em outras cores.",
       "volume": null,
       "dimensoes": "24 × 18 × 8 cm (croqui técnico, aproximado)",
-      "material": "Nylon Chicago",
+      "material": "Nylon Chicago ou courvin",
       "forro": "Nylon paraquedas e tricoline",
       "destaques": [
+        "Tiracolo, cinto ou perna",
         "Bolso frontal com botão magnético",
         "Bolso na costa com zíper",
-        "Bolso interno",
-        "Alça tiracolo",
         "Mosquetão porta-chaves"
       ],
-      "cores": "Mescla cinza (peça piloto)",
-      "preco": null,
+      "cores": "Courvin marrom · Designer · Conceitual",
       "complementos": [],
-      "disponibilidade": null,
+      "disponibilidade": "Disponível",
       "instagram": null,
+      "fonte": "Portfólio Store 2025 (preço 2025: R$ 95,00) e Briefing B2B 2025 (projeto técnico).",
       "imagens": [
         {
           "src": "imagens/produtos/minibag-01.jpg",
-          "alt": "MINIBAG em mescla cinza com alça tiracolo"
+          "alt": "MINIBAG em courvin marrom",
+          "rotulo": "Courvin marrom"
+        },
+        {
+          "src": "imagens/produtos/minibag-02.jpg",
+          "alt": "MINIBAG Designer em courvin com vivo azul",
+          "rotulo": "Designer"
+        },
+        {
+          "src": "imagens/produtos/minibag-03.jpg",
+          "alt": "MINIBAG conceitual bege",
+          "rotulo": "Conceitual"
+        },
+        {
+          "src": "imagens/produtos/minibag-04.jpg",
+          "alt": "MINIBAG em uso a tiracolo",
+          "rotulo": "Em uso"
         }
+      ]
+    },
+    {
+      "ref": "VMK-PER-001",
+      "slug": "duffel-ares",
+      "nome": "DUFFEL ARES",
+      "categoria": "Sob encomenda",
+      "linha": "Coleção Academias 2026",
+      "destaque": false,
+      "preco": null,
+      "preco_texto": "Sob encomenda",
+      "preco_nota": "O valor varia conforme a quantidade do lote.",
+      "disponibilidade": "Sob encomenda",
+      "resumo": "Mala de treino monocromática, com a marca da sua academia ou equipe.",
+      "descricao": "Força. Propósito. Movimento. Inspirada na intensidade dos campos de treino e na disciplina dos guerreiros, a DUFFEL ARES é mais do que uma mala: é um símbolo de impulso e resistência. Com design monocromático em preto, prata ou vinho, traduz a energia do combate moderno: o treino. Possui 3 bolsos e estojo, sendo 2 externos.",
+      "volume": null,
+      "dimensoes": "27 × 22 × 47 cm",
+      "material": "Poliéster",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "3 bolsos + estojo",
+        "Preto, prata ou vinho",
+        "Logo do cliente"
       ],
-      "fonte": "Portfólio Briefing B2B 2025 (projeto técnico, confecção e peça piloto)."
+      "cores": "Preto · Prata · Vinho",
+      "complementos": [],
+      "instagram": null,
+      "fonte": "Portfólio Store Academias 2026 (novo modelo).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/duffel-ares-01.jpg",
+          "alt": "DUFFEL ARES preta personalizada para academia",
+          "rotulo": "Black"
+        },
+        {
+          "src": "imagens/produtos/duffel-ares-02.jpg",
+          "alt": "DUFFEL ARES vinho personalizada para academia",
+          "rotulo": "Vinho"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-PER-002",
+      "slug": "mala-olympus",
+      "nome": "MALA OLYMPUS",
+      "categoria": "Sob encomenda",
+      "linha": "Coleção Academias 2026",
+      "destaque": false,
+      "preco": null,
+      "preco_texto": "Sob encomenda",
+      "preco_nota": "O valor varia conforme a quantidade do lote.",
+      "disponibilidade": "Sob encomenda",
+      "resumo": "Mala de lona inspirada nas malas de viajantes e marinheiros.",
+      "descricao": "Horizonte. Resistência. Movimento. Inspirada nas tradicionais malas de lona de viajantes e marinheiros, a OLYMPUS traduz o espírito das grandes jornadas para uma linguagem moderna e esportiva. Robusta e funcional, combina a autenticidade da lona com o design contemporâneo da VMORDEKAI®, feita para acompanhar treinos, viagens e todos os caminhos de quem vive em movimento. Possui 4 bolsos e estojo.",
+      "volume": null,
+      "dimensoes": "30 × 25 × 47 cm",
+      "material": "Lona e sintético",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "4 bolsos + estojo",
+        "Lona",
+        "Logo do cliente"
+      ],
+      "cores": null,
+      "complementos": [],
+      "instagram": null,
+      "fonte": "Portfólio Store Academias 2026 (novo modelo).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/mala-olympus-01.jpg",
+          "alt": "MALA OLYMPUS azul e amarela personalizada para academia",
+          "rotulo": "Olympus"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-PER-003",
+      "slug": "linha-academias",
+      "nome": "LINHA ACADEMIAS",
+      "categoria": "Sob encomenda",
+      "linha": "Personalizados",
+      "destaque": false,
+      "preco": null,
+      "preco_texto": "Sob encomenda",
+      "preco_nota": "O valor varia conforme a quantidade do lote.",
+      "disponibilidade": "Sob encomenda",
+      "resumo": "Modelos da marca com o logo da sua academia ou equipe.",
+      "descricao": "Mochilas e malas da VMORDEKAI® personalizadas para academias de artes marciais e equipes: Mala Cylinder de 24 L, DARK KNIGHT, FLYGHT de cerca de 35 L e AMBITUS, com as cores e o logo do cliente. Exemplos produzidos para o Instituto Black Diamond e para o Coelho Team.",
+      "volume": null,
+      "dimensoes": null,
+      "material": "Conforme o modelo base",
+      "forro": null,
+      "destaques": [
+        "Mala Cylinder 24 L",
+        "DARK KNIGHT",
+        "FLYGHT",
+        "AMBITUS",
+        "Cores e logo do cliente"
+      ],
+      "cores": null,
+      "complementos": [],
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 e Store Academias 2026 (customizados).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/linha-academias-01.jpg",
+          "alt": "Mala Cylinder personalizada para academia",
+          "rotulo": "Mala Cylinder"
+        },
+        {
+          "src": "imagens/produtos/linha-academias-02.jpg",
+          "alt": "DARK KNIGHT personalizada para academia",
+          "rotulo": "DARK KNIGHT"
+        },
+        {
+          "src": "imagens/produtos/linha-academias-03.jpg",
+          "alt": "Mochila FLYGHT personalizada para academia",
+          "rotulo": "FLYGHT"
+        },
+        {
+          "src": "imagens/produtos/linha-academias-04.jpg",
+          "alt": "AMBITUS personalizada para academia",
+          "rotulo": "AMBITUS"
+        },
+        {
+          "src": "imagens/produtos/linha-academias-05.jpg",
+          "alt": "DARK KNIGHT personalizada para equipe de jiu-jitsu",
+          "rotulo": "Coelho Team"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-PER-004",
+      "slug": "linha-universitaria",
+      "nome": "LINHA UNIVERSITÁRIA",
+      "categoria": "Sob encomenda",
+      "linha": "Personalizados",
+      "destaque": false,
+      "preco": null,
+      "preco_texto": "Sob encomenda",
+      "preco_nota": "O valor varia conforme a quantidade do lote.",
+      "disponibilidade": "Sob encomenda",
+      "resumo": "WILK e AMBITUS ITER com a identidade do seu curso.",
+      "descricao": "Uma boa forma identitária dos cursos para o estudante é a possibilidade de se vestir com o símbolo de sua formação e instituição de ensino. Além disso, é uma excelente maneira de a universidade apresentar para a sociedade quem são seus alunos. Mochilas WILK e AMBITUS ITER personalizadas com as cores e o símbolo do curso.",
+      "volume": null,
+      "dimensoes": null,
+      "material": "Conforme o modelo base",
+      "forro": null,
+      "destaques": [
+        "WILK",
+        "AMBITUS ITER",
+        "Cores e símbolo do curso"
+      ],
+      "cores": null,
+      "complementos": [],
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (mochilas para cursos).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/linha-universitaria-01.jpg",
+          "alt": "Mochila WILK personalizada para curso universitário",
+          "rotulo": "WILK"
+        },
+        {
+          "src": "imagens/produtos/linha-universitaria-02.jpg",
+          "alt": "Mochila WILK preta e amarela personalizada para curso",
+          "rotulo": "WILK amarela"
+        },
+        {
+          "src": "imagens/produtos/linha-universitaria-03.jpg",
+          "alt": "AMBITUS ITER personalizada para curso de engenharia",
+          "rotulo": "AMBITUS ITER"
+        },
+        {
+          "src": "imagens/produtos/linha-universitaria-04.jpg",
+          "alt": "Mochila com bordado de curso universitário",
+          "rotulo": "Bordado"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-PER-005",
+      "slug": "tematicas-equipes",
+      "nome": "TEMÁTICAS & EQUIPES",
+      "categoria": "Sob encomenda",
+      "linha": "Personalizados",
+      "destaque": false,
+      "preco": null,
+      "preco_texto": "Sob encomenda",
+      "preco_nota": "O valor varia conforme a quantidade do lote.",
+      "disponibilidade": "Sob encomenda",
+      "resumo": "Bordados, estampas e bolsos sob medida para você, sua equipe ou empresa.",
+      "descricao": "Escolha um modelo da marca ou crie um novo a partir da sua necessidade. Informe o estilo de acessório (bolsa, mochila, mala, estojo), o que ele precisa ter (quantidade de bolsos, bolsos específicos como coldres, porta-câmera ou porta-ferramentas), as cores e combinações e se terá estampas ou representações pessoais, da sua equipe ou empresa. A VMORDEKAI® apresenta propostas e orçamento.",
+      "volume": null,
+      "dimensoes": null,
+      "material": "Conforme o modelo base",
+      "forro": null,
+      "destaques": [
+        "Bordados e estampas",
+        "Bolsos específicos",
+        "Cores à escolha",
+        "Revenda e B2B com preço por lote"
+      ],
+      "cores": null,
+      "complementos": [],
+      "instagram": null,
+      "fonte": "Portfólio Store 2025 (customizados e corporativos).",
+      "imagens": [
+        {
+          "src": "imagens/produtos/tematicas-equipes-01.jpg",
+          "alt": "MUTATIO BAG personalizada para equipe",
+          "rotulo": "Equipe"
+        },
+        {
+          "src": "imagens/produtos/tematicas-equipes-02.jpg",
+          "alt": "MUTATIO BAG em tecido camuflado azul",
+          "rotulo": "Camuflada"
+        },
+        {
+          "src": "imagens/produtos/tematicas-equipes-03.jpg",
+          "alt": "Mochila com bordado temático",
+          "rotulo": "Bordado temático"
+        },
+        {
+          "src": "imagens/produtos/tematicas-equipes-04.jpg",
+          "alt": "Mochila ZEN preta com bordado",
+          "rotulo": "ZEN bordada"
+        }
+      ]
     }
   ]
 };

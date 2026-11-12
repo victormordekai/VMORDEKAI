@@ -1,30 +1,75 @@
 // VMORDEKAI® · shop.html
-// Catálogo filtrável, vitrine "Últimas unidades" e ficha do produto em overlay.
+// Catálogo com filtros (categoria, faixa de preço, ordem), vitrine "Últimas unidades",
+// ficha do produto em overlay e seleção enviada pelo WhatsApp.
 
 import "../site.js";
-import { PRODUTOS, cardHtml, pageOf } from "./product-view.js";
+import { PRODUTOS, cardHtml, categoryLabel, pageOf } from "./product-view.js";
 import { url } from "../config.js";
 import { createProductOverlay } from "./product-overlay.js";
+import { initCart } from "./cart.js";
 import { initReveal } from "../modules/reveal.js";
 import { initRotators } from "../modules/rotator.js";
 
 const grid = document.querySelector("[data-catalog]");
-const filters = document.querySelector("[data-filters]");
+const categoryFilters = document.querySelector("[data-filters]");
+const priceFilters = document.querySelector("[data-price-filters]");
+const sortSelect = document.querySelector("[data-sort]");
+const resetButton = document.querySelector("[data-reset]");
 const counter = document.querySelector("[data-count]");
+const empty = document.querySelector("[data-empty]");
 
+/** Faixas de preço. Peças sob encomenda não têm preço e só aparecem em "Todos". */
+const PRICE_RANGES = [
+  { id: "todos", label: "Todos", test: () => true },
+  { id: "ate-150", label: "Até R$ 150", test: p => p.preco && p.preco <= 150 },
+  { id: "150-300", label: "R$ 150 a 300", test: p => p.preco > 150 && p.preco <= 300 },
+  { id: "acima-300", label: "Acima de R$ 300", test: p => p.preco > 300 }
+];
+
+const SORTERS = {
+  catalogo: null,
+  menor: (a, b) => (a.preco ?? Infinity) - (b.preco ?? Infinity),
+  maior: (a, b) => (b.preco ?? -Infinity) - (a.preco ?? -Infinity),
+  nome: (a, b) => a.nome.localeCompare(b.nome, "pt-BR")
+};
+
+const DEFAULTS = Object.freeze({ categoria: "todos", preco: "todos", ordem: "catalogo" });
+const state = { ...DEFAULTS };
+
+const inCategory = p => state.categoria === "todos" || p.categoria === state.categoria;
+const inPrice = p => PRICE_RANGES.find(r => r.id === state.preco).test(p);
+
+const button = (attr, value, label, count, pressed) =>
+  `<button type="button" ${attr}="${value}" aria-pressed="${pressed}"${count ? "" : " disabled"}>${label} <span>${count}</span></button>`;
+
+/** Os contadores de cada grupo consideram o filtro do outro grupo. */
 function renderFilters() {
+  const byPrice = PRODUTOS.filter(inPrice);
+  const byCategory = PRODUTOS.filter(inCategory);
   const categories = [...new Set(PRODUTOS.map(p => p.categoria))];
-  const button = (value, label, count) =>
-    `<button type="button" data-filter="${value}" aria-pressed="${value === "todos"}">${label} <span>${count}</span></button>`;
-  filters.innerHTML = button("todos", "Todos", PRODUTOS.length) +
-    categories.map(c => button(c, `${c}s`, PRODUTOS.filter(p => p.categoria === c).length)).join("");
+  categoryFilters.innerHTML =
+    button("data-filter", "todos", "Todos", byPrice.length, state.categoria === "todos") +
+    categories.map(c => button("data-filter", c, categoryLabel(c), byPrice.filter(p => p.categoria === c).length, state.categoria === c)).join("");
+  priceFilters.innerHTML = PRICE_RANGES
+    .map(r => button("data-price", r.id, r.label, byCategory.filter(r.test).length, state.preco === r.id))
+    .join("");
 }
 
-function renderCatalog(category = "todos") {
-  const items = category === "todos" ? PRODUTOS : PRODUTOS.filter(p => p.categoria === category);
+function renderCatalog() {
+  const items = PRODUTOS.filter(p => inCategory(p) && inPrice(p));
+  if (SORTERS[state.ordem]) items.sort(SORTERS[state.ordem]);
   grid.innerHTML = items.map(cardHtml).join("");
   counter.textContent = `${items.length} ${items.length === 1 ? "peça" : "peças"}`;
+  empty.hidden = items.length > 0;
+  resetButton.hidden = Object.keys(DEFAULTS).every(k => state[k] === DEFAULTS[k]);
+  sortSelect.value = state.ordem;
   initReveal(grid);
+}
+
+function update(change) {
+  Object.assign(state, change);
+  renderFilters();
+  renderCatalog();
 }
 
 function renderShowcase() {
@@ -40,12 +85,16 @@ function renderShowcase() {
 
 const overlay = createProductOverlay();
 
-filters.addEventListener("click", e => {
+categoryFilters.addEventListener("click", e => {
   const btn = e.target.closest("[data-filter]");
-  if (!btn) return;
-  filters.querySelectorAll("[data-filter]").forEach(b => b.setAttribute("aria-pressed", String(b === btn)));
-  renderCatalog(btn.dataset.filter);
+  if (btn) update({ categoria: btn.dataset.filter });
 });
+priceFilters.addEventListener("click", e => {
+  const btn = e.target.closest("[data-price]");
+  if (btn) update({ preco: btn.dataset.price });
+});
+sortSelect.addEventListener("change", () => update({ ordem: sortSelect.value }));
+resetButton.addEventListener("click", () => update(DEFAULTS));
 
 document.addEventListener("click", e => {
   const link = e.target.closest("main [data-open-product]");
@@ -54,7 +103,7 @@ document.addEventListener("click", e => {
   overlay.open(link.dataset.openProduct);
 });
 
-renderFilters();
-renderCatalog();
+update({});
 renderShowcase();
+initCart();
 overlay.syncWithUrl();

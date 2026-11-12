@@ -45,7 +45,7 @@
     <section class="shop-hero">
       <span class="shop-hero__tag">VMORDEKAI® SHOP · OUTDOOR SERIES</span>
       <h1>Mochilas e bolsas<br>VMORDEKAI®</h1>
-      <p>Praticidade ao alcance das mãos. Peças autorais produzidas em ciclos limitados, com materiais técnicos e funcionalidade outdoor aplicada ao cotidiano.</p>
+      <p>Praticidade ao alcance das mãos.</p>
       <div class="shop-hero__actions">
         <a class="btn-primary btn-primary--lg" href="#catalogo">VER CATÁLOGO</a>
         <a class="btn-ghost" href="https://wa.me/message/LIKDPGYCWU5CF1" target="_blank" rel="noopener noreferrer">ENCOMENDAS PELO WHATSAPP</a>
@@ -60,23 +60,60 @@
           <h2 id="catalogo-titulo">Cada peça com referência própria.</h2>
         </div>
         <div class="shop-catalog__tools">
-          <div class="shop-filters" data-filters role="group" aria-label="Filtrar por categoria"></div>
-          <span class="shop-count" data-count aria-live="polite"></span>
+          <div class="shop-tools__row">
+            <span class="shop-tools__label">Categoria</span>
+            <div class="shop-filters" data-filters role="group" aria-label="Filtrar por categoria"></div>
+          </div>
+          <div class="shop-tools__row">
+            <span class="shop-tools__label">Preço</span>
+            <div class="shop-filters" data-price-filters role="group" aria-label="Filtrar por faixa de preço"></div>
+          </div>
+          <div class="shop-tools__row">
+            <label class="shop-tools__label" for="shop-ordem">Ordem</label>
+            <select id="shop-ordem" class="shop-sort" data-sort>
+              <option value="catalogo">Catálogo</option>
+              <option value="menor">Menor preço</option>
+              <option value="maior">Maior preço</option>
+              <option value="nome">Nome (A–Z)</option>
+            </select>
+            <button type="button" class="shop-reset" data-reset hidden>Ver todos os produtos</button>
+            <span class="shop-count" data-count aria-live="polite"></span>
+          </div>
         </div>
       </header>
 
       <div class="shop-grid" data-catalog></div>
+      <p class="shop-empty" data-empty hidden>Nenhuma peça nesta combinação de filtros.</p>
 
       <!-- produtos:inicio · lista gerada por tools/build_produtos.py (sem JavaScript) -->
       <noscript>
         <ul class="shop-fallback">
           <li><a href="produtos/produto_dark-knight.html">DARK KNIGHT · VMK-MOC-001</a></li>
+          <li><a href="produtos/produto_dk-war.html">DK WAR VINTAGE · VMK-MOC-016</a></li>
+          <li><a href="produtos/produto_ambitus-iter.html">AMBITUS ITER · VMK-MOC-003</a></li>
+          <li><a href="produtos/produto_mutatio.html">MUTATIO BAG · VMK-MOC-006</a></li>
+          <li><a href="produtos/produto_zen.html">ZEN · VMK-MOC-007</a></li>
+          <li><a href="produtos/produto_wilk.html">WILK · VMK-MOC-008</a></li>
+          <li><a href="produtos/produto_types.html">TYPES · VMK-MOC-011</a></li>
+          <li><a href="produtos/produto_inception.html">INCEPTION · VMK-MOC-012</a></li>
+          <li><a href="produtos/produto_terrae.html">TERRAE · VMK-MOC-004</a></li>
+          <li><a href="produtos/produto_baby.html">BABY · VMK-MOC-015</a></li>
+          <li><a href="produtos/produto_peregrine.html">PEREGRINE · VMK-MOC-013</a></li>
+          <li><a href="produtos/produto_fly.html">FLY · VMK-MOC-014</a></li>
           <li><a href="produtos/produto_von-humboldt.html">VON HUMBOLDT · VMK-MOC-002</a></li>
-          <li><a href="produtos/produto_ambitus.html">AMBITUS · VMK-MOC-003</a></li>
-          <li><a href="produtos/produto_ambitus-iter.html">AMBITUS ITER 2024.002 DARK · VMK-MOC-004</a></li>
           <li><a href="produtos/produto_tematica-pokemon.html">TEMÁTICA — POKÉMON · VMK-MOC-005</a></li>
           <li><a href="produtos/produto_cylinder-bag.html">CYLINDER BAG · VMK-BOL-001</a></li>
+          <li><a href="produtos/produto_mala-cylinder.html">MALA CYLINDER · VMK-BOL-003</a></li>
+          <li><a href="produtos/produto_messenger.html">MESSENGER · VMK-BOL-004</a></li>
+          <li><a href="produtos/produto_bolsa-box.html">BOLSA BOX · VMK-BOL-005</a></li>
+          <li><a href="produtos/produto_pocket-bag.html">POCKET BAG · VMK-BOL-006</a></li>
+          <li><a href="produtos/produto_termobag.html">TERMOBAG · VMK-BOL-007</a></li>
           <li><a href="produtos/produto_minibag.html">MINIBAG · VMK-BOL-002</a></li>
+          <li><a href="produtos/produto_duffel-ares.html">DUFFEL ARES · VMK-PER-001</a></li>
+          <li><a href="produtos/produto_mala-olympus.html">MALA OLYMPUS · VMK-PER-002</a></li>
+          <li><a href="produtos/produto_linha-academias.html">LINHA ACADEMIAS · VMK-PER-003</a></li>
+          <li><a href="produtos/produto_linha-universitaria.html">LINHA UNIVERSITÁRIA · VMK-PER-004</a></li>
+          <li><a href="produtos/produto_tematicas-equipes.html">TEMÁTICAS &amp; EQUIPES · VMK-PER-005</a></li>
         </ul>
       </noscript>
       <!-- produtos:fim -->
@@ -109,8 +146,8 @@
     <section id="como-comprar" class="shop-steps" aria-labelledby="como-comprar-titulo">
       <h2 id="como-comprar-titulo" class="sr-only">Como comprar</h2>
       <ol>
-        <li class="reveal"><span>01</span><h3>Escolha a peça</h3><p>Abra a ficha do produto e anote a referência (ex.: VMK-MOC-001).</p></li>
-        <li class="reveal"><span>02</span><h3>Reserve pelo WhatsApp</h3><p>O botão de reserva já envia a mensagem com o nome e a referência da peça.</p></li>
+        <li class="reveal"><span>01</span><h3>Monte a seleção</h3><p>Use o botão + nos cards ou na ficha do produto. Cada peça leva a própria referência (ex.: VMK-MOC-001).</p></li>
+        <li class="reveal"><span>02</span><h3>Envie pelo WhatsApp</h3><p>A seleção vira uma mensagem pronta com códigos, quantidades e valores.</p></li>
         <li class="reveal"><span>03</span><h3>Personalize</h3><p>Cores, variações e produção para a sua marca via <a href="portfolio-1.html#vm-structure">Private Label</a>.</p></li>
       </ol>
     </section>

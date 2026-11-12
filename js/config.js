@@ -20,7 +20,7 @@ export const PAGES = Object.freeze({
 
 export const SITE = Object.freeze({
   name: "VMORDEKAI®",
-  version: "V02-1. | 26.11",
+  version: "V02-2. | 26.11",
   copy: "© 2016–2026 VMORDEKAI® | Laboratório de Ideias | Curitiba – PR",
   slogan: "Praticidade ao alcance das mãos",
   cnpj: "26.732.865/0001-36",

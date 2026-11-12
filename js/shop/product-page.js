@@ -4,6 +4,7 @@
 import "../site.js";
 import { PRODUTOS, findBySlug, sheetHtml, cardHtml, bindGallery } from "./product-view.js";
 import { initReveal } from "../modules/reveal.js";
+import { initCart } from "./cart.js";
 
 const slug = document.body.dataset.produto;
 const product = findBySlug(slug);
@@ -24,3 +25,5 @@ if (product) {
   related.innerHTML = ranked.map(cardHtml).join("");
   initReveal(related);
 }
+
+initCart();

@@ -72,7 +72,7 @@ PAGE = """<!DOCTYPE html>
   <main class="product-page">
     <ol class="breadcrumb">
       <li><a href="../shop.html">Shop</a></li>
-      <li><a href="../shop.html#catalogo">{categoria}s</a></li>
+      <li><a href="../shop.html#catalogo">{categoria_plural}</a></li>
       <li aria-current="page">{nome}</li>
     </ol>
 
@@ -135,6 +135,7 @@ def pending(data: dict) -> list[str]:
     return [
         f"{p['ref']} {p['nome']}: " + ", ".join(k for k in OPTIONAL if p.get(k) in (None, ""))
         for p in data["produtos"]
+        if p.get("preco") or not p.get("preco_texto")  # sob encomenda: sem preço e sem medidas fixas por definição
         if any(p.get(k) in (None, "") for k in OPTIONAL)
     ]
 
@@ -152,6 +153,7 @@ def page_html(p: dict) -> str:
     first = p["imagens"][0]
     return PAGE.format(
         nome=e(p["nome"]), ref=e(p["ref"]), slug=e(p["slug"]), categoria=e(p["categoria"]),
+        categoria_plural=e(p["categoria"] if " " in p["categoria"] else p["categoria"] + "s"),
         descricao=e(p["descricao"]), resumo=e(p["resumo"]),
         url=f"{SITE}pages/produtos/produto_{p['slug']}.html",
         imagem=e(first["src"]), imagem_alt=e(first["alt"]), imagem_url=f"{SITE}{first['src']}",
