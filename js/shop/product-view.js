@@ -76,6 +76,9 @@ function priceHtml(p) {
   return `<p class="product-sheet__price"><span>Valor</span> <strong>${esc(priceText(p))}</strong>${p.preco ? extras : ""}${note}</p>`;
 }
 
+/** A foto inteira cabe no palco; o fundo desfocado da própria foto preenche as sobras. */
+const stageStyle = img => `--stage-image:url('${esc(asset(img.src))}')`;
+
 function galleryHtml(p) {
   const [first] = p.imagens;
   const thumbs = p.imagens.length > 1
@@ -86,8 +89,10 @@ function galleryHtml(p) {
     : "";
   return `
     <div class="product-sheet__media">
-      <img class="product-sheet__main" src="${esc(asset(first.src))}" alt="${esc(first.alt)}">
-      <span class="product-sheet__label" data-label${first.rotulo ? "" : " hidden"}>${esc(first.rotulo || "")}</span>
+      <div class="product-sheet__stage" data-stage style="${stageStyle(first)}">
+        <img class="product-sheet__main" src="${esc(asset(first.src))}" alt="${esc(first.alt)}">
+        <span class="product-sheet__label" data-label${first.rotulo ? "" : " hidden"}>${esc(first.rotulo || "")}</span>
+      </div>
       ${thumbs}
     </div>`;
 }
@@ -124,8 +129,18 @@ export function sheetHtml(p, context = "page") {
     </article>`;
 }
 
-/** Troca de imagem pela miniatura (delegação, funciona no overlay e na página). */
+/** Troca de imagem pela miniatura e recuo da foto sob o cursor
+ *  (delegação: funciona no overlay e na página). */
 export function bindGallery(root) {
+  // O recuo (zoom out) parte do ponto onde o cursor está, não do centro.
+  root.addEventListener("pointermove", e => {
+    const stage = e.target.closest?.("[data-stage]");
+    if (!stage || e.pointerType !== "mouse") return;
+    const box = stage.getBoundingClientRect();
+    stage.style.setProperty("--focus-x", `${((e.clientX - box.left) / box.width * 100).toFixed(1)}%`);
+    stage.style.setProperty("--focus-y", `${((e.clientY - box.top) / box.height * 100).toFixed(1)}%`);
+  });
+
   root.addEventListener("click", e => {
     const thumb = e.target.closest("[data-thumb]");
     if (!thumb) return;
@@ -136,6 +151,7 @@ export function bindGallery(root) {
     main.classList.remove("is-swapping");
     void main.offsetWidth;                       // reinicia a animação de troca
     main.src = asset(img.src);
+    sheet.querySelector("[data-stage]").style.setProperty("--stage-image", `url('${asset(img.src)}')`);
     main.alt = img.alt;
     main.classList.add("is-swapping");
     const label = sheet.querySelector("[data-label]");
