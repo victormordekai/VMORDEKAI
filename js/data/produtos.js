@@ -1,7 +1,7 @@
 // GERADO por tools/build_produtos.py a partir de data/produtos.json — não editar à mão.
 export const CATALOGO = {
   "versao": "2.0",
-  "atualizado": "2026-11-12",
+  "atualizado": "2026-11-17",
   "moeda": "BRL",
   "regra_precos": "Base Portfólio Store 2025 + 4,5% (matriz 2027). Acima de R$ 260, reduz R$ 10. Arredondamento de vitrine: múltiplo de R$ 5 mais próximo menos R$ 0,10.",
   "produtos": [
@@ -38,6 +38,11 @@ export const CATALOGO = {
           "src": "imagens/produtos/dark-knight-01.jpg",
           "alt": "Mochila DARK KNIGHT preta em uso, com a CYLINDER acoplada",
           "rotulo": "Em uso"
+        },
+        {
+          "src": "imagens/produtos/dark-knight-05.jpg",
+          "alt": "Mochila DARK KNIGHT preta em uso, vista lateral",
+          "rotulo": "Em uso · lateral"
         },
         {
           "src": "imagens/produtos/dark-knight-02.jpg",
@@ -413,16 +418,79 @@ export const CATALOGO = {
         "Bolso frontal com aba",
         "Estojo no estilo da mochila"
       ],
-      "cores": "Verde",
+      "cores": "Verde · Preto",
       "complementos": [],
       "disponibilidade": null,
       "instagram": null,
-      "fonte": "Foto 'Retro Mirian 2016' do acervo. Nome comercial e preço definidos pela marca em 2026-11-12 (valor da AMBITUS ITER menos R$ 15).",
+      "fonte": "Foto 'Retro Mirian 2016' do acervo. Nome comercial e preço definidos pela marca em 2026-11-12 (valor da AMBITUS ITER menos R$ 15). Fotos verde (frente e costas) e preta adicionadas em 2026-11-16.",
       "imagens": [
         {
           "src": "imagens/produtos/terrae-01.jpg",
-          "alt": "Mochila roll-top TERRAE verde com tiras claras e estojo",
+          "alt": "Mochila roll-top TERRAE verde com tiras claras e estojo, vista frontal",
           "rotulo": "Verde"
+        },
+        {
+          "src": "imagens/produtos/terrae-02.jpg",
+          "alt": "Mochila TERRAE verde, costas e alças",
+          "rotulo": "Costas"
+        },
+        {
+          "src": "imagens/produtos/terrae-03.jpg",
+          "alt": "Mochila TERRAE verde vista de cima, com estojo",
+          "rotulo": "Verde · topo"
+        },
+        {
+          "src": "imagens/produtos/terrae-04.jpg",
+          "alt": "Mochila roll-top TERRAE preta com tiras de couro e estojo",
+          "rotulo": "Preto"
+        },
+        {
+          "src": "imagens/produtos/terrae-05.jpg",
+          "alt": "Mochila TERRAE preta apoiada nas pedras",
+          "rotulo": "Preto · externa"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-MOC-017",
+      "slug": "vintage",
+      "nome": "VINTAGE",
+      "categoria": "Mochila",
+      "linha": "Vintage",
+      "destaque": false,
+      "preco": null,
+      "resumo": "Mochila de lona preta com aba e tiras de couro, de estilo retrô.",
+      "descricao": "Mochila de estilo retrô em lona preta, com aba frontal presa por duas tiras de couro com fivelas, bolso frontal e bolsos laterais. Por dentro, forro em verde-limão e estojo removível.",
+      "volume": null,
+      "dimensoes": null,
+      "material": null,
+      "forro": null,
+      "destaques": [
+        "Aba com tiras de couro",
+        "Bolso frontal",
+        "Bolsos laterais",
+        "Estojo removível"
+      ],
+      "cores": "Preto",
+      "complementos": [],
+      "disponibilidade": null,
+      "instagram": null,
+      "fonte": "Fotos 'Mochila Vintage 2016' adicionadas em 2026-11-16. Nome provisório e preço a definir pela marca.",
+      "imagens": [
+        {
+          "src": "imagens/produtos/vintage-01.jpg",
+          "alt": "Mochila VINTAGE preta com tiras de couro, vista frontal",
+          "rotulo": "Preto"
+        },
+        {
+          "src": "imagens/produtos/vintage-02.jpg",
+          "alt": "Mochila VINTAGE preta, frente sobre fundo claro",
+          "rotulo": "Frente"
+        },
+        {
+          "src": "imagens/produtos/vintage-03.jpg",
+          "alt": "Mochila VINTAGE aberta, com forro verde-limão e estojo",
+          "rotulo": "Aberta"
         }
       ]
     },
@@ -844,49 +912,44 @@ export const CATALOGO = {
     {
       "ref": "VMK-BOL-007",
       "slug": "termobag",
-      "nome": "TERMOBAG",
+      "nome": "TERMOBAG TB23A001",
       "categoria": "Bolsa",
-      "linha": "Da floresta à cidade",
+      "linha": "Outdoor Series",
       "destaque": false,
       "preco": 104.9,
       "preco_prefixo": "a partir de ",
-      "resumo": "Bolsa térmica para as refeições do dia, com materiais que evocam a brasilidade.",
-      "descricao": "Bolsa térmica ideal para quem busca praticidade e saúde: desenvolvida para carregar as refeições diárias de quem tem uma rotina de trabalho e precisa se alimentar com qualidade. O exemplar da coleção \"Da floresta à cidade\" combina materiais e cores que evocam a brasilidade, como as alças de látex, que remetem ao ciclo da borracha amazônico, e a estampa em tecido acquablock (impermeável) com folhagens típicas das florestas brasileiras.",
+      "resumo": "Bolsa térmica para as refeições do dia, em vermelho e preto.",
+      "descricao": "Bolsa térmica ideal para quem busca praticidade e saúde: desenvolvida para carregar as refeições diárias de quem tem uma rotina de trabalho e precisa se alimentar com qualidade. O modelo TB23A001 combina vermelho e preto, com alça de mão e a etiqueta da marca na frente.",
       "volume": null,
       "dimensoes": "Variáveis",
-      "material": "Acquablock (impermeável)",
-      "forro": "Nylon paraquedas",
+      "material": null,
+      "forro": null,
       "destaques": [
         "Térmica",
-        "Tecido impermeável",
-        "Alças de látex",
+        "Alça de mão",
+        "Vermelho e preto",
         "Outros estilos disponíveis"
       ],
-      "cores": "Da floresta à cidade · TB23A001",
+      "cores": "Vermelho e preto",
       "complementos": [],
       "disponibilidade": "Disponível",
       "instagram": null,
-      "fonte": "Portfólio Store 2025 (preço 2025: a partir de R$ 99,90).",
+      "fonte": "Portfólio Store 2025 (preço 2025: a partir de R$ 99,90). Separada da TERMOBAG conceitual em 2026-11-17; capa definida pela marca.",
       "imagens": [
         {
           "src": "imagens/produtos/termobag-01.jpg",
-          "alt": "TERMOBAG com estampa de folhagens e alças de látex",
-          "rotulo": "Da floresta à cidade"
+          "alt": "TERMOBAG TB23A001 vermelha e preta, vista frontal",
+          "rotulo": "Vermelho e preto"
         },
         {
           "src": "imagens/produtos/termobag-02.jpg",
-          "alt": "TERMOBAG com talheres",
-          "rotulo": "Em uso"
+          "alt": "TERMOBAG TB23A001 vermelha e preta, em estúdio",
+          "rotulo": "Estúdio"
         },
         {
           "src": "imagens/produtos/termobag-03.jpg",
-          "alt": "Interior térmico da TERMOBAG",
-          "rotulo": "Interior"
-        },
-        {
-          "src": "imagens/produtos/termobag-04.jpg",
-          "alt": "TERMOBAG TB23A001 vermelha e preta",
-          "rotulo": "TB23A001"
+          "alt": "TERMOBAG TB23A001, vista lateral",
+          "rotulo": "Lateral"
         }
       ]
     },
@@ -910,7 +973,7 @@ export const CATALOGO = {
         "Bolso na costa com zíper",
         "Mosquetão porta-chaves"
       ],
-      "cores": "Courvin marrom · Designer · Conceitual",
+      "cores": "Courvin marrom · Designer com vivo azul",
       "complementos": [],
       "disponibilidade": "Disponível",
       "instagram": null,
@@ -922,19 +985,131 @@ export const CATALOGO = {
           "rotulo": "Courvin marrom"
         },
         {
+          "src": "imagens/produtos/minibag-03.jpg",
+          "alt": "MINIBAG em courvin marrom, vista em três quartos com a alça",
+          "rotulo": "Três quartos"
+        },
+        {
           "src": "imagens/produtos/minibag-02.jpg",
           "alt": "MINIBAG Designer em courvin com vivo azul",
           "rotulo": "Designer"
         },
         {
-          "src": "imagens/produtos/minibag-03.jpg",
-          "alt": "MINIBAG conceitual bege",
-          "rotulo": "Conceitual"
+          "src": "imagens/produtos/minibag-05.jpg",
+          "alt": "MINIBAG Designer com vivo azul, pendurada pela alça",
+          "rotulo": "Vivo azul"
+        },
+        {
+          "src": "imagens/produtos/minibag-06.jpg",
+          "alt": "MINIBAG em courvin com vivo azul e bolso frontal com zíper",
+          "rotulo": "Bolso frontal"
         },
         {
           "src": "imagens/produtos/minibag-04.jpg",
           "alt": "MINIBAG em uso a tiracolo",
           "rotulo": "Em uso"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-CON-001",
+      "slug": "minibag-conceitual",
+      "nome": "MINIBAG CONCEITUAL",
+      "categoria": "Conceitual",
+      "linha": "Da floresta à cidade",
+      "destaque": false,
+      "preco": 99.9,
+      "resumo": "MINIBAG conceitual em látex e tecido acquablock, com estampa de folhagens.",
+      "descricao": "Versão conceitual da MINIBAG, feita de látex e tecido acquablock (impermeável). Da coleção \"Da floresta à cidade\": a frente e a alça de látex remetem ao ciclo da borracha amazônico, e a estampa traz folhagens típicas das florestas brasileiras. Mantém o uso da MINIBAG: a tiracolo ou presa no cinto e na perna.",
+      "volume": null,
+      "dimensoes": "24 × 18 × 8 cm (croqui técnico, aproximado)",
+      "material": "Látex e tecido acquablock (impermeável)",
+      "forro": null,
+      "destaques": [
+        "Peça conceitual",
+        "Látex",
+        "Tecido acquablock impermeável",
+        "Tiracolo, cinto ou perna"
+      ],
+      "cores": "Látex natural · estampa de folhagens",
+      "complementos": [],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Separada da MINIBAG em 2026-11-17 (decisão da marca: peças em látex e acquablock formam a linha conceitual). Preço igual ao da MINIBAG.",
+      "imagens": [
+        {
+          "src": "imagens/produtos/minibag-conceitual-01.jpg",
+          "alt": "MINIBAG CONCEITUAL em látex com laterais estampadas, vista frontal",
+          "rotulo": "Frente"
+        },
+        {
+          "src": "imagens/produtos/minibag-conceitual-02.jpg",
+          "alt": "MINIBAG CONCEITUAL com a alça de látex",
+          "rotulo": "Com alça"
+        },
+        {
+          "src": "imagens/produtos/minibag-conceitual-03.jpg",
+          "alt": "MINIBAG CONCEITUAL aberta, com forro azul",
+          "rotulo": "Aberta"
+        }
+      ]
+    },
+    {
+      "ref": "VMK-CON-002",
+      "slug": "termobag-conceitual",
+      "nome": "TERMOBAG CONCEITUAL",
+      "categoria": "Conceitual",
+      "linha": "Da floresta à cidade",
+      "destaque": false,
+      "preco": 104.9,
+      "preco_prefixo": "a partir de ",
+      "resumo": "Bolsa térmica conceitual em látex e tecido acquablock, com estampa de folhagens.",
+      "descricao": "Bolsa térmica para levar as refeições do dia, em versão conceitual feita de látex e tecido acquablock (impermeável). O exemplar da coleção \"Da floresta à cidade\" combina materiais e cores que evocam a brasilidade: as alças de látex remetem ao ciclo da borracha amazônico, e a estampa traz folhagens típicas das florestas brasileiras.",
+      "volume": null,
+      "dimensoes": "Variáveis",
+      "material": "Látex e tecido acquablock (impermeável)",
+      "forro": "Nylon paraquedas",
+      "destaques": [
+        "Peça conceitual",
+        "Térmica",
+        "Tecido impermeável",
+        "Alças de látex"
+      ],
+      "cores": "Estampa de folhagens · látex natural",
+      "complementos": [],
+      "disponibilidade": "Disponível",
+      "instagram": null,
+      "fonte": "Antiga TERMOBAG \"Da floresta à cidade\" (Portfólio Store 2025, a partir de R$ 99,90), separada em 2026-11-17 como linha conceitual.",
+      "imagens": [
+        {
+          "src": "imagens/produtos/termobag-conceitual-01.jpg",
+          "alt": "TERMOBAG CONCEITUAL com estampa de folhagens e alças de látex",
+          "rotulo": "Da floresta à cidade"
+        },
+        {
+          "src": "imagens/produtos/termobag-conceitual-02.jpg",
+          "alt": "TERMOBAG CONCEITUAL vista em três quartos",
+          "rotulo": "Três quartos"
+        },
+        {
+          "src": "imagens/produtos/termobag-conceitual-03.jpg",
+          "alt": "TERMOBAG CONCEITUAL com as alças de látex abertas",
+          "rotulo": "Alças de látex"
+        },
+        {
+          "src": "imagens/produtos/termobag-conceitual-04.jpg",
+          "alt": "TERMOBAG CONCEITUAL com talheres",
+          "rotulo": "Em uso"
+        },
+        {
+          "src": "imagens/produtos/termobag-conceitual-05.jpg",
+          "alt": "Interior térmico da TERMOBAG CONCEITUAL com frutas e marmita",
+          "rotulo": "Interior"
+        },
+        {
+          "src": "imagens/produtos/termobag-conceitual-06.jpg",
+          "alt": "Interior térmico verde da TERMOBAG CONCEITUAL",
+          "rotulo": "Interior vazio"
         }
       ]
     },
@@ -949,8 +1124,8 @@ export const CATALOGO = {
       "preco_texto": "Sob encomenda",
       "preco_nota": "O valor varia conforme a quantidade do lote.",
       "disponibilidade": "Sob encomenda",
-      "resumo": "Mala de treino monocromática, com a marca da sua academia ou equipe.",
-      "descricao": "Força. Propósito. Movimento. Inspirada na intensidade dos campos de treino e na disciplina dos guerreiros, a DUFFEL ARES é mais do que uma mala: é um símbolo de impulso e resistência. Com design monocromático em preto, prata ou vinho, traduz a energia do combate moderno: o treino. Possui 3 bolsos e estojo, sendo 2 externos.",
+      "resumo": "Academia? Personalize com sua logo. Mala de treino monocromática em preto, prata ou vinho.",
+      "descricao": "Academia? Personalize com sua logo. Força. Propósito. Movimento. Inspirada na intensidade dos campos de treino e na disciplina dos guerreiros, a DUFFEL ARES é mais do que uma mala: é um símbolo de impulso e resistência. Com design monocromático em preto, prata ou vinho, traduz a energia do combate moderno: o treino. Possui 3 bolsos e estojo, sendo 2 externos.",
       "volume": null,
       "dimensoes": "27 × 22 × 47 cm",
       "material": "Poliéster",
@@ -967,13 +1142,18 @@ export const CATALOGO = {
       "imagens": [
         {
           "src": "imagens/produtos/duffel-ares-01.jpg",
-          "alt": "DUFFEL ARES preta personalizada para academia",
-          "rotulo": "Black"
+          "alt": "DUFFEL ARES preta, pronta para receber a logo da academia",
+          "rotulo": "Preto"
         },
         {
           "src": "imagens/produtos/duffel-ares-02.jpg",
-          "alt": "DUFFEL ARES vinho personalizada para academia",
+          "alt": "DUFFEL ARES vinho, pronta para receber a logo da academia",
           "rotulo": "Vinho"
+        },
+        {
+          "src": "imagens/produtos/duffel-ares-03.jpg",
+          "alt": "DUFFEL ARES prata, pronta para receber a logo da academia",
+          "rotulo": "Prata"
         }
       ]
     },
@@ -988,8 +1168,8 @@ export const CATALOGO = {
       "preco_texto": "Sob encomenda",
       "preco_nota": "O valor varia conforme a quantidade do lote.",
       "disponibilidade": "Sob encomenda",
-      "resumo": "Mala de lona inspirada nas malas de viajantes e marinheiros.",
-      "descricao": "Horizonte. Resistência. Movimento. Inspirada nas tradicionais malas de lona de viajantes e marinheiros, a OLYMPUS traduz o espírito das grandes jornadas para uma linguagem moderna e esportiva. Robusta e funcional, combina a autenticidade da lona com o design contemporâneo da VMORDEKAI®, feita para acompanhar treinos, viagens e todos os caminhos de quem vive em movimento. Possui 4 bolsos e estojo.",
+      "resumo": "Academia? Personalize com sua logo. Mala de lona inspirada nas malas de viajantes e marinheiros.",
+      "descricao": "Academia? Personalize com sua logo. Horizonte. Resistência. Movimento. Inspirada nas tradicionais malas de lona de viajantes e marinheiros, a OLYMPUS traduz o espírito das grandes jornadas para uma linguagem moderna e esportiva. Robusta e funcional, combina a autenticidade da lona com o design contemporâneo da VMORDEKAI®, feita para acompanhar treinos, viagens e todos os caminhos de quem vive em movimento. Possui 4 bolsos e estojo.",
       "volume": null,
       "dimensoes": "30 × 25 × 47 cm",
       "material": "Lona e sintético",
@@ -1006,7 +1186,7 @@ export const CATALOGO = {
       "imagens": [
         {
           "src": "imagens/produtos/mala-olympus-01.jpg",
-          "alt": "MALA OLYMPUS azul e amarela personalizada para academia",
+          "alt": "MALA OLYMPUS azul, preta e amarela, pronta para receber a logo da academia",
           "rotulo": "Olympus"
         }
       ]
@@ -1022,48 +1202,41 @@ export const CATALOGO = {
       "preco_texto": "Sob encomenda",
       "preco_nota": "O valor varia conforme a quantidade do lote.",
       "disponibilidade": "Sob encomenda",
-      "resumo": "Modelos da marca com o logo da sua academia ou equipe.",
-      "descricao": "Mochilas e malas da VMORDEKAI® personalizadas para academias de artes marciais e equipes: Mala Cylinder de 24 L, DARK KNIGHT, FLYGHT de cerca de 35 L e AMBITUS, com as cores e o logo do cliente. Exemplos produzidos para o Instituto Black Diamond e para o Coelho Team.",
+      "resumo": "Academia? Personalize com sua logo.",
+      "descricao": "Academia? Personalize com sua logo. Malas e mochilas da VMORDEKAI® produzidas com as cores e a logo da sua academia de artes marciais ou centro de treinamento: Mala Cylinder de 24 L (camuflada ou preta), DUFFEL ARES e MALA OLYMPUS, entre outros modelos da marca.",
       "volume": null,
       "dimensoes": null,
       "material": "Conforme o modelo base",
       "forro": null,
       "destaques": [
         "Mala Cylinder 24 L",
-        "DARK KNIGHT",
-        "FLYGHT",
-        "AMBITUS",
-        "Cores e logo do cliente"
+        "Camuflada ou preta",
+        "DUFFEL ARES",
+        "MALA OLYMPUS",
+        "Cores e logo da academia"
       ],
       "cores": null,
-      "complementos": [],
+      "complementos": [
+        "VMK-PER-001",
+        "VMK-PER-002"
+      ],
       "instagram": null,
-      "fonte": "Portfólio Store 2025 e Store Academias 2026 (customizados).",
+      "fonte": "Pasta 'Produtos personalizados para academias' (2026-11-17). Exemplos com marcas de clientes ficam em TEMÁTICAS & EQUIPES.",
       "imagens": [
         {
           "src": "imagens/produtos/linha-academias-01.jpg",
-          "alt": "Mala Cylinder personalizada para academia",
-          "rotulo": "Mala Cylinder"
+          "alt": "Mala Cylinder camuflada para academia, pendurada pela alça",
+          "rotulo": "Mala Cylinder camuflada"
         },
         {
           "src": "imagens/produtos/linha-academias-02.jpg",
-          "alt": "DARK KNIGHT personalizada para academia",
-          "rotulo": "DARK KNIGHT"
+          "alt": "Mala Cylinder camuflada para academia, vista lateral",
+          "rotulo": "Camuflada · lateral"
         },
         {
           "src": "imagens/produtos/linha-academias-03.jpg",
-          "alt": "Mochila FLYGHT personalizada para academia",
-          "rotulo": "FLYGHT"
-        },
-        {
-          "src": "imagens/produtos/linha-academias-04.jpg",
-          "alt": "AMBITUS personalizada para academia",
-          "rotulo": "AMBITUS"
-        },
-        {
-          "src": "imagens/produtos/linha-academias-05.jpg",
-          "alt": "DARK KNIGHT personalizada para equipe de jiu-jitsu",
-          "rotulo": "Coelho Team"
+          "alt": "Mala Cylinder preta para academia",
+          "rotulo": "Mala Cylinder preta"
         }
       ]
     },
@@ -1128,7 +1301,7 @@ export const CATALOGO = {
       "preco_nota": "O valor varia conforme a quantidade do lote.",
       "disponibilidade": "Sob encomenda",
       "resumo": "Bordados, estampas e bolsos sob medida para você, sua equipe ou empresa.",
-      "descricao": "Escolha um modelo da marca ou crie um novo a partir da sua necessidade. Informe o estilo de acessório (bolsa, mochila, mala, estojo), o que ele precisa ter (quantidade de bolsos, bolsos específicos como coldres, porta-câmera ou porta-ferramentas), as cores e combinações e se terá estampas ou representações pessoais, da sua equipe ou empresa. A VMORDEKAI® apresenta propostas e orçamento.",
+      "descricao": "Escolha um modelo da marca ou crie um novo a partir da sua necessidade. Informe o estilo de acessório (bolsa, mochila, mala, estojo), o que ele precisa ter (quantidade de bolsos, bolsos específicos como coldres, porta-câmera ou porta-ferramentas), as cores e combinações e se terá estampas ou representações pessoais, da sua equipe ou empresa. A VMORDEKAI® apresenta propostas e orçamento. Exemplos produzidos para equipes: Instituto Black Diamond (FLYGHT e DARK KNIGHT) e Coelho Team.",
       "volume": null,
       "dimensoes": null,
       "material": "Conforme o modelo base",
@@ -1142,8 +1315,18 @@ export const CATALOGO = {
       "cores": null,
       "complementos": [],
       "instagram": null,
-      "fonte": "Portfólio Store 2025 (customizados e corporativos).",
+      "fonte": "Portfólio Store 2025 (customizados e corporativos). Capas Black Diamond definidas pela marca em 2026-11-17.",
       "imagens": [
+        {
+          "src": "imagens/produtos/tematicas-equipes-05.jpg",
+          "alt": "Mochila FLYGHT personalizada para a equipe Black Diamond",
+          "rotulo": "FLYGHT Black Diamond"
+        },
+        {
+          "src": "imagens/produtos/tematicas-equipes-06.jpg",
+          "alt": "Mochila DARK KNIGHT personalizada para a equipe Black Diamond",
+          "rotulo": "DARK KNIGHT Black Diamond"
+        },
         {
           "src": "imagens/produtos/tematicas-equipes-01.jpg",
           "alt": "MUTATIO BAG personalizada para equipe",
@@ -1163,6 +1346,11 @@ export const CATALOGO = {
           "src": "imagens/produtos/tematicas-equipes-04.jpg",
           "alt": "Mochila ZEN preta com bordado",
           "rotulo": "ZEN bordada"
+        },
+        {
+          "src": "imagens/produtos/tematicas-equipes-07.jpg",
+          "alt": "DARK KNIGHT personalizada para equipe de jiu-jitsu",
+          "rotulo": "Coelho Team"
         }
       ]
     }

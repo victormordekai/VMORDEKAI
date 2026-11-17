@@ -148,12 +148,19 @@ def catalog_js(data: dict) -> str:
     )
 
 
+PLURAL_IRREGULAR = {"Conceitual": "Conceituais"}  # mesmo mapa de js/shop/product-view.js
+
+
+def plural(categoria: str) -> str:
+    return PLURAL_IRREGULAR.get(categoria) or (categoria if " " in categoria else categoria + "s")
+
+
 def page_html(p: dict) -> str:
     e = lambda v: html.escape(str(v), quote=True)
     first = p["imagens"][0]
     return PAGE.format(
         nome=e(p["nome"]), ref=e(p["ref"]), slug=e(p["slug"]), categoria=e(p["categoria"]),
-        categoria_plural=e(p["categoria"] if " " in p["categoria"] else p["categoria"] + "s"),
+        categoria_plural=e(plural(p["categoria"])),
         descricao=e(p["descricao"]), resumo=e(p["resumo"]),
         url=f"{SITE}pages/produtos/produto_{p['slug']}.html",
         imagem=e(first["src"]), imagem_alt=e(first["alt"]), imagem_url=f"{SITE}{first['src']}",

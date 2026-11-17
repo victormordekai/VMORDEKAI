@@ -17,7 +17,8 @@ const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": 
 export const brl = v => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v);
 
 /** Plural da categoria para filtros e trilha ("Sob encomenda" não flexiona). */
-export const categoryLabel = c => (c.includes(" ") ? c : `${c}s`);
+const PLURAL_IRREGULAR = { Conceitual: "Conceituais" };
+export const categoryLabel = c => PLURAL_IRREGULAR[c] || (c.includes(" ") ? c : `${c}s`);
 
 /** Preço de vitrine, "a partir de …" ou o texto de quem não tem preço fixo (sob encomenda). */
 export const priceText = p => (p.preco ? `${p.preco_prefixo || ""}${brl(p.preco)}` : p.preco_texto || "Sob consulta");

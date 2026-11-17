@@ -1,4 +1,4 @@
-# VMORDEKAI® · V02-3. | 26.11
+# VMORDEKAI® · V02-4. | 26.11
 
 Laboratório de design, produto, branding e produção têxtil. Site estático (HTML, CSS e JavaScript) publicado no GitHub Pages.
 
@@ -64,4 +64,4 @@ python3 -m http.server 8000
 # http://localhost:8000
 ```
 
-Registros: `docs/V02-3_FICHA_E_ESCALA_2026-11-16.md` (foto da ficha e escala), `docs/V02-2_CATALOGO_2027_E_SELECAO_2026-11-12.md` (catálogo 2027, filtros e seleção pelo WhatsApp), `docs/V02-0_REESTRUTURACAO_2026-11-11.md` (auditoria e reestruturação) e `docs/V02-1_PAGINAS_E_PORTFOLIO_2026-11-11.md` (pastas e portfólio).
+Registros: `docs/V02-4_CONCEITUAIS_E_ACADEMIAS_2026-11-17.md` (linha conceitual, academias e fotos novas), `docs/V02-3_FICHA_E_ESCALA_2026-11-16.md` (foto da ficha e escala), `docs/V02-2_CATALOGO_2027_E_SELECAO_2026-11-12.md` (catálogo 2027, filtros e seleção pelo WhatsApp), `docs/V02-0_REESTRUTURACAO_2026-11-11.md` (auditoria e reestruturação) e `docs/V02-1_PAGINAS_E_PORTFOLIO_2026-11-11.md` (pastas e portfólio).
